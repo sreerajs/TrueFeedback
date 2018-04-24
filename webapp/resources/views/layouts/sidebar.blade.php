@@ -1,0 +1,82 @@
+@section('user_sidebar')
+<div class="o-page__sidebar js-page-sidebar">
+  <aside class="c-sidebar">
+    <div class="c-sidebar__brand">
+      <a href="#"><img src="../img/logo.png" width="85" alt="Bytacoin"></a>
+    </div>
+
+ <!-- Scrollable -->
+ <div class="c-sidebar__body">
+    <span class="c-sidebar__title"></span>
+    <ul class="c-sidebar__list">
+      <li>
+        <a class="c-sidebar__link is-active" href="true-dash.html">
+          <i class="c-sidebar__icon feather icon-home"></i>Home
+        </a>
+      </li>
+      <li>
+        <a class="c-sidebar__link is-active" href="mysurveys.html">
+          <i class="c-sidebar__icon feather icon-power"></i>Surveys
+        </a>
+      </li>
+      <li>
+        <a class="c-sidebar__link" href="rewards.html">
+          <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Rewards
+        </a>
+      </li>
+      <li>
+        <a class="c-sidebar__link" href="mywalletuser.html">
+          <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
+        </a>
+      </li>
+
+  </div>
+
+
+    <a class="c-sidebar__footer" href="../logout">
+      Logout <i class="c-sidebar__footer-icon feather icon-power"></i>
+    </a>
+  </aside>
+</div>
+@endsection
+
+@section('business_sidebar')
+<div class="o-page__sidebar js-page-sidebar">
+    <aside class="c-sidebar">
+      <div class="c-sidebar__brand">
+        <a href="#"><img src="../img/logo.png" width="85" alt="Bytacoin"></a>
+      </div>
+            <!-- Scrollable -->
+            <div class="c-sidebar__body">
+                <span class="c-sidebar__title"></span>
+                <ul class="c-sidebar__list">
+                  <li>
+                    <a class="c-sidebar__link is-active" href="/business/home">
+                      <i class="c-sidebar__icon feather icon-home"></i>Home
+                    </a>
+                  </li>
+                  <li>
+                    <a class="c-sidebar__link is-active" href="../mycontract">
+                      <i class="c-sidebar__icon feather icon-power"></i>My Contracts
+                    </a>
+                  </li>
+                  <li>
+                    <a class="c-sidebar__link" href="/business/deployed_contracts">
+                      <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Deployed Contracts
+                    </a>
+                  </li>
+                  <li>
+                    <a class="c-sidebar__link" href="/business/mywallet">
+                      <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
+                    </a>
+                  </li>
+    
+              </div>
+  
+  
+      <a class="c-sidebar__footer" href="../logout">
+        Logout <i class="c-sidebar__footer-icon feather icon-power"></i>
+      </a>
+    </aside>
+  </div>
+@endsection

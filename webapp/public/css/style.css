@@ -1,0 +1,37 @@
+.o-page__signup {
+  width: 600px;
+}
+.empty-space {
+  height: 20px;
+  width: 100%;
+}
+.u-mb-small.c-input--danger {
+  margin-bottom: 0px !important;
+}
+label.c-input--danger {
+  font-size: 85%;
+  margin-bottom: 15px;
+}
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+.sandbox-requests-label {
+  margin-top: 7px;
+}
+.hidden {
+  display: none;
+}
+.file-input-avatar {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+}
+.c-avatar__profile {
+  padding: 10px;
+}
+.card-min__height {
+  min-height:470px;
+}
