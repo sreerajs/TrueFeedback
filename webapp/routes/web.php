@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 /**
 * Routes - Unauthenticated Users
-* @author Tittu Varghese (tittu@servntire.com)
+* @author Stanly Johnson (stanly.johnson@servntire.com)
 * @param string | route
 * @return class,view
 */
@@ -40,8 +40,14 @@ Route::group(['middleware' => ['guest']], function() {
     return view('register');
   });
 
+  /*Forgot Password */
+  Route::get('/forgot_password', function() {
+    return view('forgot_password');
+  });
+
   Route::post('/register','UserAuth\RegisterController@create');
   Route::post('/login','UserAuth\LoginController@auth');
+  Route::post('/forgot_password_email', 'UserAuth\ForgotPasswordController@create');
 
 });
 
@@ -86,6 +92,7 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/applicants','Pages\Applicants@user');
   Route::get('/organization','Pages\UserSettings@organization');
   Route::get('/profile','Pages\UserSettings@profile');
+  Route::get('/mycontract','Pages\UserSettings@profile');
 
   Route::post('/profileImage','Functions\Upload@avatar');
   Route::post('/userprofile','Pages\UserSettings@profileUpdate');

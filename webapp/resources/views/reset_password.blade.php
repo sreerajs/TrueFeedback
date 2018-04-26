@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title', 'Login')
+@section('title', 'Reset Password')
 @section('body_content')
 <div class="o-page o-page--center">
   <!-- System Error Handling -->
@@ -32,12 +32,12 @@
         <img src="img/logo-small.png" width="16" alt="Bytacoin">
       </span>
 
-      <h4 class="u-mb-medium">Welcome Back :)</h4>
-      <form id="formLogin" action="login" method="post">
+      <h4 class="u-mb-medium">Reset Your Password</h4>
+      <form id="formLogin" action="reset_password" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="c-field">
           <label class="c-field__label">Email Address</label>
-          <input class="c-input u-mb-small" name="email_address" id="email_address" type="email" placeholder="e.g. adam@google.com">
+          <input class="c-input u-mb-small" name="email_address" value = $email id="email_address" type="email" placeholder="e.g. adam@google.com">
         </div>
 
         <div class="c-field">
@@ -45,10 +45,14 @@
           <input class="c-input u-mb-small" name="password" id="password" type="password" placeholder="Numbers, Pharagraphs Only">
         </div>
 
-        <input type="submit" value="LOGIN" class="c-btn c-btn--fullwidth c-btn--info"></input>
+        <div class="c-field">
+            <label class="c-field__label">Confirm Password</label>
+            <input class="c-input u-mb-small" name="password" id="password" type="password" placeholder="Numbers, Pharagraphs Only">
+        </div>
+
+
+        <input type="submit" value="Reset Password" class="c-btn c-btn--fullwidth c-btn--info"></input>
       </form>
-      <br /><br />
-      <a href = "/forgot_password">Forgot Password</a>
 
     </div>
   </div>
