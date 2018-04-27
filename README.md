@@ -6,7 +6,11 @@ Develop Web Application and necessary APIs, to enable users to find and answer s
 * Business Registration and Account Management
 * Business Dashboard
 * User Dashboard
-
+* Wallet Page (User/Business)
+* Create Contract Page
+* Surveys Page (User)
+* Rewards Page (User)
+* Ethereum Wallet Integration
 * Reports and Statistics
 * Payment Gateway Integration
 * APIs for third party service providers
