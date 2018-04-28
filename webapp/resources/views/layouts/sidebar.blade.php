@@ -10,12 +10,12 @@
     <span class="c-sidebar__title"></span>
     <ul class="c-sidebar__list">
       <li>
-        <a class="c-sidebar__link is-active" href="/home">
+        <a class="c-sidebar__link" href="/home">
           <i class="c-sidebar__icon feather icon-home"></i>Home
         </a>
       </li>
       <li>
-        <a class="c-sidebar__link is-active" href="mysurveys.html">
+        <a class="c-sidebar__link" href="mysurveys.html">
           <i class="c-sidebar__icon feather icon-power"></i>Surveys
         </a>
       </li>
@@ -51,12 +51,12 @@
                 <span class="c-sidebar__title"></span>
                 <ul class="c-sidebar__list">
                   <li>
-                    <a class="c-sidebar__link is-active" href="/business/home">
+                    <a class="c-sidebar__link" href="/business/home">
                       <i class="c-sidebar__icon feather icon-home"></i>Home
                     </a>
                   </li>
                   <li>
-                    <a class="c-sidebar__link is-active" href="/business/mycontract">
+                    <a class="c-sidebar__link" href="/business/mycontract">
                       <i class="c-sidebar__icon feather icon-power"></i>My Contracts
                     </a>
                   </li>
