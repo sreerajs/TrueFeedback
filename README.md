@@ -135,3 +135,5 @@ class ClassName extends Controller {
 /* File Naming: file-name.blade.php */
 /* Section Naming: section_name */
 ```
+
+
