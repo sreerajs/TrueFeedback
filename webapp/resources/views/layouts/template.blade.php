@@ -15,16 +15,16 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/neat.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/neat.css">
+    <link rel="stylesheet" href="../../css/style.css">
   </head>
   <body>
     @yield('body_content')
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-  <script src="../js/neat.js"></script>
-  <script src="../js/functions.js"></script>
-  <script src="../js/jquery.validate.js"></script>
-  <script src="../js/form.validate.js"></script>
+  <script src="../../js/neat.js"></script>
+  <script src="../../js/functions.js"></script>
+  <script src="../../js/jquery.validate.js"></script>
+  <script src="../../js/form.validate.js"></script>
   
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>

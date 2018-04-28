@@ -48,7 +48,7 @@
         <input type="submit" value="LOGIN" class="c-btn c-btn--fullwidth c-btn--info"></input>
       </form>
       <br /><br />
-      <a href = "/forgot_password">Forgot Password</a>
+      <a href = "/forgot-password">Forgot Password</a>
 
     </div>
   </div>

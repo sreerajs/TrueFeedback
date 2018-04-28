@@ -37,15 +37,26 @@ Route::group(['middleware' => ['guest']], function() {
     return view('register');
   });
 
-  /*Forgot Password */
-  Route::get('/forgot_password', function() {
-    return view('forgot_password');
-  });
-
   /* User Auth Controllers */
   Route::post('/register','UserAuth\RegisterController@create');
   Route::post('/login','UserAuth\LoginController@auth');
   Route::post('/forgot_password_email', 'UserAuth\ForgotPasswordController@create');
+
+/**
+* Routes - forgot Password
+* @author Stanly Johnson (stanly.johnson@servntire.com)
+* @param string | route
+* @return class,view, login
+*/
+Route::get('/forgot-password', function () {
+  return view('forgot_password');
+});
+
+Route::get('/password-reset/email/{email_token}', 'Verify\UserVerification@emailVerificationPasswordReset');
+
+Route::post('/forgot-password','UserAuth\PasswordResetController@forgotPassword');
+Route::post('/password-reset', 'Verify\UserVerification@passwordReset');
+
 });
 /**
 * Routes - Verification
