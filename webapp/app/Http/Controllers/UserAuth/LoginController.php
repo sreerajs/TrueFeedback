@@ -59,8 +59,9 @@ class LoginController extends Controller
       if(Auth::attempt($userCredentials))
   		{
           /* If Auth true */
-          if (Entrust::hasRole('User')) {
-              auth()->user()->notify(new WelcomeNotification());
+          auth()->user()->notify(new WelcomeNotification());
+                    
+          if (Entrust::hasRole('User')) {             
               return redirect('/home');
           } 
           else if (Entrust::hasRole('Business')) {
