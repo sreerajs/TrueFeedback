@@ -18,6 +18,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Zizaco\Entrust\EntrustFacade as Entrust;
+use Illuminate\Notifications\Notifiable;
+use App\Notifications\WelcomeNotification;
 
 class LoginController extends Controller
 {
@@ -58,6 +60,7 @@ class LoginController extends Controller
   		{
           /* If Auth true */
           if (Entrust::hasRole('User')) {
+              auth()->user()->notify(new WelcomeNotification());
               return redirect('/home');
           } 
           else if (Entrust::hasRole('Business')) {
