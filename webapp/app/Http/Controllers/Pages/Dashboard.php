@@ -33,8 +33,13 @@ class Dashboard extends Controller
     $user = Auth::user();
     $uri = $request->path();
     if($uri == 'home') {
-      $uri = "Dashboard";
+      $uri = "User Dashboard";
     }
+
+    else if($uri == 'business/home') {
+      $uri = "Business Dashboard";
+    }
+
     $returnData['user'] = $user;
     $returnData['uri'] = $uri;
     return view('dashboard',['dataArray' => $returnData]);

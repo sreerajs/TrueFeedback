@@ -37,7 +37,7 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="c-field">
           <label class="c-field__label">Email Address</label>
-          <input class="c-input u-mb-small" name="email_address" value = $email id="email_address" type="email" placeholder="e.g. adam@google.com">
+          <input class="c-input u-mb-small" name="email_address" id="email_address" type="email" placeholder="e.g. adam@google.com">
         </div>
 
         <div class="c-field">

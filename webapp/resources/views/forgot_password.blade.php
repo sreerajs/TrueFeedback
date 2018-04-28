@@ -2,7 +2,7 @@
 @section('title', 'Forgot Password')
 @section('body_content')
 <div class="o-page o-page--center">
-  <!-- System Error Handling test -->
+  <!-- System Error Handling -->
   @if ($errors->any())
   @include('layouts.alert-messages',['alertMessage'=>'Something went wrong. We are unable to process your request at the moment. Please try again later.'])
   @yield('alert_system_error')
