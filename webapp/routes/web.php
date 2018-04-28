@@ -13,7 +13,7 @@ Route::get('/deploy','Deploy\Dev@deploy');
 Route::get('/deploy/composer','Deploy\Dev@deployComposer');
 Route::get('/deploy/migrate','Deploy\Dev@deployMigrate');
 Route::get('/', function () {
-  return view('login');
+  return view('frontpage');
 });
 /**
 * Routes - Unauthenticated Users
@@ -43,14 +43,14 @@ Route::group(['middleware' => ['guest']], function() {
 });
 /**
 * Routes - Verification
-* @author Tittu Varghese (tittu@servntire.com)
+* @author Stanly Johnson (stanly.johnson@servntire.com)
 * @param string | route
 * @return class,view
 */
 Route::get('/verify/email/{email_token}', 'Verify\UserVerification@email');
 /**
 * Routes - logout
-* @author Tittu Varghese (tittu@servntire.com)
+* @author Stanly Johnson (stanly.johnson@servntire.com)
 * @param none
 * @return class,view,login
 */
@@ -59,7 +59,7 @@ Route::get('/logout','UserAuth\Logout@logout');
 /**
 * Routes - Pages
 * Role - User
-* @author Tittu Varghese (tittu@servntire.com)
+* @author Stanly Johnson (stanly.johnson@servntire.com)
 * @param string | route
 * @return class,view
 */
@@ -77,6 +77,14 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::get('/profile','Pages\UserSettings@profile');
   Route::get('/mysurveys','Pages\mySurveys@mysurveys');
 });
+
+/**
+* Routes - Pages
+* Role - Business
+* @author Stanly Johnson (stanly.johnson@servntire.com)
+* @param string | route
+* @return class,view
+*/
 Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], function() {
   Route::get('/home','Pages\Dashboard@user');
   Route::get('/applicants','Pages\Applicants@user');
