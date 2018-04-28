@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/neat.min.css?v=1.0">
+    <link rel="stylesheet" href="../../css/neat.min.css?v=1.0">
   </head>
   <body>
 
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Main JavaScript -->
-    <script src="js/neat.min.js?v=1.0"></script>
+    <script src="../../js/neat.min.js?v=1.0"></script>
 
   </body>
 </html>

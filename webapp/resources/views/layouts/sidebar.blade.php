@@ -2,7 +2,7 @@
 <div class="o-page__sidebar js-page-sidebar">
   <aside class="c-sidebar">
     <div class="c-sidebar__brand">
-      <a href="#"><img src="../img/logo.png" width="85" alt="Bytacoin"></a>
+      <a href="/"><img src="../img/logo.png" width="300" alt="TrueFeedback"></a>
     </div>
 
  <!-- Scrollable -->
@@ -44,7 +44,7 @@
 <div class="o-page__sidebar js-page-sidebar">
     <aside class="c-sidebar">
       <div class="c-sidebar__brand">
-        <a href="#"><img src="../img/logo.png" width="85" alt="Bytacoin"></a>
+          <a href="/"><img src="../img/logo.png" width="300" alt="TrueFeedback"></a>
       </div>
             <!-- Scrollable -->
             <div class="c-sidebar__body">

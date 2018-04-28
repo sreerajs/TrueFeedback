@@ -23,11 +23,11 @@ class CreateUsersTable extends Migration
             $table->string('phone_number',14)->nullable();
             $table->string('password',250);
             $table->string('account_type',20);
-
+            $table->text('eth_key')->nullable();
             //stats for analytics
-            $table->string('country',24);
-            $table->string('state', 100);    
-            $table->date('dob',100);            
+            $table->string('country',24)->nullable();
+            $table->string('state', 100)->nullable();    
+            $table->date('dob',100)->nullable();            
             //stats for analytics
 
             $table->boolean('profile_status')->default(false);
