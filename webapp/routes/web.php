@@ -93,6 +93,7 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/organization','Pages\UserSettings@organization');
   Route::get('/profile','Pages\UserSettings@profile');
   Route::get('/mycontract','Pages\UserSettings@profile');
+  Route::get('/mysurveys','Pages\mySurveys@mysurveys');
 
   Route::post('/profileImage','Functions\Upload@avatar');
   Route::post('/userprofile','Pages\UserSettings@profileUpdate');
