@@ -75,6 +75,7 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::get('/user_rewards','Pages\RewardsController@rewards');
   Route::get('/wallet', 'Pages\WalletController@userWallet');
   Route::get('/profile','Pages\UserSettings@profile');
+  Route::get('/mysurveys','Pages\mySurveys@mysurveys');
 });
 Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], function() {
   Route::get('/home','Pages\Dashboard@user');
@@ -82,7 +83,6 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/organization','Pages\UserSettings@organization');
   Route::get('/profile','Pages\UserSettings@profile');
   Route::get('/mycontract','Pages\UserSettings@profile');
-  Route::get('/mysurveys','Pages\mySurveys@mysurveys');
   Route::post('/profileImage','Functions\Upload@avatar');
   Route::post('/userprofile','Pages\UserSettings@profileUpdate');
   Route::post('/userpassword','Pages\UserSettings@profilePassword');

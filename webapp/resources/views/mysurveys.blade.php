@@ -11,6 +11,12 @@
     @endrole
   <main class="o-page__content">
     @include('layouts.header')
+    @role('User')
+    @yield('user_header')
+    @endrole
+    @role('Business')
+    @yield('business_header')
+    @endrole
         <div class="container">
 
           <div class="row">
