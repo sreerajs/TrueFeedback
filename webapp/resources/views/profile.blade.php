@@ -2,9 +2,21 @@
 @section('title', 'Dashboard')
 @section('body_content')
 <div class="o-page">
-  @include('layouts.sidebar')
+    @include('layouts.sidebar')
+    @role('User')
+    @yield('user_sidebar')
+    @endrole
+    @role('Business')
+    @yield('business_sidebar')
+    @endrole
   <main class="o-page__content">
     @include('layouts.header')
+    @role('User')
+    @yield('user_header')
+    @endrole
+    @role('Business')
+    @yield('business_header')
+    @endrole
     <div class="container">
       @include('layouts.alerts')
       <div class="row">
@@ -47,12 +59,7 @@
                             <input class="c-input" type="email" id="email_address" name="email_address" placeholder="eg. adam@google.com" value="{{ $dataArray['user']->email }}" readonly>
                           </div>
                         </div>
-                        <div class="col-md-6">
-                          <div class="c-field u-mb-medium">
-                            <label class="c-field__label" for="phone_number">Phone Number</label>
-                            <input class="c-input" type="text" id="phone_number" name="phone_number" placeholder="eg. +1234567890" value="{{ $dataArray['user']->phone_number }}">
-                          </div>
-                        </div>
+                        
                       </div>
                       <div class="row">
                         <div class="col-md-6">

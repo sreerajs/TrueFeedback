@@ -55,6 +55,7 @@ Route::get('/verify/email/{email_token}', 'Verify\UserVerification@email');
 * @return class,view,login
 */
 Route::get('/logout','UserAuth\Logout@logout');
+
 /**
 * Routes - Pages
 * Role - User
@@ -73,6 +74,7 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::post('/organizationprofile','Pages\UserSettings@organizationUpdate');
   Route::get('/user_rewards','Pages\RewardsController@rewards');
   Route::get('/wallet', 'Pages\WalletController@userWallet');
+  Route::get('/profile','Pages\UserSettings@profile');
 });
 Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], function() {
   Route::get('/home','Pages\Dashboard@user');
@@ -87,4 +89,5 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/wallet', 'Pages\WalletController@businessWallet');
   Route::get('/mycontract', 'Pages\myContractController@contract');
   Route::get('/deployed_contracts', 'Pages\DeployedContractsController@contract');
+  Route::get('/profile','Pages\UserSettings@profile');
 });
