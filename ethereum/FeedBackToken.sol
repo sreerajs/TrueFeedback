@@ -8,7 +8,7 @@ pragma solidity ^0.4.8;
 import ./ERC20.sol;
 import ./safeMath.sol;
 
-contract TittuToken is ERC20, SafeMath{
+contract FeedBackToken is ERC20, SafeMath{
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -19,7 +19,7 @@ contract TittuToken is ERC20, SafeMath{
      mapping(address => mapping(address => uint)) allowed;
 
      //constructor
-     function TittuToken(
+     function FeedBackToken(
         uint256 _initialAmount,
         string _tokenName,
         uint8 _decimalUnits,
