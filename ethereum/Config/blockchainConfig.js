@@ -12,8 +12,8 @@ const input = fs.readFileSync('./Contracts/');
 const output = solc.compile(input.toString(), 1);
 let code = output.contracts[':TrueFeedBack'].bytecode;
 let abi = JSON.parse(output.contracts[':TrueFeedBack'].interface);
-var SampleContract = web3.eth.contract(abi);
-let contract = SampleContract.new({ from: web3.eth.accounts[0], data: "0x" + code, gas: '4700000' });
+var Contract = web3.eth.contract(abi);
+let contract = Contract.new({ from: web3.eth.accounts[0], data: "0x" + code, gas: '4700000' });
 
 /**
  * @function This function deploys the contract to the local geth node
@@ -33,6 +33,6 @@ DelpoyContract();
 
 module.exports = {
     contractAddress,
-    SampleContract,
+    Contract,
     web3
 }
