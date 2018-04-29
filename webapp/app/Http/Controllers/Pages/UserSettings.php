@@ -86,8 +86,13 @@ class UserSettings extends Controller
     $user = Auth::user();
     $uri = $request->path();
     if($uri == 'profile') {
-      $uri = "Profile";
+      $uri = "User Profile";
     }
+
+    else if($uri == 'business/profile') {
+      $uri = "Business Profile";
+    }
+
     $returnData['user'] = $user;
     $returnData['uri'] = $uri;
     return view('profile',['dataArray' => $returnData]);
@@ -106,9 +111,9 @@ class UserSettings extends Controller
     $user = Auth::user();
     $first_name = $request->get('first_name');
     $last_name = $request->get('last_name');
-    $phone_number = $request->get('phone_number');
 
-    $profileUpdate = DB::table('users')->where('email', $user->email)->update(['first_name'=> $first_name,'last_name' => $last_name,'phone_number' => $phone_number]);
+
+    $profileUpdate = DB::table('users')->where('email', $user->email)->update(['first_name'=> $first_name,'last_name' => $last_name]);
 
     if($profileUpdate) {
       return redirect('profile')->with('success', 'Successfully updated your profile.');

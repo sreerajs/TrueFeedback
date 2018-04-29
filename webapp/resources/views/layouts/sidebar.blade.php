@@ -10,7 +10,7 @@
     <span class="c-sidebar__title"></span>
     <ul class="c-sidebar__list">
       <li>
-        <a class="c-sidebar__link is-active" href="true-dash.html">
+        <a class="c-sidebar__link is-active" href="/home">
           <i class="c-sidebar__icon feather icon-home"></i>Home
         </a>
       </li>
@@ -20,12 +20,12 @@
         </a>
       </li>
       <li>
-        <a class="c-sidebar__link" href="rewards.html">
+        <a class="c-sidebar__link" href="/user_rewards">
           <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Rewards
         </a>
       </li>
       <li>
-        <a class="c-sidebar__link" href="mywalletuser.html">
+        <a class="c-sidebar__link" href="/wallet">
           <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
         </a>
       </li>
@@ -56,7 +56,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="c-sidebar__link is-active" href="../mycontract">
+                    <a class="c-sidebar__link is-active" href="/business/mycontract">
                       <i class="c-sidebar__icon feather icon-power"></i>My Contracts
                     </a>
                   </li>
@@ -66,7 +66,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="c-sidebar__link" href="/business/mywallet">
+                    <a class="c-sidebar__link" href="/business/wallet">
                       <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
                     </a>
                   </li>

@@ -89,7 +89,7 @@ class ForgotPasswordController extends Controller
           $emailVariables_SubTitle = "Confirm Password Reset.";
           $emailVariables_MainTitle = "Reset your Password";
           $emailVariables_EmailText = "You have created a password reset request. Click on the link below to reset you password. If this was not done by you, immediately contact Truefeedback Support. ";
-          $emailVariables_ButtonLink = "https://bytacoin.telrpay.com/reset/email/".$user->verification_token;
+          $emailVariables_ButtonLink = "https://bytacoin.telrpay.com/reset_password/".$user->token;
           $emailVariables_ButtonText = "RESET PASSWORD";
 
           $emailTemplate = new EmailTemplates($emailVariables_UserName,$emailVariables_SubTitle,$emailVariables_MainTitle,$emailVariables_EmailText,$emailVariables_ButtonLink,$emailVariables_ButtonText);
