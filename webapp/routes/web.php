@@ -91,7 +91,7 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::get('/user_rewards','Pages\RewardsController@rewards');
   Route::get('/wallet', 'Pages\WalletController@userWallet');
   Route::get('/profile','Pages\UserSettings@profile');
-  Route::get('/mysurveys','Pages\mySurveys@mysurveys');
+  Route::get('/surveys','Pages\mySurveys@mysurveys');
 });
 
 /**
@@ -114,4 +114,8 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/mycontract', 'Pages\myContractController@contract');
   Route::get('/deployed_contracts', 'Pages\DeployedContractsController@contract');
   Route::get('/profile','Pages\UserSettings@profile');
+  
+  Route::get('/surveyresults', function () {
+  return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
+});
 });
