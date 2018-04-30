@@ -92,6 +92,24 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::get('/wallet', 'Pages\WalletController@userWallet');
   Route::get('/profile','Pages\UserSettings@profile');
   Route::get('/surveys','Pages\mySurveys@mysurveys');
+  Route::get('/wallet_import','Wallet\WalletImport@setup');
+  /**
+  * Routes - Wallet Pages
+  * Role - User
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  * @param string | route
+  * @return class,view
+  */
+  Route::get('/wallet_menu','Wallet\WalletMenu@setup');
+  Route::get('/wallet_import','Wallet\WalletImport@setup');
+  Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
+  Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
+  Route::get('/wallet_success','Wallet\WalletSuccess@complete');
+
+  Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
+
+
+
 });
 
 /**
@@ -114,6 +132,19 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/mycontract', 'Pages\myContractController@contract');
   Route::get('/deployed_contracts', 'Pages\DeployedContractsController@contract');
   Route::get('/profile','Pages\UserSettings@profile');
+
+  /**
+  * Routes - Wallet Pages
+  * Role - User
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  * @param string | route
+  * @return class,view
+  */
+  Route::get('/wallet_menu','Wallet\WalletMenu@setup');
+  Route::get('/wallet_import','Wallet\WalletImport@setup');
+  Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
+  Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
+  Route::get('/wallet_success','Wallet\WalletSuccess@complete');
   
   Route::get('/surveyresults', function () {
   return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
