@@ -32,7 +32,7 @@
         <img src="../img/logo.png" width="300" height="100" alt="TrueFeedback">
       </span>
 
-      <h4 class="u-mb-medium">Welcome Back :)</h4>
+      <h4 class="u-mb-medium">Welcome Back</h4>
       <form id="formLogin" action="login" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="c-field">
