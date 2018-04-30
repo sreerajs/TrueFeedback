@@ -15,7 +15,7 @@
         </a>
       </li>
       <li>
-        <a class="c-sidebar__link" href="/mysurveys">
+        <a class="c-sidebar__link" href="/surveys">
           <i class="c-sidebar__icon feather icon-power"></i>Surveys
         </a>
       </li>

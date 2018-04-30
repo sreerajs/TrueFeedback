@@ -53,7 +53,6 @@ Route::get('/forgot-password', function () {
 });
 
 Route::get('/password-reset/email/{email_token}', 'Verify\UserVerification@emailVerificationPasswordReset');
-
 Route::post('/forgot-password','UserAuth\PasswordResetController@forgotPassword');
 Route::post('/password-reset', 'Verify\UserVerification@passwordReset');
 
@@ -106,9 +105,12 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
   Route::get('/wallet_success','Wallet\WalletSuccess@complete');
   Route::get('/wallet_privatekey','Wallet\WalletKey@input');
+  Route::get('/wallet_create','Wallet\WalletCreate@password');
+  //Route::get('/wallet_create_success','Wallet\WalletCreate@success');
 
   Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
   Route::post('/wallet_private_key','Wallet\WalletKey@upload');
+  Route::post('/wallet_create','Wallet\WalletCreate@create');
 
 
 
@@ -148,6 +150,8 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
   Route::get('/wallet_success','Wallet\WalletSuccess@complete');
   Route::get('/wallet_privatekey','Wallet\WalletKey@input');
+  Route::get('/wallet_create','Wallet\WalletCreate@password');
+  //Route::get('/wallet_create_success','Wallet\WalletCreate@success');
 
   Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
   Route::post('/wallet_private_key','Wallet\WalletKey@upload');
