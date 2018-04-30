@@ -30,6 +30,11 @@ class CreateUsersTable extends Migration
             $table->date('dob',100)->nullable();            
             //stats for analytics
 
+            //stats for wallet
+            $table->boolean('is_wallet_linked')->default(false);
+            $table->text('wallet_address')->nullable();       
+            //stats for wallet
+
             $table->boolean('profile_status')->default(false);
             $table->boolean('verified')->default(false);
             $table->string('verification_token')->nullable();
