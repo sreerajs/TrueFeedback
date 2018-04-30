@@ -25,24 +25,23 @@
   @include('layouts.alert-messages',['alertMessage'=>session('failed_login')])
   @yield('alert_info')
   @endif
+
   <div class="container">
-        <div class="row u-pv-large">
-          <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
-            <h1>Import your wallet</h1>
-            <p class="u-mb-large u-h4">Unlock your wallet to see your address</p>
-          </div>
-        </div>
-
-          <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
-
-              <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/wallet_keystore_password">KEYSTORE JSON</a>
-              <br /><br />
-            <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/wallet_privatekey">PRIVATE KEY</a>
-
-
-          </div>
-        </div>
-
-  </div>
+    <div class="row u-pv-large">
+      <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
+        <h1>Enter Private Key</h1>
+        <p class="u-mb-large u-h4">Enter the private key of your wallet</p>
+      </div>
+    </div>
+    <form id="formKeystorePassword" action="wallet_private_key" method="post">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      <div class="c-field">
+        <input class="c-input" name="wallet_private_key" id="wallet_private_key" type="text" placeholder="Private Key" required>
+      </br></br>
+    </div>     
+      <input type="submit" value="Submit" class="c-btn c-btn--fullwidth c-btn--info"></input>
+    </form>
+      
+    </div>
 </div>
 @endsection

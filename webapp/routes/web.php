@@ -105,8 +105,10 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
   Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
   Route::get('/wallet_success','Wallet\WalletSuccess@complete');
+  Route::get('/wallet_privatekey','Wallet\WalletKey@input');
 
   Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
+  Route::post('/wallet_private_key','Wallet\WalletKey@upload');
 
 
 
@@ -145,6 +147,10 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
   Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
   Route::get('/wallet_success','Wallet\WalletSuccess@complete');
+  Route::get('/wallet_privatekey','Wallet\WalletKey@input');
+
+  Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
+  Route::post('/wallet_private_key','Wallet\WalletKey@upload');
   
   Route::get('/surveyresults', function () {
   return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
