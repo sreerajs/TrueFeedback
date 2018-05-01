@@ -12,12 +12,12 @@
         @yield('business_header')
         @endrole
         <div class="container">
-<!--            <div class="row  m-b-20">
+            <div class="row  m-b-20">
                 <div class="col-md-4" id="sm-template-one">
                     <div class="c-state-card c-state-card--info">
                         <h4 class="c-state-card__title">Template One</h4>
                         <p class="c-state-card__status">
-                           Template One Description
+                            Template One Description
                         </p>
                     </div>
                 </div>
@@ -39,11 +39,11 @@
                         </p>                        
                     </div>
                 </div>
-            </div>-->
+            </div>
             <div  class="row  m-b-20">
                 <div id="survey-composer" class="col-md-12">
-                    <div class="build-wrap composer"></div>
-                    <div class="render-wrap"></div>
+                    <div id="stage1" class="build-wrap composer"></div>
+                    <form class="render-wrap"></form>
                     <button id="edit-form">Edit Form</button>
                     <!--                    <button id="c-btn c-btn--info c-btn--outline c-btn--fullwidth edit-form">Create Survey</button>-->
                 </div>

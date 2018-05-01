@@ -1,37 +1,82 @@
 .o-page__signup {
-  width: 600px;
+    width: 600px;
 }
 .empty-space {
-  height: 20px;
-  width: 100%;
+    height: 20px;
+    width: 100%;
 }
 .u-mb-small.c-input--danger {
-  margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
 }
 label.c-input--danger {
-  font-size: 85%;
-  margin-bottom: 15px;
+    font-size: 85%;
+    margin-bottom: 15px;
 }
 .float-right {
-  float: right;
+    float: right;
 }
 .float-left {
-  float: left;
+    float: left;
 }
 .sandbox-requests-label {
-  margin-top: 7px;
+    margin-top: 7px;
 }
 .hidden {
-  display: none;
+    display: none;
 }
 .file-input-avatar {
-  position: absolute;
-  top: 55px;
-  right: 10px;
+    position: absolute;
+    top: 55px;
+    right: 10px;
 }
 .c-avatar__profile {
-  padding: 10px;
+    padding: 10px;
 }
 .card-min__height {
-  min-height:470px;
+    min-height:470px;
+}
+
+
+.template-textarea-wrap {
+    display: block !important;
+}
+
+.content {
+    margin: auto;
+    width: 100%;
+    max-width: 1280px;
+    padding-top: 5em;
+}
+
+.form-rendered .build-wrap {
+    display: none;
+}
+
+.render-wrap {
+    display: none;
+}
+
+.form-rendered .render-wrap {
+    display: block;
+}
+
+#edit-form {
+    display: none;
+    float: right;
+}
+
+.form-rendered #edit-form {
+    display: block;
+}
+
+.composer{
+    width: 100%;
+}
+
+.m-b-20{
+    margin-bottom: 20px;
+}
+
+.frmb-0-view-data{
+    display: none;
 }
