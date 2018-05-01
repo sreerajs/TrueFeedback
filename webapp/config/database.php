@@ -43,7 +43,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'bytacoin'),
+            'database' => env('DB_DATABASE', 'surveyMonkey'),
             'username' => env('DB_USERNAME', 'bytacoin'),
             'password' => env('DB_PASSWORD', 'ByTsaCoinPeWs732910wordSim'),
             'unix_socket' => env('DB_SOCKET', ''),
