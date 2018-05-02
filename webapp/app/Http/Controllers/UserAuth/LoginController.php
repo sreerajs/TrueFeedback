@@ -60,14 +60,15 @@ class LoginController extends Controller
   		{
           /* If Auth true */
           $user = Auth::user();
+
+          auth()->user()->notify(new WelcomeNotification());
           
           if(!$user->is_wallet_linked)
           {
             return view('Wallet/wallet_menu')->with('error', 'Please link your wallet to continue');
-          }
-
-          auth()->user()->notify(new WelcomeNotification());
+          }        
                     
+          
           
           if (Entrust::hasRole('User')) {             
               return redirect('/home');
