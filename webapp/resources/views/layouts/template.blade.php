@@ -27,22 +27,6 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../css/form-render.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.1/jquery.rateyo.min.css">
     </head>
-    <body>
-        @yield('body_content')
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <script src="../js/vendor.js"></script>
-        <script src="../js/form-builder.min.js" type="text/javascript"></script>
-        <script src="../js/form-render.min.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.1/jquery.rateyo.min.js"></script>
-        <script src="../js/form-composer.js"></script>                     
-        <!-- Font Awesome -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-    </body>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../../css/neat.css">
-    <link rel="stylesheet" href="../../css/style.css">
-  </head>
   <body>
     @yield('body_content')
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
