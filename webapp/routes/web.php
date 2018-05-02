@@ -37,15 +37,25 @@ Route::group(['middleware' => ['guest']], function() {
     return view('register');
   });
 
-  /*Forgot Password */
-  Route::get('/forgot_password', function() {
-    return view('forgot_password');
-  });
-
   /* User Auth Controllers */
   Route::post('/register','UserAuth\RegisterController@create');
   Route::post('/login','UserAuth\LoginController@auth');
   Route::post('/forgot_password_email', 'UserAuth\ForgotPasswordController@create');
+
+/**
+* Routes - forgot Password
+* @author Stanly Johnson (stanly.johnson@servntire.com)
+* @param string | route
+* @return class,view, login
+*/
+Route::get('/forgot-password', function () {
+  return view('forgot_password');
+});
+
+Route::get('/password-reset/email/{email_token}', 'Verify\UserVerification@emailVerificationPasswordReset');
+Route::post('/forgot-password','UserAuth\PasswordResetController@forgotPassword');
+Route::post('/password-reset', 'Verify\UserVerification@passwordReset');
+
 });
 /**
 * Routes - Verification
@@ -80,7 +90,30 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::get('/user_rewards','Pages\RewardsController@rewards');
   Route::get('/wallet', 'Pages\WalletController@userWallet');
   Route::get('/profile','Pages\UserSettings@profile');
-  Route::get('/mysurveys','Pages\mySurveys@mysurveys');
+  Route::get('/surveys','Pages\mySurveys@mysurveys');
+  Route::get('/wallet_import','Wallet\WalletImport@setup');
+  /**
+  * Routes - Wallet Pages
+  * Role - User
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  * @param string | route
+  * @return class,view
+  */
+  Route::get('/wallet_menu','Wallet\WalletMenu@setup');
+  Route::get('/wallet_import','Wallet\WalletImport@setup');
+  Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
+  Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
+  Route::get('/wallet_success','Wallet\WalletSuccess@complete');
+  Route::get('/wallet_privatekey','Wallet\WalletKey@input');
+  Route::get('/wallet_create','Wallet\WalletCreate@password');
+  //Route::get('/wallet_create_success','Wallet\WalletCreate@success');
+
+  Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
+  Route::post('/wallet_private_key','Wallet\WalletKey@upload');
+  Route::post('/wallet_create','Wallet\WalletCreate@create');
+
+
+
 });
 
 /**
@@ -104,4 +137,27 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/deployed_contracts', 'Pages\DeployedContractsController@contract');
   Route::get('/profile','Pages\UserSettings@profile');
   Route::get('/survey_composer','Pages\SurveyComposerSettings@showComposer');
+  /**
+  * Routes - Wallet Pages
+  * Role - User
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  * @param string | route
+  * @return class,view
+  */
+  Route::get('/wallet_menu','Wallet\WalletMenu@setup');
+  Route::get('/wallet_import','Wallet\WalletImport@setup');
+  Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
+  Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
+  Route::get('/wallet_success','Wallet\WalletSuccess@complete');
+  Route::get('/wallet_privatekey','Wallet\WalletKey@input');
+  Route::get('/wallet_create','Wallet\WalletCreate@password');
+  //Route::get('/wallet_create_success','Wallet\WalletCreate@success');
+
+  Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
+  Route::post('/wallet_private_key','Wallet\WalletKey@upload');
+  
+  Route::get('/surveyresults', function () {
+  return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
+});
+
 });

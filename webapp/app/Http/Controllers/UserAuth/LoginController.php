@@ -18,6 +18,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Zizaco\Entrust\EntrustFacade as Entrust;
+use Illuminate\Notifications\Notifiable;
+use App\Notifications\WelcomeNotification;
 
 class LoginController extends Controller
 {
@@ -57,7 +59,17 @@ class LoginController extends Controller
       if(Auth::attempt($userCredentials))
   		{
           /* If Auth true */
-          if (Entrust::hasRole('User')) {
+          $user = Auth::user();
+          
+          if(!$user->is_wallet_linked)
+          {
+            return view('Wallet/wallet_menu')->with('error', 'Please link your wallet to continue');
+          }
+
+          auth()->user()->notify(new WelcomeNotification());
+                    
+          
+          if (Entrust::hasRole('User')) {             
               return redirect('/home');
           } 
           else if (Entrust::hasRole('Business')) {

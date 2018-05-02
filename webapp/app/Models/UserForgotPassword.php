@@ -24,7 +24,7 @@ class UserForgotPassword extends Model
 
     protected $table = "password_resets";
 
-        /**
+    /**
      * The attributes that are mass assignable.
      *
      * @var array

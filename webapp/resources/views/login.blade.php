@@ -28,11 +28,11 @@
   <!-- Failed Login Message Handling -->
   <div class="o-page__card">
     <div class="c-card c-card--center">
-      <span class="c-icon c-icon--large u-mb-small">
-        <img src="img/logo-small.png" width="16" alt="Bytacoin">
+      <span class="c-icon">
+        <img src="../img/logo.png" width="300" height="100" alt="TrueFeedback">
       </span>
 
-      <h4 class="u-mb-medium">Welcome Back :)</h4>
+      <h4 class="u-mb-medium">Welcome Back</h4>
       <form id="formLogin" action="login" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="c-field">
@@ -48,7 +48,7 @@
         <input type="submit" value="LOGIN" class="c-btn c-btn--fullwidth c-btn--info"></input>
       </form>
       <br /><br />
-      <a href = "/forgot_password">Forgot Password</a>
+      <a href = "/forgot-password">Forgot Password</a>
 
     </div>
   </div>

@@ -17,7 +17,8 @@
         "laravelcollective/remote": "5.6.*",
         "phpmailer/phpmailer": "^6.0",
         "pragmarx/countries": "^0.5.8",
-        "zizaco/entrust": "5.2.x-dev"
+        "zizaco/entrust": "5.2.x-dev",
+        "nesbot/carbon": "~1.21"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
