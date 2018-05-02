@@ -20,21 +20,47 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-4">
 
               <div class="c-field u-mb-small">
                 <label class="c-field__label">Search for surveys</label>
-                <input class="c-input"  placeholder="Try BlockChain" required>
+                <input class="c-input"  placeholder="Try Pepsi" required>
               </div>
             </div>
 
-            <div class = "col-md-3">
-              <br/>
-              <button class="c-btn c-btn--fullwidth c-btn--info">Search</button>
-
-
+           <div class = "col-md-3">
+           <div class="c-field u-mb-small">
+              <label class="c-field__label">Filter By</label>
+              <div class="c-select">
+                <select class="c-select__input" type="country" id="country" name="country" placeholder="Location ">
+                  <option>Location</option>
+                  <option>Category</option>
+                  <option>High Rewards</option>
+                </select>
+              </div>
             </div>
           </div>
+
+          <div class = "col-md-3">
+              <div class="c-field u-mb-small">
+                 <label class="c-field__label">Sort By</label>
+                 <div class="c-select">
+                   <select class="c-select__input" type="country" id="country" name="country" placeholder="Australia">
+                     <option>Reward Amount</option>
+                     <option>Survey Expiry</option>
+                     </select>
+                 </div>
+               </div>
+             </div>
+
+          <div class = "col-md-2">
+          </br><button class="c-btn c-btn--fullwidth c-btn--info">Search</button>
+           </div>
+
+
+        </div>
+
+          
 
           </div>
 
@@ -42,7 +68,11 @@
             <div class="col-12">
               <div class="c-table-responsive@wide">
                 <table class="c-table">
+                  
                   <thead class="c-table__head">
+                    <tr class="c-table_row">
+                        <th class="c-table__cell c-table__cell--head">Recommended for you</th>
+                    </tr> 
                     <tr class="c-table__row">
                       <th class="c-table__cell c-table__cell--head">Contract</th>
                       <th class="c-table__cell c-table__cell--head">Catagory</th>
@@ -163,116 +193,6 @@
                       </td>
                     </tr>
 
-                    <tr class="c-table__row">
-                      <td class="c-table__cell">
-                        <div class="o-media">
-                          <div class="o-media__img u-mr-xsmall">
-                            <div class="c-avatar c-avatar--small">
-                              <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Jessica Alba">
-                            </div>
-                          </div>
-                          <div class="o-media__body">
-                            <h6>Adam Sandler</h6>
-                            <p>Front-end Developer</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="c-table__cell">Google</td>
-                      <th class="c-table__cell">235</th>
-                      <td class="c-table__cell">14-3-2018</td>
-                      <td class="c-table__cell">
-                        <a class="c-badge c-badge--small c-badge--info" href="#">html</a>
-                        <a class="c-badge c-badge--small c-badge--info" href="#">css</a>
-                        <a class="c-badge c-badge--small c-badge--fancy" href="#">javascript</a>
-                      </td>
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More <i class="feather icon-chevron-down"></i>
-                          </a>
-
-                          <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable4">
-                            <a class="c-dropdown__item dropdown-item" href="#">Link One</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Two</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Three</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr class="c-table__row">
-                      <td class="c-table__cell">
-                        <div class="o-media">
-                          <div class="o-media__img u-mr-xsmall">
-                            <div class="c-avatar c-avatar--small">
-                              <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Jessica Alba">
-                            </div>
-                          </div>
-                          <div class="o-media__body">
-                            <h6>Adam Sandler</h6>
-                            <p>Backend Developer</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="c-table__cell">Twitter</td>
-                      <th class="c-table__cell">113</th>
-                      <td class="c-table__cell">14-7-2018</td>
-                      <td class="c-table__cell">
-                        <a class="c-badge c-badge--small c-badge--info" href="#">php</a>
-                        <a class="c-badge c-badge--small c-badge--danger" href="#">nodejs</a>
-                        <a class="c-badge c-badge--small c-badge--success" href="#">server</a>
-                      </td>
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More <i class="feather icon-chevron-down"></i>
-                          </a>
-
-                          <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable5">
-                            <a class="c-dropdown__item dropdown-item" href="#">Link One</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Two</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Three</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr class="c-table__row">
-                      <td class="c-table__cell">
-                        <div class="o-media">
-                          <div class="o-media__img u-mr-xsmall">
-                            <div class="c-avatar c-avatar--small">
-                              <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Jessica Alba">
-                            </div>
-                          </div>
-                          <div class="o-media__body">
-                            <h6>Adam Sandler</h6>
-                            <p>Marketer.</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="c-table__cell">Apple</td>
-                      <th class="c-table__cell">230</th>
-                      <td class="c-table__cell">22-2-2018</td>
-                      <td class="c-table__cell">
-                        <a class="c-badge c-badge--small c-badge--warning" href="#">docs</a>
-                        <a class="c-badge c-badge--small c-badge--danger" href="#">content</a>
-                        <a class="c-badge c-badge--small c-badge--success" href="#">seo</a>
-                      </td>
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More <i class="feather icon-chevron-down"></i>
-                          </a>
-
-                          <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable6">
-                            <a class="c-dropdown__item dropdown-item" href="#">Link One</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Two</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Three</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>

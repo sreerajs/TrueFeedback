@@ -17,6 +17,8 @@ Develop Web Application and necessary APIs, to enable users to find and answer s
 * Email Notifications
 The project will be similar to [surveymonkey.com](https://surveymonkey.com) but we will be acting as a middle layer / common gateway and having multiple data providers similar to onfido.
 
+Original Template : [Demo / Preview](https://zawiastudio.com/neat/demo/dashboard01.html), [Documentation](https://zawiastudio.com/neat/docs/), [UI Kit](https://zawiastudio.com/neat/demo/ui-kit.html)
+
 ## Running / Local Development
 * Pull the repository
 * Update composer `composer update`
@@ -28,7 +30,7 @@ The project will be similar to [surveymonkey.com](https://surveymonkey.com) but 
 * Laravel 5.5
 * MySQL
 * [HashIds](https://github.com/ivanakimov/hashids.php)
-* [JQuery Validation](https://jqueryvalidation.org/documentation/) @Jithinqw
+* [JQuery Validation](https://jqueryvalidation.org/documentation/)
 
 ## Automatic Deployment
 * Live URL: 

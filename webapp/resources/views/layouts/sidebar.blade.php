@@ -1,34 +1,35 @@
 @section('user_sidebar')
 <div class="o-page__sidebar js-page-sidebar">
-    <aside class="c-sidebar">
-        <div class="c-sidebar__brand">
-            <a href="#"><img src="../img/logo.png" width="85" alt="Bytacoin"></a>
-        </div>
+  <aside class="c-sidebar">
+    <div class="c-sidebar__brand">
+      <a href="/"><img src="../img/logo.png" width="300" alt="TrueFeedback"></a>
+    </div>
 
-        <!-- Scrollable -->
-        <div class="c-sidebar__body">
-            <span class="c-sidebar__title"></span>
-            <ul class="c-sidebar__list">
-                <li>
-                    <a class="c-sidebar__link" href="/home">
-                        <i class="c-sidebar__icon feather icon-home"></i>Home
-                    </a>
-                </li>
-                <li>
-                    <a class="c-sidebar__link" href="/mysurveys">
-                        <i class="c-sidebar__icon feather icon-power"></i>Surveys
-                    </a>
-                </li>
-                <li>
-                    <a class="c-sidebar__link" href="/user_rewards">
-                        <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Rewards
-                    </a>
-                </li>
-                <li>
-                    <a class="c-sidebar__link" href="/wallet">
-                        <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
-                    </a>
-                </li>
+ <!-- Scrollable -->
+ <div class="c-sidebar__body">
+    <span class="c-sidebar__title"></span>
+    <ul class="c-sidebar__list">
+      <li>
+        <a class="c-sidebar__link" href="/home">
+          <i class="c-sidebar__icon feather icon-home"></i>Home
+        </a>
+      </li>
+      <li>
+        <a class="c-sidebar__link" href="/surveys">
+          <i class="c-sidebar__icon feather icon-power"></i>Surveys
+        </a>
+      </li>
+      <li>
+        <a class="c-sidebar__link" href="/user_rewards">
+          <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Rewards
+        </a>
+      </li>
+      <li>
+        <a class="c-sidebar__link" href="/wallet">
+          <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
+        </a>
+      </li>
+
 
         </div>
 
@@ -43,14 +44,15 @@
 @section('business_sidebar')
 <div class="o-page__sidebar js-page-sidebar">
     <aside class="c-sidebar">
-        <div class="c-sidebar__brand">
-            <a href="#"><img src="../img/logo.png" width="85" alt="Bytacoin"></a>
-        </div>
-        <!-- Scrollable -->
-        <div class="c-sidebar__body">
-            <span class="c-sidebar__title"></span>
-            <ul class="c-sidebar__list">
-                <li>
+      <div class="c-sidebar__brand">
+          <a href="/"><img src="../img/logo.png" width="300" alt="TrueFeedback"></a>
+      </div>
+            <!-- Scrollable -->
+            <div class="c-sidebar__body">
+                <span class="c-sidebar__title"></span>
+                <ul class="c-sidebar__list">
+                  <li>
+
                     <a class="c-sidebar__link" href="/business/home">
                         <i class="c-sidebar__icon feather icon-home"></i>Home
                     </a>

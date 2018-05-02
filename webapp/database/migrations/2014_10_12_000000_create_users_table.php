@@ -21,15 +21,20 @@ class CreateUsersTable extends Migration
             $table->string('email',100)->unique();
             $table->text('profile_image')->nullable();
             $table->string('phone_number',14)->nullable();
-            $table->string('country',24)->nullable();
             $table->string('password',250);
             $table->string('account_type',20);
-            $table->string('company_name',100)->nullable();
-            $table->string('company_email',100)->nullable();
-            $table->string('company_website',100)->nullable();
-            $table->string('company_location',100)->nullable();
-            $table->string('interested_in',50)->nullable();
-            $table->string('applications_per_month',50)->nullable();
+            $table->text('eth_key')->nullable();
+            //stats for analytics
+            $table->string('country',24)->nullable();
+            $table->string('state', 100)->nullable();    
+            $table->date('dob',100)->nullable();            
+            //stats for analytics
+
+            //stats for wallet
+            $table->boolean('is_wallet_linked')->default(false);
+            $table->text('wallet_address')->nullable();       
+            //stats for wallet
+
             $table->boolean('profile_status')->default(false);
             $table->boolean('verified')->default(false);
             $table->string('verification_token')->nullable();

@@ -4,13 +4,11 @@
 <div class="o-page o-page--center">
     <div class="o-page__card">
       <div class="c-card c-card--center">
-        <span class="c-icon c-icon--large u-mb-small">
-          <img src="img/logo.png" alt="True Feedback">
+        <span >
+            <img src="../img/logo.png" width="300" height="100" alt="TrueFeedback">
         </span>
 
-        <h4 class="u-mb-medium">True Feedback</h4>
-
-          <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/register">SignUp</a>
+         <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/register">SignUp</a>
           <br /> <br />
         <div>
             <div class = "c-field_label">
