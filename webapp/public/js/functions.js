@@ -19,3 +19,7 @@ if ($(".c-alert").length) {
         $('.c-alert').fadeOut()
     }, 3000);
 }
+
+function createSurvey() {
+  console.log(JSON.parse(window.sessionStorage.getItem('formData')));
+}
