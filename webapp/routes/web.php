@@ -136,7 +136,7 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/mycontract', 'Pages\myContractController@contract');
   Route::get('/deployed_contracts', 'Pages\DeployedContractsController@contract');
   Route::get('/profile','Pages\UserSettings@profile');
-
+  Route::get('/survey_composer','Pages\SurveyComposerSettings@showComposer');
   /**
   * Routes - Wallet Pages
   * Role - User
@@ -159,4 +159,5 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
   Route::get('/surveyresults', function () {
   return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
 });
+
 });

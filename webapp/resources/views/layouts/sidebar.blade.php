@@ -30,13 +30,14 @@
         </a>
       </li>
 
-  </div>
+
+        </div>
 
 
-    <a class="c-sidebar__footer" href="../logout">
-      Logout <i class="c-sidebar__footer-icon feather icon-power"></i>
-    </a>
-  </aside>
+        <a class="c-sidebar__footer" href="../logout">
+            Logout <i class="c-sidebar__footer-icon feather icon-power"></i>
+        </a>
+    </aside>
 </div>
 @endsection
 
@@ -51,32 +52,38 @@
                 <span class="c-sidebar__title"></span>
                 <ul class="c-sidebar__list">
                   <li>
+
                     <a class="c-sidebar__link" href="/business/home">
-                      <i class="c-sidebar__icon feather icon-home"></i>Home
+                        <i class="c-sidebar__icon feather icon-home"></i>Home
                     </a>
-                  </li>
-                  <li>
+                </li>
+                <li>
+                    <a class="c-sidebar__link" href="/business/survey_composer">
+                        <i class="c-sidebar__icon feather icon-power"></i>Create Survey
+                    </a>
+                </li>
+                <li>
                     <a class="c-sidebar__link" href="/business/mycontract">
-                      <i class="c-sidebar__icon feather icon-power"></i>My Contracts
+                        <i class="c-sidebar__icon feather icon-power"></i>My Contracts
                     </a>
-                  </li>
-                  <li>
+                </li>
+                <li>
                     <a class="c-sidebar__link" href="/business/deployed_contracts">
-                      <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Deployed Contracts
+                        <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Deployed Contracts
                     </a>
-                  </li>
-                  <li>
+                </li>
+                <li>
                     <a class="c-sidebar__link" href="/business/wallet">
-                      <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
+                        <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
                     </a>
-                  </li>
-    
-              </div>
-  
-  
-      <a class="c-sidebar__footer" href="../logout">
-        Logout <i class="c-sidebar__footer-icon feather icon-power"></i>
-      </a>
+                </li>
+
+        </div>
+
+
+        <a class="c-sidebar__footer" href="../logout">
+            Logout <i class="c-sidebar__footer-icon feather icon-power"></i>
+        </a>
     </aside>
-  </div>
+</div>
 @endsection
