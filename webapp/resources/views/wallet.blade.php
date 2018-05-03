@@ -35,11 +35,11 @@
                 
                 <tr class="c-table__row">
                   <td class="c-table__cell">
-                    <h3> Feedback Token Balance : <span style="color: green">0.00</span> </h3>                       
+                    <h3> Feedback Token Balance : <span style="color: green">{{$dataArray['user']->feedback_token_balance}}</span> </h3>                       
                   </td>   
                   
                   <td class="c-table__cell">
-                      <h3> ETH Balance : <span style="color: green">0.00</span> </h3>                   
+                      <h3> ETH Balance : <span style="color: green">{{$dataArray['user']->eth_token_balance}}</span> </h3>                   
                     </td>  
                     
                   </tr>

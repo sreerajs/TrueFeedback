@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('password',250);
             $table->string('account_type',20);
             $table->text('eth_key')->nullable();
+
             //stats for analytics
             $table->string('country',24)->nullable();
             $table->string('state', 100)->nullable();    
@@ -32,7 +33,9 @@ class CreateUsersTable extends Migration
 
             //stats for wallet
             $table->boolean('is_wallet_linked')->default(false);
-            $table->text('wallet_address')->nullable();       
+            $table->text('wallet_address')->nullable(); 
+            $table->double('feedback_token_balance', 8, 4)->nullable(); 
+            $table->double('eth_token_balance', 8, 4)->nullable();     
             //stats for wallet
 
             $table->boolean('profile_status')->default(false);

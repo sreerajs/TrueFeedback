@@ -29,6 +29,8 @@ class UserTable extends Seeder
           'state' => 'Kerala',
           'verified' => 1,
           'verification_token' => $hashids->encode(rand(1,9999)),
+          'feedback_token_balance' => '12.322',
+          'eth_token_balance' => '15.8795',
       ]);
 
     
@@ -48,6 +50,8 @@ class UserTable extends Seeder
           'password' => bcrypt('Stanly123'),
           'verified' => 1,
           'verification_token' => $hashids->encode(rand(1,9999)),
+          'feedback_token_balance' => '12.322',
+          'eth_token_balance' => '15.8795',
       ]);
 
       /* Admin Seeding */
