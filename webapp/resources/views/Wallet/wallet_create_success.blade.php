@@ -43,7 +43,7 @@
 
 
       <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
-        <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/">I Understand, Continue</a>
+        <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/home">I Understand, Continue</a>
           <br /><br />
      </div>
     </div>

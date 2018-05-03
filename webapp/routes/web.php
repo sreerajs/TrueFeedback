@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 Route::get('/deploy', 'Deploy\Dev@deploy');
 Route::get('/deploy/composer', 'Deploy\Dev@deployComposer');
 Route::get('/deploy/migrate', 'Deploy\Dev@deployMigrate');
+
 Route::get('/', function () {
     return view('frontpage');
 });
@@ -33,7 +34,7 @@ Route::group(['middleware' => ['guest']], function() {
 
     /* Login */
     Route::get('/login', function () {
-        return view('login');
+     return view('login');
     })->name('login');
 
     /* Register */
@@ -76,33 +77,14 @@ Route::get('/verify/email/{email_token}', 'Verify\UserVerification@email');
  */
 Route::get('/logout', 'UserAuth\Logout@logout');
 
+ 
 /**
-* Routes - Pages
-* Role - User
-* @author Stanly Johnson (stanly.johnson@servntire.com)
-* @param string | route
-* @return class,view
-*/
-Route::group(['middleware' => ['role:User','auth']], function() {
-  Route::get('/home','Pages\Dashboard@user');
-  Route::get('/organization','Pages\UserSettings@organization');
-  Route::get('/profile','Pages\UserSettings@profile');
-  Route::post('/profileImage','Functions\Upload@avatar');
-  Route::post('/userprofile','Pages\UserSettings@profileUpdate');
-  Route::post('/userpassword','Pages\UserSettings@profilePassword');
-  Route::post('/organizationprofile','Pages\UserSettings@organizationUpdate');
-  Route::get('/user_rewards','Pages\RewardsController@rewards');
-  Route::get('/wallet', 'Pages\WalletController@userWallet');
-  Route::get('/profile','Pages\UserSettings@profile');
-  Route::get('/surveys','Pages\mySurveys@mysurveys');
-  Route::get('/wallet_import','Wallet\WalletImport@setup');
-  /**
   * Routes - Wallet Pages
   * Role - User
   * @author Stanly Johnson (stanly.johnson@servntire.com)
   * @param string | route
   * @return class,view
-  */
+  */  
   Route::get('/wallet_menu','Wallet\WalletMenu@setup');
   Route::get('/wallet_import','Wallet\WalletImport@setup');
   Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
@@ -115,9 +97,31 @@ Route::group(['middleware' => ['role:User','auth']], function() {
   Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
   Route::post('/wallet_private_key','Wallet\WalletKey@upload');
   Route::post('/wallet_create','Wallet\WalletCreate@create');
+/**
 
 
 
+/**
+* Routes - Pages
+* Role - User
+* @author Stanly Johnson (stanly.johnson@servntire.com)
+* @param string | route
+* @return class,view
+*/
+Route::group(['middleware' => ['role:User','auth','wallet']], function() {
+  Route::get('/home','Pages\Dashboard@user');
+  Route::get('/profile','Pages\UserSettings@profile');
+  Route::post('/profileImage','Functions\Upload@avatar');
+  Route::post('/userprofile','Pages\UserSettings@profileUpdate');
+  Route::post('/userpassword','Pages\UserSettings@profilePassword');
+  Route::post('/organizationprofile','Pages\UserSettings@organizationUpdate');
+  Route::get('/user_rewards','Pages\RewardsController@rewards');
+  Route::get('/wallet', 'Pages\WalletController@userWallet');
+  Route::get('/profile','Pages\UserSettings@profile');
+  Route::get('/surveys','Pages\mySurveys@mysurveys');
+
+
+   
 });
 
 /**
@@ -127,7 +131,7 @@ Route::group(['middleware' => ['role:User','auth']], function() {
 * @param string | route
 * @return class,view
 */
-Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], function() {
+Route::group(['prefix' => 'business','middleware' => ['role:Business','auth','wallet']], function() {
   Route::get('/home','Pages\Dashboard@user');
   Route::get('/organization','Pages\UserSettings@organization');
   Route::get('/profile','Pages\UserSettings@profile');
@@ -145,25 +149,8 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth']], 
     $response['test'] = $request->input('survey_name');
     return json_encode($response);
 });
-  /**
-  * Routes - Wallet Pages
-  * Role - User
-  * @author Stanly Johnson (stanly.johnson@servntire.com)
-  * @param string | route
-  * @return class,view
-  */
-  Route::get('/wallet_menu','Wallet\WalletMenu@setup');
-  Route::get('/wallet_import','Wallet\WalletImport@setup');
-  Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
-  Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
-  Route::get('/wallet_success','Wallet\WalletSuccess@complete');
-  Route::get('/wallet_privatekey','Wallet\WalletKey@input');
-  Route::get('/wallet_create','Wallet\WalletCreate@password');
-  //Route::get('/wallet_create_success','Wallet\WalletCreate@success');
 
-  Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
-  Route::post('/wallet_private_key','Wallet\WalletKey@upload');
-  
+ 
   Route::get('/surveyresults', function () {
   return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
 });
