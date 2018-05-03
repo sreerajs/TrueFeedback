@@ -275,19 +275,23 @@ jQuery(function ($) {
                 var name = document.getElementById('input-survey-name').value;
                 if (name !== undefined && name !== '') {
                     var token = $('#token').val();
-                    var param = {                        
-                        'survey_name' : name,
-                        'survey_form' : JSON.parse(window.sessionStorage.getItem('formData'))
-                    };                    
+                    var param = {
+                        'survey_name': name,
+                        'survey_form': JSON.parse(window.sessionStorage.getItem('formData'))
+                    };
                     $.ajax({
                         type: 'POST',
                         headers: {'X-CSRF-TOKEN': token},
-                        url: "/business/savesurvey",
+                        url: "/business/mycontract",
                         data: param,
-                        success: function (data) {                            
-                           
+                        success: function (data) {
+                            if (data.success) {
+                                window.location.replace('/business/savesurvey');
+                            }else{
+                                //do somthing here
+                            }
                         }
                     });
-                }                
+                }
             });
 });
