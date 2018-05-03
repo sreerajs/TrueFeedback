@@ -42,25 +42,24 @@ Route::group(['middleware' => ['guest']], function() {
         return view('register');
     });
 
-  /* User Auth Controllers */
-  Route::post('/register','UserAuth\RegisterController@create');
-  Route::post('/login','UserAuth\LoginController@auth');
-  Route::post('/forgot_password_email', 'UserAuth\ForgotPasswordController@create');
+    /* User Auth Controllers */
+    Route::post('/register', 'UserAuth\RegisterController@create');
+    Route::post('/login', 'UserAuth\LoginController@auth');
+    Route::post('/forgot_password_email', 'UserAuth\ForgotPasswordController@create');
 
-/**
-* Routes - forgot Password
-* @author Stanly Johnson (stanly.johnson@servntire.com)
-* @param string | route
-* @return class,view, login
-*/
-Route::get('/forgot-password', function () {
-  return view('forgot_password');
-});
+    /**
+     * Routes - forgot Password
+     * @author Stanly Johnson (stanly.johnson@servntire.com)
+     * @param string | route
+     * @return class,view, login
+     */
+    Route::get('/forgot-password', function () {
+        return view('forgot_password');
+    });
 
-Route::get('/password-reset/email/{email_token}', 'Verify\UserVerification@emailVerificationPasswordReset');
-Route::post('/forgot-password','UserAuth\PasswordResetController@forgotPassword');
-Route::post('/password-reset', 'Verify\UserVerification@passwordReset');
-
+    Route::get('/password-reset/email/{email_token}', 'Verify\UserVerification@emailVerificationPasswordReset');
+    Route::post('/forgot-password', 'UserAuth\PasswordResetController@forgotPassword');
+    Route::post('/password-reset', 'Verify\UserVerification@passwordReset');
 });
 /**
  * Routes - Verification
@@ -149,10 +148,11 @@ Route::group(['prefix' => 'business','middleware' => ['role:Business','auth','wa
     $response['test'] = $request->input('survey_name');
     return json_encode($response);
 });
-
  
   Route::get('/surveyresults', function () {
   return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
 });
 
 });
+
+

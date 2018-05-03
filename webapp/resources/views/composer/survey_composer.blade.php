@@ -59,7 +59,10 @@
                               <input class="c-input" id="input-survey-name" name= "" type="text" placeholder="My First Survey" required="">
                               </div>
                               <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
-                                  Create
+                                  Save
+                              </button>
+                              <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
+                                  Deploy
                               </button>
                               <button class="c-btn c-btn--info" data-dismiss="modal">
                                   Close
