@@ -65,9 +65,7 @@
                       
                       <td class="c-table__cell">
                         <div class="c-dropdown dropdown">
-                          <a href="walletinfo.html" class="c-btn c-btn--info" >
-                            View Wallet Information
-                          </a>
+                            <input type="button" class="c-btn c-btn--info" id="btn" value ="View Wallet Information">
                         </div>
                       </td>
                     </tr>                 
@@ -79,12 +77,29 @@
             </div>
             
           </div>
+
+          <br /> 
+
+          <div class = "row" id="Create" style="display:none">
+              <div class="col-xl-12">
+                  <div class="c-card">
+            <h2 style="color: blue"> Wallet Information </h2>
+            <br />
+            <h4> Wallet Address : <span style="font-weight: bold">{{$dataArray['user']->wallet_address}}</span> </h4>
+            <br />
+            <a href="/wallet_menu" class="c-btn c-btn--info" >
+                Modify Wallet Info
+              </a>
+            </div>
+            </div>
+          </div>
+          
           
           <br /> 
           
           <div class="row">
-            <div class="col-xl-12">
-              <div class="c-card">
+              <div class="col-xl-12">
+                  <div class="c-card">
                 <h4>Accounts Overview</h4>
                 <p class="u-mb-medium">Activity from 4 Jan 2017 to 10 Jan 2017</p>
                 
@@ -131,6 +146,17 @@
           </div>
         </div>
       </div><!-- // .container -->
+
+      <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#Create").toggle();
+            });
+        });
+        </script>
       
       @endsection
       
+    
+
+       

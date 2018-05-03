@@ -52,6 +52,7 @@ class UserTable extends Seeder
           'verification_token' => $hashids->encode(rand(1,9999)),
           'feedback_token_balance' => '12.322',
           'eth_token_balance' => '15.8795',
+          'wallet_address' => 'thisisatestvalue',
       ]);
 
       /* Admin Seeding */
