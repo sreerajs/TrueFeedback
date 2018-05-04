@@ -79,7 +79,7 @@ Route::get('/logout', 'UserAuth\Logout@logout');
  
 /**
   * Routes - Wallet Pages
-  * Role - User
+  * Role - User/Business
   * @author Stanly Johnson (stanly.johnson@servntire.com)
   * @param string | route
   * @return class,view
