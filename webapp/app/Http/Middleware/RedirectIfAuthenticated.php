@@ -20,23 +20,13 @@ class RedirectIfAuthenticated
     {
             
         if (Auth::guard($guard)->check()) {
-            $user = Auth::user();
-            if($user->is_wallet_linked)
-            {
-                if (Entrust::hasRole('User')) {
+                if(Entrust::hasRole('User')) {
                     return redirect('/home');
                 } 
                 else if (Entrust::hasRole('Business')) {
                     return redirect('/business/home');
-                }
-                    
+                }                   
                 return redirect('/home');
-            }
-
-            else
-            {
-                return redirect('/wallet_menu');
-            }
 
         }
 

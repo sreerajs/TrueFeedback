@@ -22,7 +22,10 @@ class CheckWallet
             $user = Auth::user();
             if(!$user->is_wallet_linked)
             {
-                 return redirect('/wallet_menu');
+                if($user->hasRole('User')) {
+                    return redirect('wallet_menu');
+                }
+                return redirect('business/wallet_menu');
             }
         return $next($request);
     }
