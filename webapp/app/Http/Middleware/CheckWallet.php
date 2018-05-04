@@ -25,7 +25,7 @@ class CheckWallet
                 if($user->hasRole('User')) {
                     return redirect('wallet_menu');
                 }
-                return redirect('business/wallet_menu');
+                return redirect('wallet_menu');
             }
         return $next($request);
     }
