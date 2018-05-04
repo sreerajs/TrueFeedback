@@ -34,8 +34,8 @@ class CreateUsersTable extends Migration
             //stats for wallet
             $table->boolean('is_wallet_linked')->default(false);
             $table->text('wallet_address')->nullable(); 
-            $table->double('feedback_token_balance', 8, 4)->nullable(); 
-            $table->double('eth_token_balance', 8, 4)->nullable();     
+            $table->double('feedback_token_balance', 8, 4)->default(0.00); 
+            $table->double('eth_token_balance', 8, 4)->default(0.00);     
             //stats for wallet
 
             $table->boolean('profile_status')->default(false);
