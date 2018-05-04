@@ -20,6 +20,54 @@ if ($(".c-alert").length) {
     }, 3000);
 }
 
-function createSurvey() {
-  console.log(JSON.parse(window.sessionStorage.getItem('formData')));
+// Delete Contract
+function deleteContract(id) {
+    var token = $('#token').val();
+    var param = {
+        'contract_id': id
+    };
+    $.ajax({
+        type: 'POST',
+        headers: {'X-CSRF-TOKEN': token},
+        url: "/business/deletecontract",
+        data: param,
+        success: function (data) {
+            if (data.success) {
+                $('#contract-' + id).slideUp(300, function () {
+                });
+            } else {
+                //do somthing here
+            }
+        }
+    });
+}
+
+function editContract(id) {
+    window.location.replace('/business/composer?edit_contract=' + id);
+}
+
+function updateContractData() {    
+    var name = document.getElementById('input-survey-name').value;
+    if (name !== undefined && name !== '') {
+        var token = $('#token').val();
+        var param = {
+            'contract_id': $('#edit-contract-id').val(),
+            'survey_name': name,
+            'survey_form': JSON.parse(window.sessionStorage.getItem('formData'))
+        };
+        console.log(param);
+        $.ajax({
+            type: 'POST',
+            headers: {'X-CSRF-TOKEN': token},
+            url: "/business/editcontract",
+            data: param,
+            success: function (data) {
+                if (data.success) {
+                    window.location.replace('/business/mycontract');
+                } else {
+                    //do somthing here
+                }
+            }
+        });
+    }
 }

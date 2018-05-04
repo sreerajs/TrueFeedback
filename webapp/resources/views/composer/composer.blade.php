@@ -10,42 +10,22 @@
         @include('layouts.header')
         @role('Business')
         @yield('business_header')
-        @endrole  
+        @endrole        
         <div class="container">
-            <div class="row  m-b-20">
-                <div class="col-md-4" id="sm-template-one">
-                    <div class="c-state-card c-state-card--info">
-                        <h4 class="c-state-card__title">Template One</h4>
-                        <p class="c-state-card__status">
-                            Template One Description
-                        </p>
-                    </div>
+            <div id="show-editor-warning" class="c-alert c-alert--danger alert m-b-20" style="display: none">
+                <span class="c-alert__icon">
+                    <i class="feather icon-slash"></i>
+                </span>
+                <div class="c-alert__content">
+                    <h4 class="c-alert__title">Oops. Not Found</h4>                
                 </div>
-
-                <div class="col-md-4" id="sm-template-two">
-                    <div class="c-state-card c-state-card--success">
-                        <h4 class="c-state-card__title">Template Two</h4>
-                        <p class="c-state-card__status">
-                            Template Two Description
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-4" id="sm-template-three">
-                    <div class="c-state-card c-state-card--fancy">
-                        <h4 class="c-state-card__title">Template Three</h4>
-                        <p class="c-state-card__status">
-                            Template Three Description
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </div>            
             <div  class="row  m-b-20">
                 <div id="survey-composer" class="col-md-12">
                     <div id="stage1" class="build-wrap composer"></div>
                     <form class="render-wrap c-card"></form>
                     <button id="edit-form" class="c-btn c-btn--info c-btn--outline">Edit Form</button>
-                    <button id="edit-form" class="c-btn c-btn--info c-btn--outline" style="margin-right:5px;float: right" data-toggle="modal" data-target="#modal1">Create Survey</button>
+                    <button id="edit-form" class="c-btn c-btn--info c-btn--outline" style="margin-right:5px;float: right" data-toggle="modal" data-target="#modal1">Update</button>
                 </div>
             </div>
 
@@ -54,14 +34,15 @@
                     <div class="modal-content">
                         <div class="c-card u-p-medium u-mh-auto" style="max-width:500px;">
                             <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="_contractId" id="edit-contract-id" value="{{ $dataArray['contract_id'] }}">
                             <div class="c-field" style="margin-bottom:20px;">
                                 <label class="c-field__label" for="input1">Survey Name</label>
-                                <input class="c-input" id="input-survey-name" name= "" type="text" placeholder="My First Survey" required="">
+                                <input class="c-input" id="input-survey-name" name= "" type="text" placeholder="My First Survey" value="{{$dataArray['contract_details'][0]->name}}" required="">
                             </div>
-                            <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
+                            <button id="edit-contract-form" class="c-btn c-btn--info" name="submit" type="submit" onclick="updateContractData()">
                                 Save
                             </button>
-                            <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
+                            <button id="deploy-contract-form" class="c-btn c-btn--info" name="submit" type="submit">
                                 Deploy
                             </button>
                             <button class="c-btn c-btn--info" data-dismiss="modal">

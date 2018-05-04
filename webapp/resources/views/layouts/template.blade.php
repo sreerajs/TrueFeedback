@@ -6,7 +6,7 @@
         <title>@yield('title') | TrueFeedback</title>
         <meta name="description" content="Bytacoin">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
