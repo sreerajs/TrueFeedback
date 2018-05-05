@@ -16,17 +16,17 @@
       </li>
       <li>
         <a class="c-sidebar__link" href="/surveys">
-          <i class="c-sidebar__icon feather icon-power"></i>Surveys
+          <i class="c-sidebar__icon feather icon-bar-chart"></i>Surveys
         </a>
       </li>
       <li>
         <a class="c-sidebar__link" href="/user_rewards">
-          <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Rewards
+          <i class="c-sidebar__icon feather icon-award"></i>Rewards
         </a>
       </li>
       <li>
         <a class="c-sidebar__link" href="/wallet">
-          <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
+          <i class="c-sidebar__icon feather icon-briefcase"></i>My Wallet
         </a>
       </li>
 
@@ -59,22 +59,22 @@
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/business/survey_composer">
-                        <i class="c-sidebar__icon feather icon-power"></i>Create Survey
+                        <i class="c-sidebar__icon feather icon-activity"></i>Create Survey
                     </a>
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/business/mycontract">
-                        <i class="c-sidebar__icon feather icon-power"></i>My Contracts
+                        <i class="c-sidebar__icon feather icon-box"></i>My Contracts
                     </a>
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/business/deployed_contracts">
-                        <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Deployed Contracts
+                        <i class="c-sidebar__icon feather icon-copy"></i>Deployed Contracts
                     </a>
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/business/wallet">
-                        <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
+                        <i class="c-sidebar__icon feather icon-briefcase"></i>My Wallet
                     </a>
                 </li>
 
@@ -106,12 +106,12 @@
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/admin/user_reports">
-                        <i class="c-sidebar__icon feather icon-power"></i>User Reports
+                        <i class="c-sidebar__icon feather icon-activity"></i>User Reports
                     </a>
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/admin/survey_reports">
-                        <i class="c-sidebar__icon feather icon-power"></i>Survey Reports
+                        <i class="c-sidebar__icon feather icon-align-justify"></i>Survey Reports
                     </a>
                 </li>
                 <li>
