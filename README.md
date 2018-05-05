@@ -78,18 +78,6 @@ There will be three requests required in-order to complete a KYC verification pr
 
 > We have to re route each of these request to third party providers and have to register callback to push the response back to client.
 
-## Task Lists
-- [x] User Login Page
-- [x] User Registration Page
-- [ ] User / Admin Role Integration
-- [ ] Database Design
-- [ ] User Dashboard
-- [ ] Admin Dashboard
-- [ ] Emails and Notifications
-- [ ] Payment Gateway Integration (Stripe / PayPal Express)
-- [ ] API for Integration and Call Back Routing
-- [ ] Middle layer for Routing the request to multiple data providers
-
 ## Contributing Guides
 ### PHP Document Block for Functions
 ```PHP
