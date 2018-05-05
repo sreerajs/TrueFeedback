@@ -34,7 +34,7 @@ Route::group(['middleware' => ['guest']], function() {
 
     /* Login */
     Route::get('/login', function () {
-     return view('login');
+        return view('login');
     })->name('login');
 
     /* Register */
@@ -76,7 +76,7 @@ Route::get('/verify/email/{email_token}', 'Verify\UserVerification@email');
  */
 Route::get('/logout', 'UserAuth\Logout@logout');
 
- 
+
 /**
   * Routes - Wallet Pages
   * Role - User/Business
@@ -100,59 +100,54 @@ Route::get('/logout', 'UserAuth\Logout@logout');
 
 
 
-/**
-* Routes - Pages
-* Role - User
-* @author Stanly Johnson (stanly.johnson@servntire.com)
-* @param string | route
-* @return class,view
-*/
-Route::group(['middleware' => ['role:User','auth','wallet']], function() {
-  Route::get('/home','Pages\Dashboard@user');
-  Route::get('/profile','Pages\UserSettings@profile');
-  Route::post('/profileImage','Functions\Upload@avatar');
-  Route::post('/userprofile','Pages\UserSettings@profileUpdate');
-  Route::post('/userpassword','Pages\UserSettings@profilePassword');
-  Route::post('/organizationprofile','Pages\UserSettings@organizationUpdate');
-  Route::get('/user_rewards','Pages\RewardsController@rewards');
-  Route::get('/wallet', 'Pages\WalletController@userWallet');
-  Route::get('/profile','Pages\UserSettings@profile');
-  Route::get('/surveys','Pages\mySurveys@mysurveys');
-
-
-   
+  /**
+ * Routes - Pages
+ * Role - User
+ * @author Stanly Johnson (stanly.johnson@servntire.com)
+ * @param string | route
+ * @return class,view
+ */
+Route::group(['middleware' => ['role:User', 'auth', 'wallet']], function() {
+    Route::get('/home', 'Pages\Dashboard@user');
+    Route::get('/profile', 'Pages\UserSettings@profile');
+    Route::post('/profileImage', 'Functions\Upload@avatar');
+    Route::post('/userprofile', 'Pages\UserSettings@profileUpdate');
+    Route::post('/userpassword', 'Pages\UserSettings@profilePassword');
+    Route::post('/organizationprofile', 'Pages\UserSettings@organizationUpdate');
+    Route::get('/user_rewards', 'Pages\RewardsController@rewards');
+    Route::get('/wallet', 'Pages\WalletController@userWallet');
+    Route::get('/profile', 'Pages\UserSettings@profile');
+    Route::get('/surveys', 'Pages\mySurveys@mysurveys');
 });
 
 /**
-* Routes - Pages
-* Role - Business
-* @author Stanly Johnson (stanly.johnson@servntire.com)
-* @param string | route
-* @return class,view
-*/
-Route::group(['prefix' => 'business','middleware' => ['role:Business','auth','wallet']], function() {
-  Route::get('/home','Pages\Dashboard@user');
-  Route::get('/organization','Pages\UserSettings@organization');
-  Route::get('/profile','Pages\UserSettings@profile');
-  Route::get('/mycontract','Pages\UserSettings@profile');
-  Route::post('/profileImage','Functions\Upload@avatar');
-  Route::post('/userprofile','Pages\UserSettings@profileUpdate');
-  Route::post('/userpassword','Pages\UserSettings@profilePassword');
-  Route::post('/organizationprofile','Pages\UserSettings@organizationUpdate');
-  Route::get('/wallet', 'Pages\WalletController@businessWallet');
-  Route::get('/mycontract', 'Pages\myContractController@contract');
-  Route::get('/deployed_contracts', 'Pages\DeployedContractsController@contract');
-  Route::get('/profile','Pages\UserSettings@profile');
-  Route::get('/survey_composer','Pages\SurveyComposerSettings@showComposer');
-  Route::post('/savesurvey', function(Request $request) {
-    $response['test'] = $request->input('survey_name');
-    return json_encode($response);
-});
- 
-  Route::get('/surveyresults', function () {
-  return view('surveyresults')->with('dataArray',['uri'=> 'Survey Results','user' => Auth::user()]);
-});
-
+ * Routes - Pages
+ * Role - Business
+ * @author Stanly Johnson (stanly.johnson@servntire.com)
+ * @param string | route
+ * @return class,view
+ */
+Route::group(['prefix' => 'business', 'middleware' => ['role:Business', 'auth', 'wallet']], function() {
+    Route::get('/home', 'Pages\Dashboard@user');
+    Route::get('/organization', 'Pages\UserSettings@organization');
+    Route::get('/profile', 'Pages\UserSettings@profile');
+    Route::post('/profileImage', 'Functions\Upload@avatar');
+    Route::post('/userprofile', 'Pages\UserSettings@profileUpdate');
+    Route::post('/userpassword', 'Pages\UserSettings@profilePassword');
+    Route::post('/organizationprofile', 'Pages\UserSettings@organizationUpdate');
+    Route::get('/wallet', 'Pages\WalletController@businessWallet');
+    Route::get('/mycontract', 'Pages\myContractController@contract');
+    Route::get('/deployed_contracts', 'Pages\DeployedContractsController@contract');
+    Route::get('/profile', 'Pages\UserSettings@profile');
+    Route::get('/survey_composer', 'Pages\SurveyComposerSettings@showComposer');
+    Route::post('/savecontract', 'Survey\SurveyController@saveSurvey');
+    Route::post('/deletecontract', 'Survey\SurveyController@deleteSurvey');
+    Route::post('/getContractDetails', 'Survey\SurveyController@getContractDetails');
+    Route::get('/composer', 'Pages\SurveyComposerSettings@showEditComposer');
+    Route::post('/editcontract', 'Survey\SurveyController@editSurvey');
+    Route::get('/surveyresults', function () {
+        return view('surveyresults')->with('dataArray', ['uri' => 'Survey Results', 'user' => Auth::user()]);
+    });
 });
 
 

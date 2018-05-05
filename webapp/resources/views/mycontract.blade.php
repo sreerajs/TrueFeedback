@@ -55,18 +55,19 @@
                             </thead>
 
                             <tbody>
-                                @foreach ($dataArray['contractList'] as $user)
-                                <tr class="c-table__row">
+                                <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+                                @foreach ($dataArray['contractList'] as $contract)
+                                <tr id = "contract-{{$contract->id}}" class="c-table__row">
                                     <td class="c-table__cell">
                                         <div class="o-media">
                                             <div class="o-media__body">
-                                                <h6>{{$user->name }}</h6>                                                    
+                                                <h6>{{$contract->name }}</h6>                                                    
                                             </div>
                                         </div>
                                     </td>
                                     <td class="c-table__cell">Pinterest</td>
                                     <th class="c-table__cell">223</th>
-                                    <td class="c-table__cell">{{$user->created_at }}</td>
+                                    <td class="c-table__cell">{{$contract->updated_at }}</td>
                                     <td class="c-table__cell">
                                         <a class="c-badge c-badge--small c-badge--info" href="#">sketch</a>
                                         <a class="c-badge c-badge--small c-badge--info" href="#">ui</a>
@@ -80,7 +81,8 @@
 
                                             <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable1">
                                                 <a class="c-dropdown__item dropdown-item" href="#">Deploy</a>
-                                                <a class="c-dropdown__item dropdown-item" href="#">Delete</a>
+                                                <a class="c-dropdown__item dropdown-item" onclick="deleteContract({{$contract->id}})">Delete</a>
+                                                <a class="c-dropdown__item dropdown-item" onclick="editContract({{$contract->id}})">Edit</a>
                                                 <a class="c-dropdown__item dropdown-item" href="#">Archive</a>
                                             </div>
                                         </div>

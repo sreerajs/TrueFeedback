@@ -49,9 +49,48 @@ class Business_Surveys extends Eloquent {
      */
     public function getSurvey($userId) {
         return $this->tableObject->
-                where('user_id',$userId)->
-                where('is_deleted', 0)->
-                paginate(10);
+                        where('user_id', $userId)->
+                        where('is_deleted', 0)->
+                        orderBy('updated_at', 'DESC')->
+                        paginate(10);
+    }
+
+    /**
+     * @author     Ajith E R
+     * @date       May 04, 2018
+     * @brief      delet Survey Form.
+     * @param      $id.     
+     */
+    public function deleteSurvey($id) {
+        return $this->tableObject->
+                        where('id', $id)->
+                        update(array('is_deleted' => 1));
+    }
+
+    /**
+     * @author     Ajith E R
+     * @date       May 04, 2018
+     * @brief      get Survey Form.
+     * @param      $id.     
+     */
+    public function getContractDetail($id) {
+        return $this->tableObject->
+                        where('id', $id)->
+                        where('is_deleted', 0)->
+                        get();
+    }
+
+    /**
+     * @author     Ajith E R
+     * @date       May 04, 2018
+     * @brief      update Survey Form.
+     * @param      $data    
+     */
+    public function updateContractDetail($data) {
+        return $this->tableObject->
+                        where('id', $data['id'])->
+                        where('user_id', $data['user_id'])->
+                        update($data);
     }
 
 }

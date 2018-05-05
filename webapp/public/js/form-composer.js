@@ -158,10 +158,16 @@ jQuery(function ($) {
     };
     //  var formData = window.sessionStorage.getItem('formData');
     var editing = true;
+    $.urlParam = function (name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results == null) {
+            return null;
+        } else {
+            return decodeURI(results[1]) || 0;
+        }
+    }
 
-    //  if (formData) {
-    //    fbOptions.formData = JSON.parse(formData);
-    //  }
+    var contractEditId = $.urlParam('edit_contract');
 
     /**
      * Toggles the edit mode for the demo
@@ -176,6 +182,31 @@ jQuery(function ($) {
     var formBuilder = $('.build-wrap').formBuilder(fbOptions);
     var fbPromise = formBuilder.promise;
 
+    if (contractEditId) {
+        var param = {
+            contract_id: contractEditId
+        };
+        $.ajax({
+            type: 'POST',
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            url: "/business/getContractDetails",
+            data: param,
+            success: function (data) {
+                if (data.success) {
+                    if (data.contract_details[0] === undefined) {
+                        $('#show-editor-warning').show();
+                        setTimeout(function () {
+                            $('#show-editor-warning').fadeOut()
+                        }, 1000);
+                    } else {
+                        formBuilder.actions.setData(data.contract_details[0].survey_form);
+                    }
+                } else {
+                    //do somthing here
+                }
+            }
+        });
+    };
     fbPromise.then(function (fb) {
         var apiBtns = {
             showData: fb.actions.showData,
@@ -272,7 +303,7 @@ jQuery(function ($) {
             });
     document.getElementById('create-new-form')
             .addEventListener('click', function (e) {
-                var name = document.getElementById('input-survey-name').value;
+                var name = document.getElementById('input-survey-name').value;                
                 if (name !== undefined && name !== '') {
                     var token = $('#token').val();
                     var param = {
@@ -282,12 +313,12 @@ jQuery(function ($) {
                     $.ajax({
                         type: 'POST',
                         headers: {'X-CSRF-TOKEN': token},
-                        url: "/business/mycontract",
+                        url: "/business/savecontract",
                         data: param,
                         success: function (data) {
                             if (data.success) {
-                                window.location.replace('/business/savesurvey');
-                            }else{
+                                window.location.replace('/business/mycontract');
+                            } else {
                                 //do somthing here
                             }
                         }
