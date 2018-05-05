@@ -12,7 +12,7 @@
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
 
         <!-- Scripts-->
 
