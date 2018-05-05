@@ -1,13 +1,14 @@
 <?php
 
   /**
-  * Insert User Data in to the User Table - `users`
-  * @author Tittu Varghese (tittu@servntire.com)
-  *
-  * @param  Request | $request
-  * @return array | $error_message
-  * @return redirect | login | register
-  */
+ * Wallet/WalletKeystore
+ * TrueFeedback - Upload Keystore file
+ * PHP Laravel Version 5.5
+ *
+ * @author Stanly Johnson (stanly.johnson@servntire.com)
+ *
+ * (c) Servntire Global (servntire.com)
+ */
 
 namespace App\Http\Controllers\Wallet;
 
@@ -23,18 +24,26 @@ use App\Notifications\WelcomeNotification;
 
 class WalletKeystore extends Controller
 {
-     /**
-  * Insert User Data in to the User Table - `users`
-  * @author Tittu Varghese (tittu@servntire.com)
+  /**
+  * Return wallet import page to user if authenticated
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
   *
   * @param  Request | $request
-  * @return array | $error_message
-  * @return redirect | login | register
+  * @return redirect | login | wallet_import
   */
 
   protected function password(Request $request) {
     
-    return view ('Wallet/wallet_keystore_password');
+    if($user = Auth::user())
+    {
+      return view ('Wallet/wallet_keystore_password');
+    }
+    
+    else
+    {
+      return view ('/login');
+    }    
+   
 
   }
 

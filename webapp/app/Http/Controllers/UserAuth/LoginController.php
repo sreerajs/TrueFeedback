@@ -60,15 +60,15 @@ class LoginController extends Controller
   		{
           /* If Auth true */
           $user = Auth::user();
+
+          auth()->user()->notify(new WelcomeNotification());
           
           if(!$user->is_wallet_linked)
           {
             return view('Wallet/wallet_menu')->with('error', 'Please link your wallet to continue');
-          }
-
-          auth()->user()->notify(new WelcomeNotification());
+          }        
                     
-          
+                  
           if (Entrust::hasRole('User')) {             
               return redirect('/home');
           } 
@@ -87,4 +87,36 @@ class LoginController extends Controller
 
       return redirect('login');
     }
+
+  protected function verify(Request $request) {
+      
+      if($user = Auth::user())
+      {
+        if(!$user->is_wallet_linked)
+          {
+            return view('Wallet/wallet_menu')->with('error', 'Please link your wallet to continue');
+          } 
+          
+        else
+          {
+                if (Entrust::hasRole('User')) {             
+                  return redirect('/home/tseet');
+                } 
+              else if (Entrust::hasRole('Business')) {
+                  return redirect('/business/home');
+                }
+          }  
+      }
+
+      else
+      {
+        return view ('login');
+      }
+
+
+
+    }
+
+
+
 }

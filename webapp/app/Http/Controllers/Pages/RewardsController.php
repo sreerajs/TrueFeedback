@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pages;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class RewardsController extends Controller
 {
@@ -18,8 +19,13 @@ class RewardsController extends Controller
   */
 
   protected function rewards(Request $request) {
+    $user = Auth::user();
+    $uri = $request->path();
 
-        return view('user_rewards');
+    $returnData['user'] = $user;
+    $returnData['uri'] = "Rewards";
+    return view('user_rewards',['dataArray' => $returnData]);
   }
+
 
 }

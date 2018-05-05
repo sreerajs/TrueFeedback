@@ -1,13 +1,14 @@
 <?php
 
-  /**
-  * Insert User Data in to the User Table - `users`
-  * @author Tittu Varghese (tittu@servntire.com)
-  *
-  * @param  Request | $request
-  * @return array | $error_message
-  * @return redirect | login | register
-  */
+/**
+ * Wallet/WalletKey
+ * TrueFeedback - Enter Key to unlock wallet
+ * PHP Laravel Version 5.5
+ *
+ * @author Stanly Johnson (stanly.johnson@servntire.com)
+ *
+ * (c) Servntire Global (servntire.com)
+ */
 
 namespace App\Http\Controllers\Wallet;
 
@@ -23,29 +24,52 @@ use App\Notifications\WelcomeNotification;
 
 class WalletKey extends Controller
 {
-     /**
-  * Insert User Data in to the User Table - `users`
-  * @author Tittu Varghese (tittu@servntire.com)
+ /**
+  * Return wallet key page to user if authenticated
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
   *
   * @param  Request | $request
-  * @return array | $error_message
-  * @return redirect | login | register
+  * @return redirect | login | wallet_privatekey
   */
 
   protected function input(Request $request) {
-    
-    return view ('Wallet/wallet_privatekey');
 
-  }
+    if($user = Auth::user())
+      {
+        return view ('Wallet/wallet_privatekey');
+
+      }
+      
+    else
+      {
+        return view ('/login');
+      }
+    
+    
+   }
+
+   /**
+  * Return wallet success page to user if authenticated
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  *
+  * @param  Request | $request
+  * @return redirect | login | wallet_success
+  */
 
   protected function upload(Request $request) {
     
-    return view ('Wallet/wallet_success');
-
+    if($user = Auth::user())
+      {
+        return view ('Wallet/wallet_success');
+      }
+      
+    else
+      {
+        return view ('/login');
+      }
+    
+    
   }
-
-  
-
 
 
 }

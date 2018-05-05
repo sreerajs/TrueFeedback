@@ -13,6 +13,7 @@ namespace App\Http\Controllers\Wallet;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class WalletMenu extends Controller
 {
@@ -26,8 +27,16 @@ class WalletMenu extends Controller
   */
 
   protected function setup(Request $request) {
-    
-    return view ('Wallet/wallet_menu');
 
+    if($user = Auth::user())
+    {
+      return view ('Wallet/wallet_menu');
+    }
+    
+    else
+   {
+    return view ('/login');
+    }
+    
   }
 }
