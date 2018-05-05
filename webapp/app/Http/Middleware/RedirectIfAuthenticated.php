@@ -20,14 +20,17 @@ class RedirectIfAuthenticated
     {
             
         if (Auth::guard($guard)->check()) {
+
                 if(Entrust::hasRole('User')) {
                     return redirect('/home');
                 } 
                 else if (Entrust::hasRole('Business')) {
                     return redirect('/business/home');
-                }                   
+                } 
+                else if (Entrust::hasRole('admin')) {
+                    return redirect('/admin/home');
+                }                  
                 return redirect('/home');
-
         }
 
         return $next($request);

@@ -99,8 +99,7 @@ Route::get('/logout', 'UserAuth\Logout@logout');
 /**
 
 
-
-  /**
+/**
  * Routes - Pages
  * Role - User
  * @author Stanly Johnson (stanly.johnson@servntire.com)
@@ -150,4 +149,23 @@ Route::group(['prefix' => 'business', 'middleware' => ['role:Business', 'auth', 
     });
 });
 
+  /**
+ * Routes - Pages
+ * Role - Admin
+ * @author Stanly Johnson (stanly.johnson@servntire.com)
+ * @param string | route
+ * @return class,view
+ */
+Route::group(['prefix' => 'admin', 'middleware' => ['role:admin', 'auth', 'admin']], function() {
+    Route::get('/home', 'Pages\Dashboard@user');
+    Route::get('/profile', 'Pages\UserSettings@profile');
+    Route::post('/profileImage', 'Functions\Upload@avatar');
+    Route::post('/userprofile', 'Pages\UserSettings@profileUpdate');
+    Route::post('/userpassword', 'Pages\UserSettings@profilePassword');
+    Route::post('/organizationprofile', 'Pages\UserSettings@organizationUpdate');
+    Route::get('/user_rewards', 'Pages\RewardsController@rewards');
+    Route::get('/wallet', 'Pages\WalletController@userWallet');
+    Route::get('/profile', 'Pages\UserSettings@profile');
+    Route::get('/surveys', 'Pages\mySurveys@mysurveys');
+});
 

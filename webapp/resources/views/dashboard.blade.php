@@ -9,6 +9,9 @@
     @role('Business')
     @yield('business_sidebar')
     @endrole
+    @role('admin')
+    @yield('admin_sidebar')
+    @endrole
   <main class="o-page__content">
     @include('layouts.header')
     @role('User')
@@ -16,6 +19,9 @@
     @endrole
     @role('Business')
     @yield('business_header')
+    @endrole
+    @role('admin')
+    @yield('admin_header')
     @endrole
     <div class="container">
         <div class="row">
