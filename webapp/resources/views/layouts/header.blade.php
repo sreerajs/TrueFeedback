@@ -137,7 +137,6 @@
 
   <h2 class="c-navbar__title">{{ $dataArray['uri'] }}</h2>
 
-
     
   <div class="c-dropdown dropdown u-mr-medium">
     <div class="c-notification has-indicator dropdown-toggle" id="dropdownMenuToggle2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
@@ -153,30 +152,6 @@
         <div class="o-media">
           <div class="o-media__img u-mr-xsmall">
             <span class="c-icon c-icon--info c-icon--xsmall"><i class="feather icon-globe"></i></span>
-          </div>
-
-          <div class="o-media__body">
-            <p>We've updated the Stripe Services agreement and its supporting terms. Your continueduse of Stripe's services.</p>
-          </div>
-        </div>
-      </a>
-
-      <a class="c-dropdown__item dropdown-item" href="#">
-        <div class="o-media">
-          <div class="o-media__img u-mr-xsmall">
-            <span class="c-icon c-icon--danger c-icon--xsmall"><i class="feather icon-x"></i></span>
-          </div>
-
-          <div class="o-media__body">
-            <p>We've updated the Stripe Services agreement and its supporting terms. Your continueduse of Stripe's services.</p>
-          </div>
-        </div>
-      </a>
-
-      <a class="c-dropdown__item dropdown-item" href="#">
-        <div class="o-media">
-          <div class="o-media__img u-mr-xsmall">
-            <span class="c-icon c-icon--success c-icon--xsmall"><i class="feather icon-anchor"></i></span>
           </div>
 
           <div class="o-media__body">
@@ -201,7 +176,7 @@
     </div>
 
     <div class="c-dropdown__menu has-arrow dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuAvatar">
-      <a class="c-dropdown__item dropdown-item" href="/business/profile">Edit Profile</a>
+      <a class="c-dropdown__item dropdown-item" href="/admin/profile">Edit Profile</a>
       <!--<a class="c-dropdown__item dropdown-item" href="#">View Activity</a> -->
       <a class="c-dropdown__item dropdown-item" href="../logout">Logout</a>
     </div>

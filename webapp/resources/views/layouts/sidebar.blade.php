@@ -100,30 +100,26 @@
                 <ul class="c-sidebar__list">
                   <li>
 
-                    <a class="c-sidebar__link" href="/business/home">
+                    <a class="c-sidebar__link" href="/admin/home">
                         <i class="c-sidebar__icon feather icon-home"></i>Home
                     </a>
                 </li>
                 <li>
-                    <a class="c-sidebar__link" href="/business/survey_composer">
-                        <i class="c-sidebar__icon feather icon-power"></i>Create Survey
+                    <a class="c-sidebar__link" href="/admin/user_reports">
+                        <i class="c-sidebar__icon feather icon-power"></i>User Reports
                     </a>
                 </li>
                 <li>
-                    <a class="c-sidebar__link" href="/business/mycontract">
-                        <i class="c-sidebar__icon feather icon-power"></i>My Contracts
+                    <a class="c-sidebar__link" href="/admin/survey_reports">
+                        <i class="c-sidebar__icon feather icon-power"></i>Survey Reports
                     </a>
                 </li>
                 <li>
-                    <a class="c-sidebar__link" href="/business/deployed_contracts">
-                        <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Deployed Contracts
+                    <a class="c-sidebar__link" href="/admin/activities">
+                        <i class="c-sidebar__icon feather icon-bar-chart-2"></i>Activities
                     </a>
                 </li>
-                <li>
-                    <a class="c-sidebar__link" href="/business/wallet">
-                        <i class="c-sidebar__icon feather icon-pie-chart"></i>My Wallet
-                    </a>
-                </li>
+                
 
         </div>
 

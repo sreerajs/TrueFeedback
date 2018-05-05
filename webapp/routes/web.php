@@ -162,10 +162,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin', 'auth', 'admin
     Route::post('/profileImage', 'Functions\Upload@avatar');
     Route::post('/userprofile', 'Pages\UserSettings@profileUpdate');
     Route::post('/userpassword', 'Pages\UserSettings@profilePassword');
-    Route::post('/organizationprofile', 'Pages\UserSettings@organizationUpdate');
-    Route::get('/user_rewards', 'Pages\RewardsController@rewards');
     Route::get('/wallet', 'Pages\WalletController@userWallet');
     Route::get('/profile', 'Pages\UserSettings@profile');
-    Route::get('/surveys', 'Pages\mySurveys@mysurveys');
+    Route::get('/user_reports', 'Pages\UserReports@report');
+    Route::get('/survey_reports', 'Pages\SurveyReports@report');
+    Route::get('/activities', 'Pages\ActivityReports@report');
 });
 

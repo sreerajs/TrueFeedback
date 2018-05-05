@@ -40,6 +40,10 @@ class Dashboard extends Controller
       $uri = "Business Dashboard";
     }
 
+    else if($uri == 'admin/home') {
+      $uri = "Admin Dashboard";
+    }
+
     $returnData['user'] = $user;
     $returnData['uri'] = $uri;
     return view('dashboard',['dataArray' => $returnData]);
