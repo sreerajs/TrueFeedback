@@ -25,7 +25,7 @@
                   <i class="feather icon-activity"></i>
                 </span>
 
-                <h3 class="c-text--subtitle">Weekly Sales</h3>
+                <h3 class="c-text--subtitle">Today's Reward</h3>
                 <h1>$1200</h1>
               </div>
             </div>
@@ -36,7 +36,7 @@
                   <i class="feather icon-shopping-cart"></i>
                 </span>
 
-                <h3 class="c-text--subtitle">Total Orders</h3>
+                <h3 class="c-text--subtitle">Total Surveys Attended</h3>
                 <h1>623</h1>
               </div>
             </div>
@@ -47,7 +47,7 @@
                   <i class="feather icon-users"></i>
                 </span>
 
-                <h3 class="c-text--subtitle">Customers</h3>
+                <h3 class="c-text--subtitle">Companies Reviewed</h3>
                 <h1>250</h1>
               </div>
             </div>
@@ -58,50 +58,36 @@
                   <i class="feather icon-zap"></i>
                 </span>
 
-                <h3 class="c-text--subtitle">Revenue</h3>
+                <h3 class="c-text--subtitle">Total Rewards</h3>
                 <h1>$8794</h1>
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-6">
-              <div class="c-card u-ph-zero u-pb-zero">
-
-                <div class="u-ph-medium">
-                  <h4>Sales</h4>
-                  <p>Activity from 1 Jan 2018 to 30 July 2018</p>
-
-                  <span class="u-h1">$45,000</span>
+            <div class="col-xl-12">
+                <div class="c-card">
+              <h4>Transactions</h4>
+              <p class="u-mb-medium">Activity List</p>
+              
+              <div class="c-feed">
+                <div class="c-feed__item">
+                  <p>New order received from Canada by #49832</p>
+                  <p class="u-text-xsmall">just now</p>
                 </div>
-
-                <div class="u-p-medium">
-                  <div class="c-chart">
-                    <div class="sales-chart"></div>
-                  </div>
+                
+                <div class="c-feed__item c-feed__item--success">
+                  <p>New order received from Canada by #49832</p>
+                  <p class="u-text-xsmall">5 mins ago</p>
                 </div>
-
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="c-card u-ph-zero u-pb-zero">
-
-                <div class="u-ph-medium">
-                  <h4>Payouts</h4>
-                  <p>Activity from 1 Jan 2018 to 30 July 2018</p>
-
-                  <span class="u-h1">$23,420</span>
-                </div>
-
-                <div class="u-p-medium">
-                  <div class="c-chart">
-                    <div class="payouts-chart"></div>
-                  </div>
-                </div>
-
-              </div>
+                
+                
+                
+              </div><!-- // .c-feed -->
+              
             </div>
           </div>
+          
+        </div>
 
 @endsection

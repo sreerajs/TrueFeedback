@@ -13,8 +13,9 @@ class CreateBusinessSurveysTable extends Migration
      */
     public function up()
     {
-        Schema::create('business_surveys', function (Blueprint $table) {            
-            $table->increments('id')->primary();
+        Schema::create('business_surveys', function (Blueprint $table) {
+
+            $table->increments('id')->unsigned();
             $table->string('user_id');
             $table->char('name', 100);
             $table->char('survey_form', 220);

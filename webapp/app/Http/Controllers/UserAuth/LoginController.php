@@ -75,6 +75,9 @@ class LoginController extends Controller
           else if (Entrust::hasRole('Business')) {
               return redirect('/business/home');
           }
+          else if (Entrust::hasRole('admin')) {
+            return redirect('/admin/home');
+          }
                 
           return redirect('/home');
 
@@ -100,10 +103,13 @@ class LoginController extends Controller
         else
           {
                 if (Entrust::hasRole('User')) {             
-                  return redirect('/home/tseet');
+                  return redirect('/home');
                 } 
               else if (Entrust::hasRole('Business')) {
                   return redirect('/business/home');
+                }
+                else if (Entrust::hasRole('admin')) {
+                  return redirect('/admin/home');
                 }
           }  
       }
