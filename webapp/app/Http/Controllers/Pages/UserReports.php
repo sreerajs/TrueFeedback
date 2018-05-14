@@ -2,7 +2,7 @@
 
 /**
 * Pages/UserReports
-* BytaCoin - User Settings Page Controller
+* TreuFeedback - Admin User Report Page
 * PHP Laravel Version 5.5
 *
 * @author Stanly Johnson (stanly.johnson@servntire.com)
@@ -24,8 +24,16 @@ class UserReports extends Controller
     protected function report (Request $request)
     {
         $user = Auth::user();
+
+        $users_count = DB::table('users')->where('account_type', 'User')->count();
+        $business_count = DB::table('users')->where('account_type', 'Business')->count();
+        $data = DB::table('users')->paginate(3);
+
         $returnData['user'] = $user;
         $returnData['uri'] = 'User Reports';
+        $returnData['user_count'] = $users_count;
+        $returnData['business_count'] = $business_count;
+        $returnData['data'] = $data;
         return view('Admin/user_reports',['dataArray' => $returnData]);
     }
 }

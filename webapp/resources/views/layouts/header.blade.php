@@ -137,34 +137,6 @@
 
   <h2 class="c-navbar__title">{{ $dataArray['uri'] }}</h2>
 
-    
-  <div class="c-dropdown dropdown u-mr-medium">
-    <div class="c-notification has-indicator dropdown-toggle" id="dropdownMenuToggle2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-      <i class="c-notification__icon feather icon-bell"></i>
-    </div>
-
-    <div class="c-dropdown__menu c-dropdown__menu--large has-arrow dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuToggle2">
-
-      <span class="c-dropdown__menu-header">
-        Notifications
-      </span>
-      <a class="c-dropdown__item dropdown-item" href="#">
-        <div class="o-media">
-          <div class="o-media__img u-mr-xsmall">
-            <span class="c-icon c-icon--info c-icon--xsmall"><i class="feather icon-globe"></i></span>
-          </div>
-
-          <div class="o-media__body">
-            <p>We've updated the Stripe Services agreement and its supporting terms. Your continueduse of Stripe's services.</p>
-          </div>
-        </div>
-      </a>
-
-      <a class="c-dropdown__menu-footer">
-        All Notifications
-      </a>
-    </div>
-  </div>
 
   <div class="c-dropdown dropdown">
     <div class="c-avatar c-avatar--xsmall dropdown-toggle" id="dropdownMenuAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
