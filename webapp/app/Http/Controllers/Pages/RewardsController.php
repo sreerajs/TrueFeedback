@@ -22,9 +22,23 @@ class RewardsController extends Controller
     $user = Auth::user();
     $uri = $request->path();
 
+    //passing the custom values to page
+    $today_reward = "0";
+    $total_survey_count = "0";
+    $total_rewards = "0";
+
+    $header_data = [
+      "today_reward" => $today_reward,
+      "total_survey_count" => $total_survey_count,
+      "total_rewards" => $total_rewards,
+    ];
+
+
     $returnData['user'] = $user;
     $returnData['uri'] = "Rewards";
+    $returnData['header_data'] = $header_data;
     return view('user_rewards',['dataArray' => $returnData]);
+
   }
 
 

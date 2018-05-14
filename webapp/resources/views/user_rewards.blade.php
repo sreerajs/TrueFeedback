@@ -19,47 +19,36 @@
         @endrole
       <div class="container">
           <div class="row">
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-4">
               <div class="c-card">
                 <span class="c-icon c-icon--info u-mb-small">
                   <i class="feather icon-activity"></i>
                 </span>
 
                 <h3 class="c-text--subtitle">Today's Reward</h3>
-                <h1>$1200</h1>
+              <h1>{{$dataArray['header_data']['today_reward']}}</h1>
               </div>
             </div>
 
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-4">
               <div class="c-card">
                 <span class="c-icon c-icon--danger u-mb-small">
                   <i class="feather icon-shopping-cart"></i>
                 </span>
 
                 <h3 class="c-text--subtitle">Total Surveys Attended</h3>
-                <h1>623</h1>
+                <h1>{{$dataArray['header_data']['total_survey_count']}}</h1>
               </div>
             </div>
-
-            <div class="col-md-6 col-xl-3">
-              <div class="c-card">
-                <span class="c-icon c-icon--success u-mb-small">
-                  <i class="feather icon-users"></i>
-                </span>
-
-                <h3 class="c-text--subtitle">Companies Reviewed</h3>
-                <h1>250</h1>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-xl-3">
+         
+            <div class="col-md-6 col-xl-4">
               <div class="c-card">
                 <span class="c-icon c-icon--warning u-mb-small">
                   <i class="feather icon-zap"></i>
                 </span>
 
                 <h3 class="c-text--subtitle">Total Rewards</h3>
-                <h1>$8794</h1>
+                <h1>{{$dataArray['header_data']['total_rewards']}}</h1>
               </div>
             </div>
           </div>
