@@ -62,6 +62,11 @@
           </div>
         </div>
 
+        <div class="c-field">
+          <label class="c-field__label">Date of Birth</label>
+          <input class="c-input u-mb-small" type="array" name="date" id="datepicker" placeholder="DD/MM/YYYY">
+        </div>
+
         <div class="c-field u-mb-small">
           <label class="c-field__label">Account Type</label>
           <div class="c-select">
@@ -82,9 +87,18 @@
             <input class="c-input u-mb-small" type="password" name="password_confirmation" id="password_confirmation" placeholder="Use something complex">
           </div>
 
+     
+
         <input type="submit" class="c-btn c-btn--fullwidth c-btn--info" value="REGISTER"></input>
       </form>
     </div>
   </div>
 </div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+$(function() {
+  $( "#datepicker" ).datepicker();
+});
+</script>
 @endsection

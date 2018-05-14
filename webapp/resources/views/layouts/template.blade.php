@@ -19,6 +19,7 @@
         <script src="../js/jquery.validate.js"></script>
         <script src="../js/form.validate.js"></script>
         <script src="../js/functions.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
         <script src="../js/neat.js"></script>
         <!-- Stylesheet -->
         <link rel="stylesheet" href="../css/neat.css">
