@@ -43,6 +43,7 @@ class SurveyController extends BaseController {
         }
         $response['success'] = true;
         $response['message'] = 'Something Went Wrong';
+        exit();
         return $response;
     }
 

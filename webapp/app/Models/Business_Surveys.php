@@ -59,7 +59,7 @@ class Business_Surveys extends Eloquent {
      * @author     Ajith E R
      * @date       May 04, 2018
      * @brief      delet Survey Form.
-     * @param      $id.     
+     * @param      $id.
      */
     public function deleteSurvey($id) {
         return $this->tableObject->
@@ -71,7 +71,7 @@ class Business_Surveys extends Eloquent {
      * @author     Ajith E R
      * @date       May 04, 2018
      * @brief      get Survey Form.
-     * @param      $id.     
+     * @param      $id.
      */
     public function getContractDetail($id) {
         return $this->tableObject->
@@ -84,7 +84,7 @@ class Business_Surveys extends Eloquent {
      * @author     Ajith E R
      * @date       May 04, 2018
      * @brief      update Survey Form.
-     * @param      $data    
+     * @param      $data
      */
     public function updateContractDetail($data) {
         return $this->tableObject->
