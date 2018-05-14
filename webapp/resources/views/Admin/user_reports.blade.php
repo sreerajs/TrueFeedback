@@ -28,14 +28,14 @@
           <div class="col-md-6">
             <div class="c-state-card c-state-card--info">
               <h4 class="c-state-card__title">User Accounts</h4>
-              <span class="c-state-card__number">45</span>
+            <span class="c-state-card__number">{{$dataArray['user_count']}}</span>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="c-state-card c-state-card--success">
               <h4 class="c-state-card__title">Business Accounts</h4>
-              <span class="c-state-card__number">540</span>
+              <span class="c-state-card__number">{{$dataArray['business_count']}}</span>
             </div>
           </div>
 
@@ -54,25 +54,27 @@
                   </tr>
                 </thead>
 
-                <tbody>
-                  <tr class="c-table__row">
-                    <td class="c-table__cell">
-                      <div class="o-media">                        
-                        <div class="o-media__body">
-                          <h6>Adam Sandler</h6>
+                <tbody>                
+                 @foreach ($dataArray['data'] as $user)
+                 <tr class="c-table__row">
+                      <td class="c-table__cell">
+                        <div class="o-media">                        
+                          <div class="o-media__body">
+                            <h6>{{$user->first_name}} {{$user->last_name}}</h6>
+                          </div>
                         </div>
-                      </div>
+                      </td>
+                      <td class="c-table__cell">{{$user->email}}</td>
+                      <td class="c-table__cell">{{$user->account_type}}</td>
+                      <td class="c-table__cell">
+                        <button class="c-btn c-btn--fullwidth c-btn--info">View Profile</button>
                     </td>
-                    <td class="c-table__cell">Pinterest</td>
-                    <td class="c-table__cell">223</td>
-                    <td class="c-table__cell">
-                      <button class="c-btn c-btn--fullwidth c-btn--info">View Profile</button>
-                  </td>
-                  </tr>
-
-
+                 </tr>
+                @endforeach
                 </tbody>
               </table>
+              <br>
+              {{ $dataArray['data']->links() }}
             </div>
           </div>
         </div>
