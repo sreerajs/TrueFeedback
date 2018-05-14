@@ -67,7 +67,10 @@
                       <td class="c-table__cell">{{$user->email}}</td>
                       <td class="c-table__cell">{{$user->account_type}}</td>
                       <td class="c-table__cell">
-                        <button class="c-btn c-btn--fullwidth c-btn--info">View Profile</button>
+                        <form id="formProfile" action="profile" method="post">
+                          <input type="hidden" name="_token" value="{{$user->email}}">
+                           <input type="submit" value="Profile" class="c-btn c-btn--fullwidth c-btn--info"></input>
+                        </form>
                     </td>
                  </tr>
                 @endforeach

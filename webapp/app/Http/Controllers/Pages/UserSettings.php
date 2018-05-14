@@ -2,10 +2,10 @@
 
 /**
 * Pages/UserSettings
-* BytaCoin - User Settings Page Controller
+* TrueFeedback - User Settings Page Controller
 * PHP Laravel Version 5.5
 *
-* @author Tittu Varghese (tittu@servntire.com)
+* @author Stanly Johnson (stanly.johnson@servntire.com)
 *
 * (c) Servntire Global (servntire.com)
 */
@@ -98,6 +98,7 @@ class UserSettings extends Controller
     return view('profile',['dataArray' => $returnData]);
   }
 
+  
   /**
   * User Settings => Profile Settings - Update Profile
   * @author Tittu Varghese (tittu@servntire.com)
