@@ -35,7 +35,6 @@
                 <select class="c-select__input" type="country" id="country" name="country" placeholder="Location ">
                   <option>Location</option>
                   <option>Category</option>
-                  <option>High Rewards</option>
                 </select>
               </div>
             </div>
@@ -74,11 +73,10 @@
                         <th class="c-table__cell c-table__cell--head">Recommended for you</th>
                     </tr> 
                     <tr class="c-table__row">
-                      <th class="c-table__cell c-table__cell--head">Contract</th>
-                      <th class="c-table__cell c-table__cell--head">Catagory</th>
+                      <th class="c-table__cell c-table__cell--head">Survey Name</th>
+                      <th class="c-table__cell c-table__cell--head">Category</th>
                       <th class="c-table__cell c-table__cell--head">Interactions</th>
-                      <th class="c-table__cell c-table__cell--head">Date</th>
-                      <th class="c-table__cell c-table__cell--head">Tags</th>
+                      <th class="c-table__cell c-table__cell--head">Exp.Date</th>
                       <th class="c-table__cell c-table__cell--head">Actions</th>
                     </tr>
                   </thead>
@@ -101,23 +99,8 @@
                       <td class="c-table__cell">Pinterest</td>
                       <th class="c-table__cell">223</th>
                       <td class="c-table__cell">19-11-2018</td>
-                      <td class="c-table__cell">
-                        <a class="c-badge c-badge--small c-badge--info" href="#">sketch</a>
-                        <a class="c-badge c-badge--small c-badge--info" href="#">ui</a>
-                        <a class="c-badge c-badge--small c-badge--fancy" href="#">ux</a>
-                      </td>
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More <i class="feather icon-chevron-down"></i>
-                          </a>
-
-                          <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable1">
-                            <a class="c-dropdown__item dropdown-item" href="#">Deploy</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Delete</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Archive</a>
-                          </div>
-                        </div>
+                       <td class="c-table__cell">
+                          <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
                       </td>
                     </tr>
 
@@ -138,22 +121,9 @@
                       <td class="c-table__cell">Facebook</td>
                       <th class="c-table__cell">134</th>
                       <td class="c-table__cell">28-2-2018</td>
+                      
                       <td class="c-table__cell">
-                        <a class="c-badge c-badge--small c-badge--warning" href="#">research</a>
-                        <a class="c-badge c-badge--small c-badge--success" href="#">docs</a>
-                      </td>
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More <i class="feather icon-chevron-down"></i>
-                          </a>
-
-                          <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable2">
-                            <a class="c-dropdown__item dropdown-item" href="#">Link One</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Two</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Three</a>
-                          </div>
-                        </div>
+                          <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
                       </td>
                     </tr>
 
@@ -174,22 +144,9 @@
                       <td class="c-table__cell">Spotify</td>
                       <th class="c-table__cell">165</th>
                       <td class="c-table__cell">17-8-2018</td>
+                      
                       <td class="c-table__cell">
-                        <a class="c-badge c-badge--small c-badge--fancy" href="#">marketing</a>
-                        <a class="c-badge c-badge--small c-badge--info" href="#">seo</a>
-                      </td>
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More <i class="feather icon-chevron-down"></i>
-                          </a>
-
-                          <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable3">
-                            <a class="c-dropdown__item dropdown-item" href="#">Link One</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Two</a>
-                            <a class="c-dropdown__item dropdown-item" href="#">Link Three</a>
-                          </div>
-                        </div>
+                          <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
                       </td>
                     </tr>
 

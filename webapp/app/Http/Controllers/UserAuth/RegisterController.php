@@ -43,6 +43,7 @@ class RegisterController extends Controller
     $user->last_name = $request->get('last_name');
     $user->account_type = $request->get('account_type');
     $user->country = $request->get('country');
+    $user->dob = $request->get('datepicker');
     $user->email = $request->get('email_address');
     if($request->get('password') == $request->get('password_confirmation')) {
       $user->password = bcrypt($request->get('password'));

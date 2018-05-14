@@ -13,7 +13,7 @@ class DeployedContractsController extends Controller
         $user = Auth::user();           
         
         $returnData['user'] = $user;
-        $returnData['uri'] = 'Deployed Contracts';
+        $returnData['uri'] = 'Deployed Surveys';
         return view('deployed_contracts',['dataArray' => $returnData]);
     }
 }

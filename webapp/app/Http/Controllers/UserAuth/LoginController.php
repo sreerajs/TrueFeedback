@@ -63,7 +63,7 @@ class LoginController extends Controller
 
           auth()->user()->notify(new WelcomeNotification());
           
-          if(!$user->is_wallet_linked)
+          if((!$user->is_wallet_linked) && (!$user->account_type = "Admin"))
           {
             return view('Wallet/wallet_menu')->with('error', 'Please link your wallet to continue');
           }        

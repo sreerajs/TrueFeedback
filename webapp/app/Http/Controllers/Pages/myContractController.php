@@ -12,7 +12,7 @@ class myContractController extends BaseController {
         $user = Auth::user();
 
         $returnData['user'] = $user;
-        $returnData['uri'] = 'My Contract';
+        $returnData['uri'] = 'My Surveys';
         $returnData['contractList'] = self::getMyContractList($user->user_id); 
         $returnData['created_at'] = date("Y-m-d H:i:s");
         $returnData['updated_at'] = date("Y-m-d H:i:s");

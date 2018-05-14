@@ -27,66 +27,33 @@
         <div class="row">
           <div class="col-md-4">
             <div class="c-state-card c-state-card--info">
-              <h4 class="c-state-card__title">Contracts</h4>
-              <span class="c-state-card__number">45</span>
+            <h4 class="c-state-card__title">{{ $dataArray['dashboard_banner']['heading_one']}}</h4>
+              <span class="c-state-card__number">{{ $dataArray['dashboard_banner']['heading_one_value']}}</span>
               <p class="c-state-card__status">
                 <i class="feather icon-trending-up"></i> 23% Increase
               </p>
-
-              <div class="c-state-card__actions dropdown">
-                <span class="dropdown-toggle" id="dropdownMenuState1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                  <i class="feather icon-more-vertical"></i>
-                </span>
-
-                <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuState1">
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 1</a>
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 2</a>
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 3</a>
-                </div>
-              </div>
-
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="c-state-card c-state-card--success">
-              <h4 class="c-state-card__title">Responses</h4>
-              <span class="c-state-card__number">540</span>
+              <h4 class="c-state-card__title">{{ $dataArray['dashboard_banner']['heading_two']}}</h4>
+              <span class="c-state-card__number">{{ $dataArray['dashboard_banner']['heading_two_value']}}</span>
               <p class="c-state-card__status">
                 <i class="feather icon-trending-down"></i> 12% Decrease
               </p>
-              <div class="c-state-card__actions dropdown">
-                <span class="dropdown-toggle" id="dropdownMenuState2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                  <i class="feather icon-more-vertical"></i>
-                </span>
 
-                <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuState2">
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 1</a>
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 2</a>
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 3</a>
-                </div>
-              </div>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="c-state-card c-state-card--fancy">
-              <h4 class="c-state-card__title">Tokens Spent</h4>
-              <span class="c-state-card__number">45,000</span>
+              <h4 class="c-state-card__title">{{ $dataArray['dashboard_banner']['heading_three']}}</h4>
+              <span class="c-state-card__number">{{ $dataArray['dashboard_banner']['heading_three_value']}}</span>
               <p class="c-state-card__status">
                 <i class="feather icon-trending-up"></i> 65% Increase
               </p>
-              <div class="c-state-card__actions dropdown">
-                <span class="dropdown-toggle" id="dropdownMenuState3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                  <i class="feather icon-more-vertical"></i>
-                </span>
 
-                <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuState3">
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 1</a>
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 2</a>
-                  <a class="c-dropdown__item dropdown-item" href="#">Link 3</a>
-                </div>
-              </div>
             </div>
           </div>
 
