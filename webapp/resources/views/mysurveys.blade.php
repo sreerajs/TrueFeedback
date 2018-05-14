@@ -35,7 +35,6 @@
                 <select class="c-select__input" type="country" id="country" name="country" placeholder="Location ">
                   <option>Location</option>
                   <option>Category</option>
-                  <option>High Rewards</option>
                 </select>
               </div>
             </div>
