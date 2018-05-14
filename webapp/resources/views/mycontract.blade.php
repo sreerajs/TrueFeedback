@@ -20,33 +20,13 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-12">
-                    <div class="c-state-card c-state-card--info" href = "create-contract.html">
-                        <h4 class="c-state-card__title">Create Contract</h4>
-
-                        <p class="c-state-card__status">
-                            <i class="feather icon-trending-up"></i> Click here to create a new contract
-                        </p>
-
-                        <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="create-contract.html">Login</a>
-
-
-                    </div>
-                </div>
-
-
-
-
-            </div>
-
-            <div class="row">
                 <div class="col-12">
                     <div class="c-table-responsive@wide">
                         <table class="c-table">
                             <thead class="c-table__head">
                                 <tr class="c-table__row">
                                     <th class="c-table__cell c-table__cell--head">Contract</th>
-                                    <th class="c-table__cell c-table__cell--head">Catagory</th>
+                                    <th class="c-table__cell c-table__cell--head">Category</th>
                                     <th class="c-table__cell c-table__cell--head">Interactions</th>
                                     <th class="c-table__cell c-table__cell--head">Date</th>
                                     <th class="c-table__cell c-table__cell--head">Tags</th>

@@ -2,10 +2,10 @@
 
 /**
 * Pages/Dashboard
-* BytaCoin - User Dashboard Controller
+* TrueFeedback - User/Admin/Business Dashboard Controller
 * PHP Laravel Version 5.5
 *
-* @author Tittu Varghese (tittu@servntire.com)
+* @author Stanly Johnson (stanly.johnson@servntire.com)
 *
 * (c) Servntire Global (servntire.com)
 */
@@ -30,7 +30,7 @@ class Dashboard extends Controller
 
   /**
   * User Dashboard View and Data
-  * @author Tittu Varghese (tittu@servntire.com)
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
   *
   * @param  Request | $request
   * @return array | $dataArray
@@ -44,7 +44,7 @@ class Dashboard extends Controller
       $uri = "User Dashboard";
 
       //setting dashboard banner values
-      $heading_one = "Surveys";
+      $heading_one = "Surveys Attended";
       $heading_one_value = "0";
 
       $heading_two = "Responses";

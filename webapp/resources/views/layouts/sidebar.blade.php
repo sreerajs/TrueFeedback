@@ -64,12 +64,12 @@
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/business/mycontract">
-                        <i class="c-sidebar__icon feather icon-box"></i>My Contracts
+                        <i class="c-sidebar__icon feather icon-box"></i>My Surveys
                     </a>
                 </li>
                 <li>
                     <a class="c-sidebar__link" href="/business/deployed_contracts">
-                        <i class="c-sidebar__icon feather icon-copy"></i>Deployed Contracts
+                        <i class="c-sidebar__icon feather icon-copy"></i>Deployed Surveys
                     </a>
                 </li>
                 <li>
