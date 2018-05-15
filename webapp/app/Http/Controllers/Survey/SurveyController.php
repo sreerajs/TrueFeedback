@@ -30,7 +30,7 @@ class SurveyController extends BaseController {
         $user = Auth::user();
         $survey['user_id'] = $user->user_id;
         $survey['name'] = $this->request->input('survey_name');
-        $survey['survey_form'] = $this->request->input('survey_form');
+        $survey['survey_form'] = $this->request->input('survey_form');       
         $survey['created_at'] = date("Y-m-d");
         $survey['updated_at'] = date("Y-m-d");
         $businessSurveyModel = new Business_Surveys();
@@ -43,6 +43,7 @@ class SurveyController extends BaseController {
         }
         $response['success'] = true;
         $response['message'] = 'Something Went Wrong';
+        exit();
         return $response;
     }
 
