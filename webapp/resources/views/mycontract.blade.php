@@ -29,7 +29,7 @@
                                     <th class="c-table__cell c-table__cell--head">Category</th>
                                     <th class="c-table__cell c-table__cell--head">Interactions</th>
                                     <th class="c-table__cell c-table__cell--head">Date</th>
-                                    <th class="c-table__cell c-table__cell--head">Tags</th>
+                                    
                                     <th class="c-table__cell c-table__cell--head">Actions</th>
                                 </tr>
                             </thead>
@@ -48,11 +48,7 @@
                                     <td class="c-table__cell">Pinterest</td>
                                     <th class="c-table__cell">223</th>
                                     <td class="c-table__cell">{{$contract->updated_at }}</td>
-                                    <td class="c-table__cell">
-                                        <a class="c-badge c-badge--small c-badge--info" href="#">sketch</a>
-                                        <a class="c-badge c-badge--small c-badge--info" href="#">ui</a>
-                                        <a class="c-badge c-badge--small c-badge--fancy" href="#">ux</a>
-                                    </td>
+                                    
                                     <td class="c-table__cell">
                                         <div class="c-dropdown dropdown">
                                             <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
