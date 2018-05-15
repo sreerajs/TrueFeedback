@@ -1,11 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace App\Http\Controllers\Survey;
 
 use App\Http\Controllers\BaseController;
@@ -90,6 +84,33 @@ class SurveyController extends BaseController {
         $survey['name'] = $this->request->input('survey_name');
         $survey['survey_form'] = $this->request->input('survey_form');
         $survey['updated_at'] = date("Y-m-d");
+
+        $businessSurveyModel = new Business_Surveys();
+        $businessSurveyModel->updateContractDetail($survey);
+
+        $response['success'] = true;
+        $response['message'] = '';
+        return $response;
+    }
+
+    /**
+  * Deploy survey 
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  *
+  * @param  Request | $request
+  * @return array | $dataArray
+  * @return view | dashboard
+  */
+    
+    public function deploySurvey() {
+        
+        //set deployed field to true in table
+        $is_deployed = 1;
+
+        $user = Auth::user();
+        $survey['user_id'] = $user->user_id;
+        $survey['id'] = $this->request->input('contract_id');
+        $survey['is_deployed'] = 1;
 
         $businessSurveyModel = new Business_Surveys();
         $businessSurveyModel->updateContractDetail($survey);

@@ -71,3 +71,24 @@ function updateContractData() {
         });
     }
 }
+
+function deployContract(id) {
+    var token = $('#token').val();
+    var param = {
+        'contract_id': id
+    };
+    $.ajax({
+        type: 'POST',
+        headers: {'X-CSRF-TOKEN': token},
+        url: "/business/deploycontract",
+        data: param,
+        success: function (data) {
+            if (data.success) {
+                $('#contract-' + id).slideUp(300, function () {
+                });
+            } else {
+                //do somthing here
+            }
+        }
+    });
+}
