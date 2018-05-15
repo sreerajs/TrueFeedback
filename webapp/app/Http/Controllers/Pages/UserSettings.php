@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use PragmaRX\Countries\Package\Countries;
+use App\User;
 
 class UserSettings extends Controller
 {

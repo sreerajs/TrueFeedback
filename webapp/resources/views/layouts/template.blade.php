@@ -16,22 +16,22 @@
 
         <!-- Scripts-->
 
-        <script src="../js/jquery.validate.js"></script>
-        <script src="../js/form.validate.js"></script>
-        <script src="../js/functions.js"></script>
+        <script src="../../js/jquery.validate.js"></script>
+        <script src="../../js/form.validate.js"></script>
+        <script src="../../js/functions.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-        <script src="../js/neat.js"></script>
+        <script src="../../js/neat.js"></script>
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="../css/neat.css">
-        <link rel="stylesheet" href="../css/style.css">               
+        <link rel="stylesheet" href="../../css/neat.css">
+        <link rel="stylesheet" href="../../css/style.css">               
         <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.1/jquery.rateyo.min.css">
     </head>
     <body>
         @yield('body_content')
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-        <script src="../js/vendor.js"></script>   
-        <script src="../js/form-builder.min.js" type="text/javascript"></script>  
-        <script src="../js/form-render.min.js" type="text/javascript"></script>
+        <script src="../../js/vendor.js"></script>   
+        <script src="../../js/form-builder.min.js" type="text/javascript"></script>  
+        <script src="../../js/form-render.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.1/jquery.rateyo.min.js"></script>                
         <script src="../js/form-composer.js">< /script
 

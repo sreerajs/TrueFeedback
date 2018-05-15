@@ -23,11 +23,15 @@ class UserReports extends Controller
 {
     protected function report (Request $request)
     {
+        //change pagination value here
+        $pagination_count = 5;
+        
+        
         $user = Auth::user();
 
         $users_count = DB::table('users')->where('account_type', 'User')->count();
         $business_count = DB::table('users')->where('account_type', 'Business')->count();
-        $data = DB::table('users')->paginate(3);
+        $data = DB::table('users')->paginate($pagination_count);
 
         $returnData['user'] = $user;
         $returnData['uri'] = 'User Reports';
