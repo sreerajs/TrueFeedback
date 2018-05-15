@@ -23,9 +23,14 @@ class SurveyReports extends Controller
 {
     protected function report (Request $request)
     {
+        $pagination_count = 5;
         $user = Auth::user();
+
+        $data = DB::table('business_surveys')->paginate($pagination_count);
+
         $returnData['user'] = $user;
         $returnData['uri'] = 'Survey Reports';
+        $returnData['data'] = $data;
         return view('Admin/survey_reports',['dataArray' => $returnData]);
     }
 }

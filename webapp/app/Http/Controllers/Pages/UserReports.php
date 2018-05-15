@@ -24,7 +24,7 @@ class UserReports extends Controller
     protected function report (Request $request)
     {
         //change pagination value here
-        $pagination_count = 3;
+        $pagination_count = 5;
         
         
         $user = Auth::user();
