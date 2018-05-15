@@ -148,7 +148,7 @@
     </div>
 
     <div class="c-dropdown__menu has-arrow dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuAvatar">
-      <a class="c-dropdown__item dropdown-item" href="/admin/profile">Edit Profile</a>
+      <!--<a class="c-dropdown__item dropdown-item" href="/admin/profile">Edit Profile</a> -->
       <!--<a class="c-dropdown__item dropdown-item" href="#">View Activity</a> -->
       <a class="c-dropdown__item dropdown-item" href="../logout">Logout</a>
     </div>
