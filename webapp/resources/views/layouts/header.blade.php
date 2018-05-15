@@ -140,11 +140,7 @@
 
   <div class="c-dropdown dropdown">
     <div class="c-avatar c-avatar--xsmall dropdown-toggle" id="dropdownMenuAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-      @if ($dataArray['user']->profile_image != '')
-      <img class="c-avatar__img" src="{{ $dataArray['user']->profile_image }}" alt="{{ $dataArray['user']->first_name }}">
-      @else
-      <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="{{ $dataArray['user']->first_name }}">
-      @endif
+      <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Admin">
     </div>
 
     <div class="c-dropdown__menu has-arrow dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuAvatar">
