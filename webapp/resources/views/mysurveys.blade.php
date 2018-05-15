@@ -75,80 +75,34 @@
                     <tr class="c-table__row">
                       <th class="c-table__cell c-table__cell--head">Survey Name</th>
                       <th class="c-table__cell c-table__cell--head">Category</th>
-                      <th class="c-table__cell c-table__cell--head">Interactions</th>
+                      <th class="c-table__cell c-table__cell--head">Reward</th>
                       <th class="c-table__cell c-table__cell--head">Exp.Date</th>
                       <th class="c-table__cell c-table__cell--head">Actions</th>
                     </tr>
                   </thead>
 
                   <tbody>
+
+                    @foreach ($dataArray['data'] as $survey)
                     <tr class="c-table__row">
                       <td class="c-table__cell">
                         <div class="o-media">
-                          <div class="o-media__img u-mr-xsmall">
-                            <div class="c-avatar c-avatar--small">
-                              <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Jessica Alba">
-                            </div>
-                          </div>
+                          
                           <div class="o-media__body">
-                            <h6>Adam Sandler</h6>
-                            <p>Graphic Designer</p>
+                            <h6>{{$survey->name}}</h6>
+                           
                           </div>
                         </div>
                       </td>
                       <td class="c-table__cell">Pinterest</td>
                       <th class="c-table__cell">223</th>
-                      <td class="c-table__cell">19-11-2018</td>
+                      <td class="c-table__cell">{{$survey->created_at}}</td>
                        <td class="c-table__cell">
                           <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
                       </td>
                     </tr>
-
-                    <tr class="c-table__row">
-                      <td class="c-table__cell">
-                        <div class="o-media">
-                          <div class="o-media__img u-mr-xsmall">
-                            <div class="c-avatar c-avatar--small">
-                              <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Jessica Alba">
-                            </div>
-                          </div>
-                          <div class="o-media__body">
-                            <h6>Adam Sandler</h6>
-                            <p>Copy Writer</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="c-table__cell">Facebook</td>
-                      <th class="c-table__cell">134</th>
-                      <td class="c-table__cell">28-2-2018</td>
-                      
-                      <td class="c-table__cell">
-                          <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
-                      </td>
-                    </tr>
-
-                    <tr class="c-table__row">
-                      <td class="c-table__cell">
-                        <div class="o-media">
-                          <div class="o-media__img u-mr-xsmall">
-                            <div class="c-avatar c-avatar--small">
-                              <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Jessica Alba">
-                            </div>
-                          </div>
-                          <div class="o-media__body">
-                            <h6>Adam Sandler</h6>
-                            <p>Marketing Dir.</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="c-table__cell">Spotify</td>
-                      <th class="c-table__cell">165</th>
-                      <td class="c-table__cell">17-8-2018</td>
-                      
-                      <td class="c-table__cell">
-                          <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
-                      </td>
-                    </tr>
+                    @endforeach
+                    
 
                   </tbody>
                 </table>

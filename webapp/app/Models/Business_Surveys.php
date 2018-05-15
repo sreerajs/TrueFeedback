@@ -51,6 +51,23 @@ class Business_Surveys extends Eloquent {
         return $this->tableObject->
                         where('user_id', $userId)->
                         where('is_deleted', 0)->
+                        where('is_deployed', 0)->
+                        orderBy('updated_at', 'DESC')->
+                        paginate(10);
+    }
+
+    /**
+     * @author     Stanly Johnson
+     * @date       May 15, 2018
+     * @brief      Fetch deployed surveys
+     * @param      $data  Data array.
+     * @return     Insert operation output
+     */
+    public function getDeployedSurvey($userId) {
+        return $this->tableObject->
+                        where('user_id', $userId)->
+                        where('is_deleted', 0)->
+                        where('is_deployed', 1)->
                         orderBy('updated_at', 'DESC')->
                         paginate(10);
     }

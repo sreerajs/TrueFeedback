@@ -21,6 +21,12 @@ class CreateBusinessSurveysTable extends Migration
             $table->text('survey_form');
             $table->integer('is_deployed')->default(0);
             $table->integer('is_deleted')->default(0);
+
+            //deployment details
+            $table->date('expiry_date')->nullable();
+            $table->integer('reward')->nullable();
+            $table->string('category',225)->nullable();
+
             $table->timestamps();
         });
     }
