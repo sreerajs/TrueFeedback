@@ -158,7 +158,7 @@ Route::group(['prefix' => 'business', 'middleware' => ['role:Business', 'auth', 
  */
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin', 'auth', 'admin']], function() {
     Route::get('/home', 'Pages\Dashboard@user');
-    Route::post('/profile', 'Pages\UserProfile@import');
+    //Route::post('/profile', 'Pages\UserProfile@import');
     Route::post('/profileImage', 'Functions\Upload@avatar');
     Route::post('/userprofile', 'Pages\UserSettings@profileUpdate');
     Route::post('/userpassword', 'Pages\UserSettings@profilePassword');
@@ -166,8 +166,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin', 'auth', 'admin
     Route::get('/user_reports', 'Pages\UserReports@report');
     Route::get('/survey_reports', 'Pages\SurveyReports@report');
     Route::get('/activities', 'Pages\ActivityReports@report');
-
-
-    Route::get('/profile', 'Pages\UserProfile@import');
+    Route::get('/profile/{email_id}', 'Pages\UserProfile@import');
 });
 

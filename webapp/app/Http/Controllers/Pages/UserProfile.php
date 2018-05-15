@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use PragmaRX\Countries\Package\Countries;
+use App\User;
 
 class UserProfile extends Controller
 {
@@ -30,11 +31,13 @@ class UserProfile extends Controller
   * @return view | dashboard => settings => organization
   */
 
-  protected function import(Request $request) {
+  public function import($email_id) {
 
+    $user_data = User::where('email', $email_id)->first();
     $user = Auth::user();
 
     $returnData['user'] = $user;
+    $returnData['user_data'] = $user_data;
     $returnData['uri'] = 'Profile View';
     return view('Admin/user_profile',['dataArray' => $returnData]);
     

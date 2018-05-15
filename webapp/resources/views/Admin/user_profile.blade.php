@@ -17,19 +17,19 @@
                                 <img class="c-avatar__img" src="http://via.placeholder.com/72" alt="Avatar">
                               </div>
             
-                              <h5>Adam Sandler</h5>                             
+                              <h5>{{$dataArray['user_data']['first_name']}} {{$dataArray['user_data']['last_name']}}</h5>                             
                             </div>
             
                             <span class="c-divider u-mv-small"></span>
             
-                            <span class="c-text--subtitle">Email Address</span>
-                            <p class="u-mb-small u-text-large">adam@sandler.com</p>
+                            <span class="c-text--subtitle" style="color:blue;">Email Address</span>
+                            <p class="u-mb-small u-text-large">{{$dataArray['user_data']['email']}}</p>
             
-                            <span class="c-text--subtitle">Account Type</span>
-                            <p class="u-mb-small u-text-large">+966 535-277-535</p>
+                            <span class="c-text--subtitle" style="color:blue;">Account Type</span>
+                            <p class="u-mb-small u-text-large">{{$dataArray['user_data']['account_type']}}</p>
             
-                            <span class="c-text--subtitle">Country</span>
-                            <p class="u-mb-small u-text-large">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+                            <span class="c-text--subtitle" style="color:blue;">Country</span>
+                            <p class="u-mb-small u-text-large">{{$dataArray['user_data']['country']}}</p>
                                         
                             
                            
@@ -39,24 +39,45 @@
             <div class="col-md-offset-3 col-md-6">
                     <div class="c-card">
                             
-                            <span class="c-text--subtitle">Date of Birth</span>
-                            <p class="u-mb-small u-text-large">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+                            <span class="c-text--subtitle" style="color:blue;">Date of Birth</span>
+                            <p class="u-mb-small u-text-large">{{$dataArray['user_data']['dob']}}</p>
             
-                            <span class="c-text--subtitle">Wallet Status</span>
-                            <p class="u-mb-small u-text-large">adam@sandler.com</p>
-            
-                            <span class="c-text--subtitle">ETH balance</span>
-                            <p class="u-mb-small u-text-large">+966 535-277-535</p>
-            
-                            <span class="c-text--subtitle">Feedback Token Balance</span>
-                            <p class="u-mb-small u-text-large">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
-            
-                            <span class="c-text--subtitle">Created at</span>
-                            <p class="u-mb-small u-text-large">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+                            <span class="c-text--subtitle" style="color:blue;">Wallet Status</span>
+                            @if ($dataArray['user_data']['is_wallet_linked'] != 0)
+                            <p class="u-mb-small u-text-large" style="color:green;">LINKED</p>
+                            @else
+                            <p class="u-mb-small u-text-large" style="color:red;">NOT LINKED</p>
+                            @endif
 
-                            <span class="c-text--subtitle">Email Verified</span>
-                            <p class="u-mb-small u-text-large">71 Pilgrim Avenue Chevy Chase, MD 20815</p>
+                            <span class="c-text--subtitle" style="color:blue;">ETH balance</span>
+                            @if ($dataArray['user_data']['eth_token_balance'] != NULL)
+                            <p class="u-mb-small u-text-large">{{$dataArray['user_data']['eth_token_balance']}}</p>
+                            @else
+                            <p class="u-mb-small u-text-large">N.A</p>
+                            @endif
+            
+                            <span class="c-text--subtitle" style="color:blue;">Feedback Token Balance</span>
+                            @if ($dataArray['user_data']['feedback_token_balance'] != NULL)
+                            <p class="u-mb-small u-text-large">{{$dataArray['user_data']['feedback_token_balance']}}</p>
+                            @else
+                            <p class="u-mb-small u-text-large">N.A</p>
+                            @endif
+                           
+            
+                            <span class="c-text--subtitle" style="color:blue;">Created at</span>                            
+                            @if ($dataArray['user_data']['created_at'] != NULL)
+                            <p class="u-mb-small u-text-large">{{$dataArray['user_data']['created_at']}}</p>
+                            @else
+                            <p class="u-mb-small u-text-large">N.A</p>
+                            @endif
 
+                            <span class="c-text--subtitle" style="color:blue;">Email Verified</span>
+                            
+                            @if ($dataArray['user_data']['verified'] != 0)
+                            <p class="u-mb-small u-text-large" style="color:green;">VERIFIED</p>
+                            @else
+                            <p class="u-mb-small u-text-large" style="color:red;">NOT VERIFIED</p>
+                            @endif
                           </div>
 
             </div>

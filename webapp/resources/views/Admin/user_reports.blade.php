@@ -67,9 +67,7 @@
                       <td class="c-table__cell">{{$user->email}}</td>
                       <td class="c-table__cell">{{$user->account_type}}</td>
                       <td class="c-table__cell">
-                        <form id="formProfile" action="profile" method="post">
-                          <input type="hidden" name="_token" value="{{$user->email}}">
-                           <input type="submit" value="Profile" class="c-btn c-btn--fullwidth c-btn--info"></input>
+                      <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/admin/profile/{{$user->email}}">Profile</a>
                         </form>
                     </td>
                  </tr>
