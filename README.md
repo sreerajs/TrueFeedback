@@ -21,6 +21,7 @@ Original Template : [Demo / Preview](https://zawiastudio.com/neat/demo/dashboard
 
 ## Running / Local Development
 * Pull the repository
+* 'cd webapp'
 * Update composer `composer update`
 * Clear composer configuration `composer dump-autoload`
 * Migrate database `php artisan migrate`
@@ -33,7 +34,7 @@ Original Template : [Demo / Preview](https://zawiastudio.com/neat/demo/dashboard
 * [JQuery Validation](https://jqueryvalidation.org/documentation/)
 
 ## Automatic Deployment
-* Live URL: 
+* Live URL:
 * Deployment without composer update: `localhost:{port}/deploy`
 * Deployment with composer update: `localhost:{port}/deploy/composer`
 
@@ -125,5 +126,3 @@ class ClassName extends Controller {
 /* File Naming: file-name.blade.php */
 /* Section Naming: section_name */
 ```
-
-
