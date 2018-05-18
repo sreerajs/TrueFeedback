@@ -26,6 +26,8 @@ class CreateBusinessSurveysTable extends Migration
             $table->date('expiry_date')->nullable();
             $table->integer('reward')->nullable();
             $table->string('category',225)->nullable();
+            $table->integer('max_responses')->nullable();
+            $table->integer('min_responses')->nullable();
 
             $table->timestamps();
         });

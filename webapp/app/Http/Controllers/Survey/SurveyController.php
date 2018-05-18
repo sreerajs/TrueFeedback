@@ -1,11 +1,24 @@
 <?php
+/**
+* Survey/SurveyController
+* TrueFeedback - Handle Survey Creation
+* PHP Laravel Version 5.5
+*
+* @author Ajith E R
+*
+* (c) Servntire Global (servntire.com)
+*/
 
 namespace App\Http\Controllers\Survey;
 
 use App\Http\Controllers\BaseController;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Business_Surveys as Business_Surveys;
-
+use Illuminate\Notifications\Notifiable;
+use App\Notifications\WelcomeNotification;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use PragmaRX\Countries\Package\Countries;
 /**
  * Description of SurveyController
  *
@@ -24,7 +37,7 @@ class SurveyController extends BaseController {
         $user = Auth::user();
         $survey['user_id'] = $user->user_id;
         $survey['name'] = $this->request->input('survey_name');
-        $survey['survey_form'] = $this->request->input('survey_form');       
+        $survey['survey_form'] = $this->request->input('survey_form');
         $survey['created_at'] = date("Y-m-d");
         $survey['updated_at'] = date("Y-m-d");
         $businessSurveyModel = new Business_Surveys();
@@ -93,31 +106,22 @@ class SurveyController extends BaseController {
         return $response;
     }
 
-    /**
-  * Deploy survey 
+  /**
+  * Function to show Deploy survey
   * @author Stanly Johnson (stanly.johnson@servntire.com)
   *
-  * @param  Request | $request
-  * @return array | $dataArray
-  * @return view | dashboard
+  * @return view | deploy_contract
   */
-    
+  //do not use - logic changed
     public function deploySurvey() {
-        
-        //set deployed field to true in table
-        $is_deployed = 1;
 
-        $user = Auth::user();
-        $survey['user_id'] = $user->user_id;
-        $survey['id'] = $this->request->input('contract_id');
-        $survey['is_deployed'] = 1;
+      $user = Auth::user();
 
-        $businessSurveyModel = new Business_Surveys();
-        $businessSurveyModel->updateContractDetail($survey);
+      $returnData['uri'] = "Deploy Survey";
+      $returnData['user'] = $user;
+      $returnData['survey_id'] = $this->request->input('contract_id');
+      return view('deploy_contract',['dataArray' => $returnData]);
 
-        $response['success'] = true;
-        $response['message'] = '';
-        return $response;
     }
 
 }

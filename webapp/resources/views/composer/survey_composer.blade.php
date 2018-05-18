@@ -10,32 +10,32 @@
         @include('layouts.header')
         @role('Business')
         @yield('business_header')
-        @endrole  
+        @endrole
         <div class="container">
             <div class="row  m-b-20">
                 <div class="col-md-4" id="sm-template-one">
                     <div class="c-state-card c-state-card--info">
-                        <h4 class="c-state-card__title">Template One</h4>
+                        <h4 class="c-state-card__title">Quick Survey</h4>
                         <p class="c-state-card__status">
-                            Template One Description
+                            Set up a survey to collect info on users
                         </p>
                     </div>
                 </div>
 
                 <div class="col-md-4" id="sm-template-two">
                     <div class="c-state-card c-state-card--success">
-                        <h4 class="c-state-card__title">Template Two</h4>
+                        <h4 class="c-state-card__title">Name Collection</h4>
                         <p class="c-state-card__status">
-                            Template Two Description
+                            Collect users name
                         </p>
                     </div>
                 </div>
 
                 <div class="col-md-4" id="sm-template-three">
                     <div class="c-state-card c-state-card--fancy">
-                        <h4 class="c-state-card__title">Template Three</h4>
+                        <h4 class="c-state-card__title">Job Collection</h4>
                         <p class="c-state-card__status">
-                            Template Three Description
+                          Collect info on users jobs
                         </p>
                     </div>
                 </div>
@@ -58,15 +58,18 @@
                                 <label class="c-field__label" for="input1">Survey Name</label>
                                 <input class="c-input" id="input-survey-name" name= "" type="text" placeholder="My First Survey" required="">
                             </div>
+                            <p style="font-size:8">Saved surveys can be edited/deployed from the Deployed Surveys tab</p>
+                            <br />
                             <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
                                 Save
                             </button>
-                            <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
+                            <!--<button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
                                 Deploy
-                            </button>
+                            </button> -->
                             <button class="c-btn c-btn--info" data-dismiss="modal">
                                 Close
                             </button>
+
                         </div>
                     </div>
                 </div>
