@@ -10,7 +10,7 @@
         @include('layouts.header')
         @role('Business')
         @yield('business_header')
-        @endrole  
+        @endrole
         <div class="container">
             <div class="row  m-b-20">
                 <div class="col-md-4" id="sm-template-one">
@@ -61,9 +61,9 @@
                             <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
                                 Save
                             </button>
-                            <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
+                            <!--<button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
                                 Deploy
-                            </button>
+                            </button> -->
                             <button class="c-btn c-btn--info" data-dismiss="modal">
                                 Close
                             </button>
