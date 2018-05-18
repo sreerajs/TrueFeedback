@@ -15,27 +15,27 @@
             <div class="row  m-b-20">
                 <div class="col-md-4" id="sm-template-one">
                     <div class="c-state-card c-state-card--info">
-                        <h4 class="c-state-card__title">Template One</h4>
+                        <h4 class="c-state-card__title">Quick Survey</h4>
                         <p class="c-state-card__status">
-                            Template One Description
+                            Set up a survey to collect info on users
                         </p>
                     </div>
                 </div>
 
                 <div class="col-md-4" id="sm-template-two">
                     <div class="c-state-card c-state-card--success">
-                        <h4 class="c-state-card__title">Template Two</h4>
+                        <h4 class="c-state-card__title">Name Collection</h4>
                         <p class="c-state-card__status">
-                            Template Two Description
+                            Collect users name
                         </p>
                     </div>
                 </div>
 
                 <div class="col-md-4" id="sm-template-three">
                     <div class="c-state-card c-state-card--fancy">
-                        <h4 class="c-state-card__title">Template Three</h4>
+                        <h4 class="c-state-card__title">Job Collection</h4>
                         <p class="c-state-card__status">
-                            Template Three Description
+                          Collect info on users jobss
                         </p>
                     </div>
                 </div>

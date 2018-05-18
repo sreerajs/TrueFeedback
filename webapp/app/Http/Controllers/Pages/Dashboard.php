@@ -58,14 +58,25 @@ class Dashboard extends Controller
       $uri = "Business Dashboard";
 
       //setting dashboard banner values
-      $heading_one = "Surveys";
-      $heading_one_value = "0";
+      $deployed_surveys_count = DB::table('business_surveys')
+        ->where('user_id', $user->user_id)
+        ->where('is_deployed', 1)
+        ->where('is_deleted', 0)
+        ->count();
+      $heading_one = "Surveys Deployed";
+      $heading_one_value = $deployed_surveys_count;
 
+      $response_count = "0";
       $heading_two = "Responses";
-      $heading_two_value = "0";
+      $heading_two_value = $response_count;
 
-      $heading_three = "Surveys";
-      $heading_three_value = "0";
+      $saved_surveys_count = DB::table('business_surveys')
+        ->where('user_id', $user->user_id)
+        ->where('is_deployed', 0)
+        ->where('is_deleted', 0)
+        ->count();
+      $heading_three = "Surveys Saved";
+      $heading_three_value = $saved_surveys_count;
     }
 
     else if($uri == 'admin/home') {
@@ -82,7 +93,7 @@ class Dashboard extends Controller
       $heading_two_value = $business_count;
 
       $heading_three = "Surveys";
-      $heading_three_value = "0";   
+      $heading_three_value = "0";
 
     }
 

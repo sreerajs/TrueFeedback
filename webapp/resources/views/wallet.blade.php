@@ -57,14 +57,6 @@
 
                       <td class="c-table__cell">
                         <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info" >
-                            Send/Receive Tokens
-                          </a>
-                        </div>
-                      </td>
-
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
                             <input type="button" class="c-btn c-btn--info" id="btn" value ="View Wallet Information">
                         </div>
                       </td>
