@@ -30,7 +30,7 @@
                   <td class="c-table__cell">
                     <div class="c-field u-mb-small">
                       <label class="c-field__label">ETH</label>
-                      <input class="c-input" placeholder="0.00" required>
+                      <input class="c-input" placeholder="0.00" id="eth-value" name="eth-value" type="text" size="30">
                     </div>
                   </td>
 
@@ -39,7 +39,7 @@
                   <td class="c-table__cell">
                     <div class="c-field u-mb-small">
                       <label class="c-field__label">Feedback Token</label>
-                      <input class="c-input" placeholder="0.00" required>
+                      <input class="c-input" placeholder="0.00" id="ft-value" name="ft-value" type="text" size="50">
                     </div>
                   </td>
 
@@ -47,6 +47,7 @@
 
                   <td class="c-table__cell">
                     <div class="c-dropdown dropdown">
+                      <!--Link the purchase token feature here-->
                       <a href="#" class="c-btn c-btn--info">
                           Buy Feedback Tokens
                         </a>
@@ -77,6 +78,7 @@
 
                   <td class="c-table__cell">
                     <div class="c-dropdown dropdown">
+                      <!--Link the send feature here-->
                       <a href="#" class="c-btn c-btn--warning">
                         Send ETH
                       </a>
@@ -144,4 +146,28 @@
       </div>
     </div>
     <!-- // .container -->
+
+        <script type="text/javascript">
+        $(document).ready(function()
+        {
+            function updateToken()
+            {
+                var price = parseFloat($("#eth-value").val());
+                var total = price*1000 || 0.00;
+                var total = total.toFixed(2) || 0.00;
+                $("#ft-value").val(total);
+            }
+
+            function updateETH()
+            {
+                var price = parseFloat($("#ft-value").val());
+                var total = price/1000 || 0.00;
+                var total = total.toFixed(3);
+                $("#eth-value").val(total);
+            }
+            $(document).on("change, keyup", "#eth-value", updateToken);
+            $(document).on("change, keyup", "#ft-value", updateETH);
+        });
+
+            </script>
     @endsection
