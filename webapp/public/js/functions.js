@@ -46,7 +46,7 @@ function editContract(id) {
     window.location.replace('/business/composer?edit_contract=' + id);
 }
 
-function updateContractData() {    
+function updateContractData() {
     var name = document.getElementById('input-survey-name').value;
     if (name !== undefined && name !== '') {
         var token = $('#token').val();
@@ -84,8 +84,7 @@ function deployContract(id) {
         data: param,
         success: function (data) {
             if (data.success) {
-                $('#contract-' + id).slideUp(300, function () {
-                });
+
             } else {
                 //do somthing here
             }

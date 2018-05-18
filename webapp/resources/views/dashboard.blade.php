@@ -29,20 +29,13 @@
             <div class="c-state-card c-state-card--info">
             <h4 class="c-state-card__title">{{ $dataArray['dashboard_banner']['heading_one']}}</h4>
               <span class="c-state-card__number">{{ $dataArray['dashboard_banner']['heading_one_value']}}</span>
-              <p class="c-state-card__status">
-                <i class="feather icon-trending-up"></i> 23% Increase
-              </p>
-            </div>
+              </div>
           </div>
 
           <div class="col-md-4">
             <div class="c-state-card c-state-card--success">
               <h4 class="c-state-card__title">{{ $dataArray['dashboard_banner']['heading_two']}}</h4>
               <span class="c-state-card__number">{{ $dataArray['dashboard_banner']['heading_two_value']}}</span>
-              <p class="c-state-card__status">
-                <i class="feather icon-trending-down"></i> 12% Decrease
-              </p>
-
             </div>
           </div>
 
@@ -50,11 +43,7 @@
             <div class="c-state-card c-state-card--fancy">
               <h4 class="c-state-card__title">{{ $dataArray['dashboard_banner']['heading_three']}}</h4>
               <span class="c-state-card__number">{{ $dataArray['dashboard_banner']['heading_three_value']}}</span>
-              <p class="c-state-card__status">
-                <i class="feather icon-trending-up"></i> 65% Increase
-              </p>
-
-            </div>
+              </div>
           </div>
 
         </div>

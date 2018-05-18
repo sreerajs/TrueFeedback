@@ -141,7 +141,8 @@ Route::group(['prefix' => 'business', 'middleware' => ['role:Business', 'auth', 
     Route::get('/survey_composer', 'Pages\SurveyComposerSettings@showComposer');
     Route::post('/savecontract', 'Survey\SurveyController@saveSurvey');
     Route::post('/deletecontract', 'Survey\SurveyController@deleteSurvey');
-    Route::post('/deploycontract', 'Survey\SurveyController@deploySurvey');
+    Route::get('/deploycontract{id}', 'Survey\SurveyController@deploySurvey');
+    Route::post('/deploycomplete', 'Survey\SurveyDeploy@completeDeploySurvey');
     Route::post('/getContractDetails', 'Survey\SurveyController@getContractDetails');
     Route::get('/composer', 'Pages\SurveyComposerSettings@showEditComposer');
     Route::post('/editcontract', 'Survey\SurveyController@editSurvey');
