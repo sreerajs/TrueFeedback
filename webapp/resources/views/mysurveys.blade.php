@@ -59,19 +59,19 @@
 
         </div>
 
-          
+
 
           </div>
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-md-12">
               <div class="c-table-responsive@wide">
                 <table class="c-table">
-                  
+
                   <thead class="c-table__head">
                     <tr class="c-table_row">
                         <th class="c-table__cell c-table__cell--head">Recommended for you</th>
-                    </tr> 
+                    </tr>
                     <tr class="c-table__row">
                       <th class="c-table__cell c-table__cell--head">Survey Name</th>
                       <th class="c-table__cell c-table__cell--head">Category</th>
@@ -83,27 +83,25 @@
 
                   <tbody>
 
-                    @foreach ($dataArray['data'] as $survey)
-                    <tr class="c-table__row">
-                      <td class="c-table__cell">
-                        <div class="o-media">
-                          
-                          <div class="o-media__body">
-                            <h6>{{$survey->name}}</h6>
-                           
-                          </div>
-                        </div>
-                      </td>
-                      <td class="c-table__cell">Pinterest</td>
-                      <th class="c-table__cell">223</th>
-                      <td class="c-table__cell">{{$survey->created_at}}</td>
-                       <td class="c-table__cell">
-                          <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
-                      </td>
-                    </tr>
-                    @endforeach
-                    
+                      @foreach ($dataArray['data'] as $survey)
+                      <tr class="c-table__row">
+                        <td class="c-table__cell">
+                          <div class="o-media">
 
+                            <div class="o-media__body">
+                              <h6>{{$survey->name}}</h6>
+
+                            </div>
+                          </div>
+                        </td>
+                        <td class="c-table__cell">Technology</td>
+                        <th class="c-table__cell">3FT</th>
+                        <td class="c-table__cell">{{$survey->created_at}}</td>
+                         <td class="c-table__cell">
+                            <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
+                        </td>
+                      </tr>
+                      @endforeach
                   </tbody>
                 </table>
               </div>

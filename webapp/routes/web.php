@@ -83,7 +83,7 @@ Route::get('/logout', 'UserAuth\Logout@logout');
   * @author Stanly Johnson (stanly.johnson@servntire.com)
   * @param string | route
   * @return class,view
-  */  
+  */
   Route::get('/wallet_menu','Wallet\WalletMenu@setup');
   Route::get('/wallet_import','Wallet\WalletImport@setup');
   Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
@@ -148,6 +148,8 @@ Route::group(['prefix' => 'business', 'middleware' => ['role:Business', 'auth', 
     Route::get('/surveyresults', function () {
         return view('surveyresults')->with('dataArray', ['uri' => 'Survey Results', 'user' => Auth::user()]);
     });
+    Route::get('/buytokens','Pages\BuyTokens@buy');
+
 });
 
   /**
@@ -169,4 +171,3 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin', 'auth', 'admin
     Route::get('/activities', 'Pages\ActivityReports@report');
     Route::get('/profile/{email_id}', 'Pages\UserProfile@import');
 });
-

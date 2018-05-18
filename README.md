@@ -21,7 +21,7 @@ Original Template : [Demo / Preview](https://zawiastudio.com/neat/demo/dashboard
 
 ## Running / Local Development
 * Pull the repository
-* 'cd webapp'
+* `cd webapp`
 * Update composer `composer update`
 * Clear composer configuration `composer dump-autoload`
 * Migrate database `php artisan migrate`

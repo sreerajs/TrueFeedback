@@ -38,9 +38,9 @@
                     <h3> Feedback Token Balance : <span style="color: green">{{$dataArray['user']->feedback_token_balance}}</span> </h3>
                   </td>
 
-                  <td class="c-table__cell">
+                  <!--<td class="c-table__cell">
                       <h3> ETH Balance : <span style="color: green">{{$dataArray['user']->eth_token_balance}}</span> </h3>
-                    </td>
+                  </td> -->
 
                   </tr>
 
@@ -48,33 +48,26 @@
                   <tr class="c-table__row">
 
                     <td class="c-table__cell">
+                      <div class="c-field u-mb-small">
+                        <label class="c-field__label">Enter Amount</label>
+                        <input class="c-input"  placeholder="0.00" required>
+                      </div>
+                    </td>
+
+                    <td class="c-table__cell">
                       <div class="c-dropdown dropdown">
-                        <a href="/business/buytokens" class="c-btn c-btn--info" >
+                        <a href="#" class="c-btn c-btn--info" >
                           Buy Feedback Tokens
                         </a>
+                      </div>
+                    </td>
 
-                      </td>
-
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                          <a href="#" class="c-btn c-btn--info" >
-                            Send/Receive Tokens
-                          </a>
-                        </div>
-                      </td>
-
-                      <td class="c-table__cell">
-                        <div class="c-dropdown dropdown">
-                            <input type="button" class="c-btn c-btn--info" id="btn" value ="View Wallet Information">
-                        </div>
-                      </td>
-                    </tr>
-                    .
+                  </tr>
 
                   </tbody>
                 </table>
-              </div>
-            </div>
+
+
 
           </div>
 
@@ -96,7 +89,7 @@
 
 
           <br />
-
+          <!--
           <div class="row">
               <div class="col-xl-12">
                 <div class="c-table-responsive@wide">
@@ -140,7 +133,7 @@
                   </table>
                 </div>
             </div>
-
+          -->
           </div>
         </div>
       </div><!-- // .container -->

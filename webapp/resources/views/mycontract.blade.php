@@ -27,7 +27,6 @@
                                 <tr class="c-table__row">
                                     <th class="c-table__cell c-table__cell--head">Survey Name</th>
                                     <th class="c-table__cell c-table__cell--head">Date</th>
-                                    
                                     <th class="c-table__cell c-table__cell--head">Actions</th>
                                 </tr>
                             </thead>
@@ -39,13 +38,13 @@
                                     <td class="c-table__cell">
                                         <div class="o-media">
                                             <div class="o-media__body">
-                                                <h6>{{$contract->name }}</h6>                                                    
+                                                <h6>{{$contract->name }}</h6>
                                             </div>
                                         </div>
                                     </td>
-                                   
+
                                     <td class="c-table__cell">{{$contract->updated_at }}</td>
-                                    
+
                                     <td class="c-table__cell">
                                         <div class="c-dropdown dropdown">
                                             <a href="#" class="c-btn c-btn--info has-icon dropdown-toggle" id="dropdownMenuTable1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,19 +55,19 @@
                                                 <a class="c-dropdown__item dropdown-item" onclick="deployContract({{$contract->id}})">Deploy</a>
                                                 <a class="c-dropdown__item dropdown-item" onclick="deleteContract({{$contract->id}})">Delete</a>
                                                 <a class="c-dropdown__item dropdown-item" onclick="editContract({{$contract->id}})">Edit</a>
-        
+
                                             </div>
                                         </div>
                                     </td>
-                                </tr>  
-                                @endforeach                                 
+                                </tr>
+                                @endforeach
                             </tbody>
-                        </table>                        
+                        </table>
                     </div>
                     <div class="row" style="margin-top: 15px;">
                         <div class="col-12">
-                            {{ $dataArray['contractList']->links() }}                                 
-                        </div>   
+                            {{ $dataArray['contractList']->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
