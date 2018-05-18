@@ -28,7 +28,7 @@
             <div class="c-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1">
                 <div class="c-modal__dialog modal-dialog" role="document">
                     <div class="modal-content">
-                        
+
                     </div>
                 </div>
             </div>

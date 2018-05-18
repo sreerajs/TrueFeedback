@@ -69,21 +69,16 @@
                 <tr class="c-table_row">
                   <td class="c-table__cell">
                     <div class="c-field u-mb-small">
-                      <label class="c-field__label">Enter ETH to send</label>
-                      <input class="c-input" placeholder="0.00" required>
-                      <span> The ETH will be deposited to your wallet in 24 hours. Contact support if your wallet has not been
-                          credited with the correct amount of Feedback Tokens</span>
+                      <h5>Wallet Address :  <span style="color:grey">0x9f818af51ce2efa73ca3af5f883bf4bec569b4c6 </span> </h5>
+                      <br />
+                      <span>Send ETH to the above address. <br />The Feedback Tokens as per the value of ETH send will be
+                        deposited to your wallet in 24 hours.
+                        <br />Contact support if your wallet has not been
+                          credited with the correct amount of Feedback Tokens in 24 hours.</span>
                     </div>
                   </td>
 
-                  <td class="c-table__cell">
-                    <div class="c-dropdown dropdown">
-                      <!--Link the send feature here-->
-                      <a href="#" class="c-btn c-btn--warning">
-                        Send ETH
-                      </a>
-                    </div>
-                  </td>
+
                 </tr>
 
               </tbody>

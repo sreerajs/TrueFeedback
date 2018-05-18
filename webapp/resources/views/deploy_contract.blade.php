@@ -12,7 +12,7 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="contract_id" value="{{$dataArray['survey_id']}}">
             <div class="c-field">
-              <label class="c-field__label">{{$dataArray['survey_name']}}</label>
+              <label class="c-field__label">Display Name</label>
               <input class="c-input u-mb-small" type="text" id="survey_name" name="survey_name" value = "{{$dataArray['survey_name']}}" required>
             </div>
 
