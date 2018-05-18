@@ -38,9 +38,12 @@
                     <h3> Feedback Token Balance : <span style="color: green">{{$dataArray['user']->feedback_token_balance}}</span> </h3>
                   </td>
 
+                  @if ($dataArray['user']->account_type == 'Business')
                   <td class="c-table__cell">
                       <h3> ETH Balance : <span style="color: green">{{$dataArray['user']->eth_token_balance}}</span> </h3>
                     </td>
+                  @else
+                  @endif
 
                   </tr>
 
@@ -49,10 +52,15 @@
 
                     <td class="c-table__cell">
                       <div class="c-dropdown dropdown">
+                        @if ($dataArray['user']->account_type == 'Business')
                         <a href="/business/buytokens" class="c-btn c-btn--info" >
                           Buy Feedback Tokens
                         </a>
-
+                        @else
+                        <a href="#" class="c-btn c-btn--info" >
+                          Redeem Feedback Tokens
+                        </a>
+                        @endif
                       </td>
 
                       <td class="c-table__cell">

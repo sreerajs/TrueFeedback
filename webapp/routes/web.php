@@ -117,6 +117,7 @@ Route::group(['middleware' => ['role:User', 'auth', 'wallet']], function() {
     Route::get('/wallet', 'Pages\WalletController@userWallet');
     Route::get('/profile', 'Pages\UserSettings@profile');
     Route::get('/surveys', 'Pages\mySurveys@mysurveys');
+    Route::get('/survey_response','Pages\UserSurvey@setup');
 });
 
 /**
