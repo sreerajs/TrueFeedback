@@ -19,6 +19,7 @@ use App\Notifications\WelcomeNotification;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use PragmaRX\Countries\Package\Countries;
+use Illuminate\Http\Request;
 /**
  * Description of SurveyController
  *
@@ -112,14 +113,21 @@ class SurveyController extends BaseController {
   *
   * @return view | deploy_contract
   */
-  //do not use - logic changed
-    public function deploySurvey() {
+
+    public function deploySurvey($survey_id) {
 
       $user = Auth::user();
+      //$survey_id = $request->input('contract_id');
+
+      $survey_data = DB::table('business_surveys')
+      ->where('id',$survey_id)
+      ->first();
+      $survey_name = $survey_data->name;
 
       $returnData['uri'] = "Deploy Survey";
       $returnData['user'] = $user;
-      $returnData['survey_id'] = $this->request->input('contract_id');
+      $returnData['survey_name'] = $survey_name;
+      $returnData['survey_id'] = $survey_id;
       return view('deploy_contract',['dataArray' => $returnData]);
 
     }

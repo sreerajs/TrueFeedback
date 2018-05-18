@@ -258,3 +258,33 @@ $("#formProfileOrganization").validate({
         },
   }
 });
+
+/**
+* Deploy Survey Form
+* @author Stanly Johnson (stanly.johnson@servntire.com)
+*
+* Input Form: formDeploySurvey
+* File: resources/views/deploy_contract.blade.php
+*/
+
+$("#formDeploySurvey").validate({
+	rules: {
+    survey_name: {
+			required: true,
+		},
+    password: {
+			required: true,
+      minlength:8,
+		},
+  },
+  messages: {
+    email: {
+        	required: "Please enter a name",
+
+        },
+    password: {
+          required: "Please enter a valid password",
+          minlength: "You password must be atleast 8 characters long",
+        },
+  }
+});
