@@ -52,7 +52,7 @@
                                             </a>
 
                                             <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuTable1">
-                                                <a class="c-dropdown__item dropdown-item" href="/business/deploycontract({{$contract->id}})">Deploy</a>
+                                                <a class="c-dropdown__item dropdown-item" href="/business/deploycontract{{$contract->id}}">Deploy</a>
                                                 <a class="c-dropdown__item dropdown-item" onclick="deleteContract({{$contract->id}})">Delete</a>
                                                 <a class="c-dropdown__item dropdown-item" onclick="editContract({{$contract->id}})">Edit</a>
 

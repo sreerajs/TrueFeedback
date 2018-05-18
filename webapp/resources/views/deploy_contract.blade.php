@@ -8,12 +8,12 @@
       <div class="o-page__card">
         <div class="c-card c-card--center">
           <h4 class="u-mb-medium">Deploy Form</h4>
-          <form action="deploycomplete" method="post" id="formRegister">
+          <form action="deploycomplete" method="post" id="formDeploySurvey">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="contract_id" value="{{$dataArray['survey_id']}}">
             <div class="c-field">
-              <label class="c-field__label">Name</label>
-              <input class="c-input u-mb-small" type="text" id="survey_name" name="survey_name" placeholder="e.g. Adam">
+              <label class="c-field__label">{{$dataArray['survey_name']}}</label>
+              <input class="c-input u-mb-small" type="text" id="survey_name" name="survey_name" value = "{{$dataArray['survey_name']}}" required>
             </div>
 
             <div class="c-field u-mb-small">
@@ -30,23 +30,23 @@
 
             <div class="c-field">
               <label class="c-field__label">Maximum Responses</label>
-              <input class="c-input u-mb-small" type="text" id="max_response" name="max_response" placeholder="e.g. 20">
+              <input class="c-input u-mb-small" type="number" id="max_response" name="max_response" placeholder="e.g. 20" required>
             </div>
 
             <div class="c-field">
               <label class="c-field__label">Reward for each response (in Feedback Tokens)</label>
-              <input class="c-input u-mb-small" type="text" id="response_reward" name="response_reward" placeholder="e.g. 5">
+              <input class="c-input u-mb-small" type="number" id="response_reward" name="response_reward" placeholder="e.g. 5" required>
             </div>
 
             <div class="c-field">
               <label class="c-field__label">Expiry Date</label>
-              <input class="c-input u-mb-small" type="date" id="expiry_date" name="expiry_date" placeholder="e.g. 0">
+              <input class="c-input u-mb-small" type="date" id="expiry_date" name="expiry_date" placeholder="e.g. 0" required>
               <!--<p style="font-size:0.7em; color:red; display:none" id="date-warning">The survey will be destroyed if the minimum number of responses are not received.</p>-->
             </div>
 
             <div class="c-field">
               <label class="c-field__label">Minimum Responses</label>
-              <input class="c-input u-mb-small" type="text" id="min_response" name="min_response" placeholder="e.g. 0" value="0">
+              <input class="c-input u-mb-small" type="number" id="min_response" name="min_response" placeholder="e.g. 0" value="0" required>
               <p style="font-size:0.7em;">The survey will be destroyed if the minimum number of responses are not received.</p>
             </div>
 
