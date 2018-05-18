@@ -35,7 +35,7 @@
                     <div class="c-state-card c-state-card--fancy">
                         <h4 class="c-state-card__title">Job Collection</h4>
                         <p class="c-state-card__status">
-                          Collect info on users jobss
+                          Collect info on users jobs
                         </p>
                     </div>
                 </div>
@@ -58,6 +58,8 @@
                                 <label class="c-field__label" for="input1">Survey Name</label>
                                 <input class="c-input" id="input-survey-name" name= "" type="text" placeholder="My First Survey" required="">
                             </div>
+                            <p style="font-size:8">Saved surveys can be edited/deployed from the Deployed Surveys tab</p>
+                            <br />
                             <button id="create-new-form" class="c-btn c-btn--info" name="submit" type="submit">
                                 Save
                             </button>
@@ -67,6 +69,7 @@
                             <button class="c-btn c-btn--info" data-dismiss="modal">
                                 Close
                             </button>
+
                         </div>
                     </div>
                 </div>
