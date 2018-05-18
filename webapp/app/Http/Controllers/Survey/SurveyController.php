@@ -1,4 +1,13 @@
 <?php
+/**
+* Survey/SurveyController
+* TrueFeedback - Handle Survey Creation
+* PHP Laravel Version 5.5
+*
+* @author Ajith E R
+*
+* (c) Servntire Global (servntire.com)
+*/
 
 namespace App\Http\Controllers\Survey;
 
@@ -103,7 +112,7 @@ class SurveyController extends BaseController {
   *
   * @return view | deploy_contract
   */
-
+  //do not use - logic changed
     public function deploySurvey() {
 
       $user = Auth::user();
