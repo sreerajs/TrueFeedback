@@ -1,22 +1,8 @@
-@extends('layouts.template')
-@section('title', 'Rewards')
-@section('body_content')
+@extends('layouts.template') @section('title', 'Rewards') @section('body_content')
 <div class="o-page">
-  @include('layouts.sidebar')
-  @role('User')
-  @yield('user_sidebar')
-  @endrole
-  @role('Business')
-  @yield('business_sidebar')
-  @endrole
+  @include('layouts.sidebar') @role('User') @yield('user_sidebar') @endrole @role('Business') @yield('business_sidebar') @endrole
   <main class="o-page__content">
-    @include('layouts.header')
-    @role('User')
-    @yield('user_header')
-    @endrole
-    @role('Business')
-    @yield('business_header')
-    @endrole
+    @include('layouts.header') @role('User') @yield('user_header') @endrole @role('Business') @yield('business_header') @endrole
 
     <div class="container">
       <div class="row">
@@ -26,7 +12,7 @@
             <table class="c-table">
               <thead class="c-table__head">
                 <tr class="c-table__row">
-                  <th class="c-table__cell c-table__cell--head">Actions</th>
+                  <th class="c-table__cell c-table__cell--head">Purchase Feedback Token</th>
 
                 </tr>
               </thead>
@@ -35,59 +21,79 @@
 
                 <tr class="c-table__row">
                   <td class="c-table__cell">
-                    <h3> Feedback Token Balance : <span style="color: green">{{$dataArray['user']->feedback_token_balance}}</span> </h3>
+                    <h4>Value : <span style="color:grey">1 ETH = 1000 Feedback Tokens</span></h4>
+                  </td>
+                </tr>
+
+                <tr class="c-table__row">
+
+                  <td class="c-table__cell">
+                    <div class="c-field u-mb-small">
+                      <label class="c-field__label">ETH</label>
+                      <input class="c-input" placeholder="0.00" required>
+                    </div>
                   </td>
 
-                  <!--<td class="c-table__cell">
-                      <h3> ETH Balance : <span style="color: green">{{$dataArray['user']->eth_token_balance}}</span> </h3>
-                  </td> -->
-
-                  </tr>
 
 
-                  <tr class="c-table__row">
+                  <td class="c-table__cell">
+                    <div class="c-field u-mb-small">
+                      <label class="c-field__label">Feedback Token</label>
+                      <input class="c-input" placeholder="0.00" required>
+                    </div>
+                  </td>
 
-                    <td class="c-table__cell">
-                      <div class="c-field u-mb-small">
-                        <label class="c-field__label">Enter Amount</label>
-                        <input class="c-input"  placeholder="0.00" required>
-                      </div>
-                    </td>
 
-                    <td class="c-table__cell">
-                      <div class="c-dropdown dropdown">
-                        <a href="#" class="c-btn c-btn--info" >
+
+                  <td class="c-table__cell">
+                    <div class="c-dropdown dropdown">
+                      <a href="#" class="c-btn c-btn--info">
                           Buy Feedback Tokens
                         </a>
-                      </div>
-                    </td>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-                  </tr>
 
-                  </tbody>
-                </table>
+            <table class="c-table">
+              <thead class="c-table__head">
+                <tr class="c-table__row">
+                  <th class="c-table__cell c-table__cell--head">OR transfer ETH to get Feedback Tokens</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="c-table_row">
+                  <td class="c-table__cell">
+                    <div class="c-field u-mb-small">
+                      <label class="c-field__label">Enter ETH to send</label>
+                      <input class="c-input" placeholder="0.00" required>
+                      <span> The ETH will be deposited to your wallet in 24 hours. Contact support if your wallet has not been
+                          credited with the correct amount of Feedback Tokens</span>
+                    </div>
+                  </td>
+
+                  <td class="c-table__cell">
+                    <div class="c-dropdown dropdown">
+                      <a href="#" class="c-btn c-btn--warning">
+                        Send ETH
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
 
 
 
           </div>
 
           <br />
-
-          <div class = "row" id="Create" style="display:none">
-              <div class="col-xl-12">
-                  <div class="c-card">
-            <h2 style="color: blue"> Wallet Information </h2>
-            <br />
-            <h4> Wallet Address : <span style="font-weight: bold">{{$dataArray['user']->wallet_address}}</span> </h4>
-            <br />
-            <a href="/wallet_menu" class="c-btn c-btn--info" >
-                Modify Wallet Info
-              </a>
-            </div>
-            </div>
-          </div>
-
-
           <br />
           <!--
           <div class="row">
@@ -134,16 +140,8 @@
                 </div>
             </div>
           -->
-          </div>
         </div>
-      </div><!-- // .container -->
-
-      <script type="text/javascript">
-        $(document).ready(function () {
-            $("#btn").click(function () {
-                $("#Create").toggle();
-            });
-        });
-        </script>
-
-      @endsection
+      </div>
+    </div>
+    <!-- // .container -->
+    @endsection
