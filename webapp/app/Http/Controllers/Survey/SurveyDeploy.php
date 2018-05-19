@@ -53,10 +53,10 @@ class SurveyDeploy extends BaseController {
               //if deployment is successful -> mark as deployed in DB
               //set deployed field to true in table
               //$is_deployed = 1;
-              /*
+
               $businessSurveyModel = new Business_Surveys();
               $businessSurveyModel->updateContractDetail($survey);
-              */
+
 
               $returnData['user'] = $user;
               $returnData['uri'] = 'Deployed Surveys';
