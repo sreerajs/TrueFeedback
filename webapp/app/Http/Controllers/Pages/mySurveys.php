@@ -27,34 +27,58 @@ class mySurveys extends Controller
   *
   * @param  Request | $request
   * @return array | $dataArray
-  * @return view | dashboard
+  * @return view | mysurveys
   */
 
     protected function mysurveys(Request $request)
     {
     $user = Auth::user();
-    $uri = $request->path();
-    if($uri == 'mysurveys') {
-      $uri = "My Surveys";
-    }
+    //change pagination value here
+    $pagination_count = 5;
 
     /**
     * Fetching surveys from db
-    * @author Stanly Johnson (stanly.johnson@servntire.com)
-    *
-    * @param  Request | $request
-    * @return array | $dataArray
-    * @return view | dashboard
+    * @author Stanly Johnson
     */
-    
-    //change pagination value here
-    $pagination_count = 5;
     $data = DB::table('business_surveys')->where('is_deployed', 1)->paginate($pagination_count);
 
 
     $returnData['user'] = $user;
-    $returnData['uri'] = $uri;
+    $returnData['uri'] = "Surveys";
     $returnData['data'] = $data;
     return view('mysurveys',['dataArray' => $returnData]);
+    }
+
+    /**
+    * Return surveys according to search terms
+    * @author Stanly Johnson (stanly.johnson@servntire.com)
+    *
+    * @param  Request | $request
+    * @return array | $dataArray
+    * @return view | mysurveys
+    */
+
+    protected function search(Request $request)
+    {
+
+      $user = Auth::user();
+      //change pagination value here
+      $pagination_count = 5;
+      /**
+      * Fetching surveys from db
+      * @author Stanly Johnson
+      */
+
+
+      $data = DB::table('business_surveys')
+      ->where('is_deployed', 1)
+      ->where('name','like','%'.$request->get('search-key').'%')
+      ->paginate($pagination_count);
+
+      $returnData['user'] = $user;
+      $returnData['uri'] = "Surveys";
+      $returnData['data'] = $data;
+      return view('mysurveys',['dataArray' => $returnData]);
+
     }
 }
