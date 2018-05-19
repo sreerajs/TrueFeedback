@@ -98,10 +98,6 @@ class mySurveys extends Controller
       $returnData['uri'] = "Surveys";
       $surveyCount =  DB::table('business_surveys')->where('id', $returnData['survey_id'])->count();
       if($surveyCount > 0) {
-        $returnData['survey_form'] = DB::table('business_surveys')->where('id', $returnData['survey_id'])->pluck('survey_form')->first();
-
-        //$returnData['survey_form'] = json_encode(json_decode($returnData['survey_form']));
-
         return view('user_single_survey',['dataArray' => $returnData]);
       } else {
         return redirect('surveys');

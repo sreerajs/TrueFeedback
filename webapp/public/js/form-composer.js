@@ -303,7 +303,6 @@ jQuery(function ($) {
             });
     document.getElementById('create-new-form')
             .addEventListener('click', function (e) {
-              alert(formBuilder.actions.getData('json',true));
                 var name = document.getElementById('input-survey-name').value;
                 if (name !== undefined && name !== '') {
                     var token = $('#token').val();

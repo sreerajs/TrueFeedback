@@ -21,7 +21,6 @@
       <div class="row">
         <div class="col-xl-12">
           <div id="SurveyRender" class="c-card">
-            Survey not found or expired.
           </div>
         </div>
 
