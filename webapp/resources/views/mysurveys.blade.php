@@ -88,7 +88,7 @@
                 <th class="c-table__cell">3FT</th>
                 <td class="c-table__cell">{{$survey->created_at}}</td>
                 <td class="c-table__cell">
-                  <button class="c-btn c-btn--fullwidth c-btn--info">Take Survey</button>
+                  <a href="surveys/{{ $survey->id }}" class="c-btn c-btn--fullwidth c-btn--info">Take Survey</a>
                 </td>
               </tr>
               @endforeach
