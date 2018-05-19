@@ -7,10 +7,12 @@
 
       <div class="row">
         <div class="col-md-8">
+          <form id="formLogin" action="search_surveys_result" method="post">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
           <div class="c-field u-mb-small">
             <label class="c-field__label">Search for surveys</label>
-            <input class="c-input" placeholder="Try Pepsi" required>
+            <input class="c-input" placeholder="Try Job Satisfaction" id="search_key" name="search-key" type="text" required>
           </div>
         </div>
 
@@ -44,8 +46,10 @@
            End of sort-by feature-->
 
         <div class="col-md-2">
-          </br><button class="c-btn c-btn--fullwidth c-btn--info">Search</button>
+          <br />
+          <input type="submit" value="Search" class="c-btn c-btn--fullwidth c-btn--info"></input>
         </div>
+      </form>
       </div>
     </div>
 
