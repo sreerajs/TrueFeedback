@@ -109,11 +109,11 @@ class mySurveys extends Controller
     }
 
     /**
-    * Return Single Survey Form Data
+    * Return Single Survey Form Data - XML
     * @author Tittu Varghese (tittu@servntire.com)
     *
     * @param  Request | $request
-    * @return JSON
+    * @return XML
     */
     protected function surveyFormData(Request $request) {
       $surveyID = $request->get('surveyID');
