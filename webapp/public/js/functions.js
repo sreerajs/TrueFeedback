@@ -53,7 +53,7 @@ function updateContractData() {
         var param = {
             'contract_id': $('#edit-contract-id').val(),
             'survey_name': name,
-            'survey_form': JSON.parse(window.sessionStorage.getItem('formData'))
+            'survey_form': formBuilder.actions.getData('xml')
         };
         console.log(param);
         $.ajax({

@@ -65,7 +65,7 @@ if($("#SurveyRender").length){
     function renderForm(formData) {
       jQuery(function() {
         formRenderOpts = {
-          dataType: 'xml',
+          dataType: 'json',
           formData: formData
         };
         var renderedForm = $('#SurveyRender');
