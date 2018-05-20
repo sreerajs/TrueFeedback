@@ -207,6 +207,8 @@ jQuery(function ($) {
             }
         });
     };
+    /**
+    * Demo Item - Commented by @author Tittu Varghese
     fbPromise.then(function (fb) {
         var apiBtns = {
             showData: fb.actions.showData,
@@ -242,13 +244,12 @@ jQuery(function ($) {
                 location.reload();
             }
         };
-
         Object.keys(apiBtns).forEach(function (action) {
-            document.getElementById(action)
-                    .addEventListener('click', function (e) {
-                        apiBtns[action]();
-                    });
-        });
+          document.getElementById(action)
+                  .addEventListener('click', function (e) {
+                      apiBtns[action]();
+                  });
+          });
 
         document.getElementById('setLanguage')
                 .addEventListener('change', function (e) {
@@ -268,40 +269,52 @@ jQuery(function ($) {
 
     });
 
-    document.getElementById('edit-form').onclick = function () {
+    */
+
+    if ($("#edit-form").length) {
+      document.getElementById('edit-form').onclick = function () {
         toggleEdit();
-    };
+      };
+    }
 
     /**
      * Set Default Template Fieds to editor
      * @author Ajith E R
+     * Modified by @author Tittu Varghese
      */
     var surveyTemplateOne = '[{"type":"text","label":"Full Name","subtype":"text","className":"form-control","name":"text-1476748004559"},{"type":"select","label":"Occupation","className":"form-control","name":"select-1476748006618","values":[{"label":"Street Sweeper","value":"option-1","selected":true},{"label":"Moth Man","value":"option-2"},{"label":"Chemist","value":"option-3"}]},{"type":"textarea","label":"Short Bio","rows":"5","className":"form-control","name":"textarea-1476748007461"}]';
     var surveyTemplateTwo = '[{"type":"text","label":"Full Name","subtype":"text","className":"form-control","name":"text-1476748004559"}]';
     var surveyTemplateThree = '[{"type":"select","label":"Occupation","className":"form-control","name":"select-1476748006618","values":[{"label":"Street Sweeper","value":"option-1","selected":true}]}]';
-    document.getElementById('sm-template-one')
+
+    if ($("#sm-template-one").length) {
+      document.getElementById('sm-template-one')
             .addEventListener('click', function (e) {
                 if (!editing) {
                     toggleEdit();
                 }
                 formBuilder.actions.setData(surveyTemplateOne);
             });
-
-    document.getElementById('sm-template-two')
+          }
+    if ($("#sm-template-two").length) {
+      document.getElementById('sm-template-two')
             .addEventListener('click', function (e) {
                 if (!editing) {
                     toggleEdit();
                 }
                 formBuilder.actions.setData(surveyTemplateTwo);
             });
-    document.getElementById('sm-template-three')
+          }
+    if ($("#sm-template-three").length) {
+      document.getElementById('sm-template-three')
             .addEventListener('click', function (e) {
                 if (!editing) {
                     toggleEdit();
                 }
                 formBuilder.actions.setData(surveyTemplateThree);
             });
-    document.getElementById('create-new-form')
+          }
+    if ($("#create-new-form").length) {
+      document.getElementById('create-new-form')
             .addEventListener('click', function (e) {
                 var name = document.getElementById('input-survey-name').value;
                 if (name !== undefined && name !== '') {
@@ -325,4 +338,5 @@ jQuery(function ($) {
                     });
                 }
             });
+          }
 });
