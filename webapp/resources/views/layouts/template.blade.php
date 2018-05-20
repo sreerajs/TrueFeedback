@@ -33,11 +33,11 @@
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.1/jquery.rateyo.min.js"></script>
 <script src="../../js/vendor.js"></script>
 <script src="../../js/form-builder.min.js" type="text/javascript"></script>
 <script src="../../js/form-render.min.js" type="text/javascript"></script>
 <script src="../../js/form-composer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.1/jquery.rateyo.min.js"></script>
 <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js'></script>
 
 
