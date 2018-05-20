@@ -96,7 +96,6 @@ Route::get('/logout', 'UserAuth\Logout@logout');
   Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
   Route::post('/wallet_private_key','Wallet\WalletKey@upload');
   Route::post('/wallet_create','Wallet\WalletCreate@create');
-/**
 
 
 /**
