@@ -25,24 +25,25 @@
   @include('layouts.alert-messages',['alertMessage'=>session('failed_login')])
   @yield('alert_info')
   @endif
-  <div class="container">
-        <div class="row u-pv-large">
-          <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
-            <h1>Setup your wallet</h1>
-            <p class="u-mb-large u-h4">Setup Your Wallet to continue to TrueFeedback</p>
-          </div>
+  <!-- Failed Login Message Handling -->
+  <br />
+  <div class="o-page__card">
+    <div class="c-card c-card--center">
+
+      <h2 class="u-mb-medium">Wallet Setup</h2>
+      <span style="color:grey">Please link you wallet to use the TrueFeedback Platform. You can choose to create a new wallet or import any of your existing wallet.</span>
+        <br /><br />
+        <div class="c-field">
+          <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/wallet_import">Import Wallet</a>
+        </div>
+        <br /><br />
+        <div class="c-field">
+          <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/wallet_create">Create Wallet</a>
         </div>
 
-          <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
-
-              <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/wallet_import">IMPORT WALLET</a>
-              <br /><br />
-            <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/wallet_create">CREATE WALLET</a>
 
 
-          </div>
-        </div>
-
+    </div>
   </div>
 </div>
 @endsection

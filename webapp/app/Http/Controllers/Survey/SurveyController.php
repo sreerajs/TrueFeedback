@@ -93,6 +93,8 @@ class SurveyController extends BaseController {
 
     public function editSurvey() {
         $user = Auth::user();
+
+
         $survey['user_id'] = $user->user_id;
         $survey['id'] = $this->request->input('contract_id');
         $survey['name'] = $this->request->input('survey_name');
