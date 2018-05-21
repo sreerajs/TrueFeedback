@@ -34,14 +34,16 @@
           </div>
         </div>
 
-
-          <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
-            <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="#">Upload File</a>
-              <br /><br />
-
-            <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/wallet_success">I Understand, Continue</a>
-              <br /><br />
+        <form id="formKeystorePassword" action="#" method="post">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <div class="c-field">
+            <input class="c-input u-mb-small" name="password" id="keystore_password" type="file" placeholder="Password" required>
           </div>
+          <input type="submit" value="Submit" class="c-btn c-btn--fullwidth c-btn--info"></input>
+        </form>
+
         </div>
+
+
 </div>
 @endsection

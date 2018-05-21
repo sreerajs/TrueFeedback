@@ -39,13 +39,13 @@ class WalletKey extends Controller
         return view ('Wallet/wallet_privatekey');
 
       }
-      
+
     else
       {
         return view ('/login');
       }
-    
-    
+
+
    }
 
    /**
@@ -57,18 +57,20 @@ class WalletKey extends Controller
   */
 
   protected function upload(Request $request) {
-    
+
     if($user = Auth::user())
       {
-        return view ('Wallet/wallet_success');
+        $user = Auth::user();
+        $returnData['user_data'] = $user;
+        return view('Wallet/wallet_success',['dataArray' => $returnData]);
       }
-      
+
     else
       {
         return view ('/login');
       }
-    
-    
+
+
   }
 
 

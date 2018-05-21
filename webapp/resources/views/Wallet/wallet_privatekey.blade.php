@@ -38,10 +38,10 @@
       <div class="c-field">
         <input class="c-input" name="wallet_private_key" id="wallet_private_key" type="text" placeholder="Private Key" required>
       </br></br>
-    </div>     
+    </div>
       <input type="submit" value="Submit" class="c-btn c-btn--fullwidth c-btn--info"></input>
     </form>
-      
+
     </div>
 </div>
 @endsection

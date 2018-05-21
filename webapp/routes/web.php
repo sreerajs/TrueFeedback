@@ -94,6 +94,7 @@ Route::get('/logout', 'UserAuth\Logout@logout');
   //Route::get('/wallet_create_success','Wallet\WalletCreate@success');
 
   Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
+  Route::post('/wallet_keystore_upload','Wallet\WalletKeystore@uploadFile');
   Route::post('/wallet_private_key','Wallet\WalletKey@upload');
   Route::post('/wallet_create','Wallet\WalletCreate@create');
 

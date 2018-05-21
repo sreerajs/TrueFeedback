@@ -33,22 +33,22 @@ class WalletKeystore extends Controller
   */
 
   protected function password(Request $request) {
-    
+
     if($user = Auth::user())
     {
       return view ('Wallet/wallet_keystore_password');
     }
-    
+
     else
     {
       return view ('/login');
-    }    
-   
+    }
+
 
   }
 
   protected function passwordSubmit(Request $request) {
-    
+
     $user = new UserLogin;
     $user->password = $request->get('keystore_password');
     return view ('Wallet/wallet_keystore_upload');
@@ -56,13 +56,20 @@ class WalletKeystore extends Controller
   }
 
   protected function upload(Request $request) {
+
+    return view ('Wallet/wallet_keystore_upload');
+
+  }
+
+  protected function uploadFile(Request $request) {
+
     
     return view ('Wallet/wallet_keystore_upload');
 
   }
 
   protected function uploadRequest(Request $request) {
-    
+
     return view ('Wallet/wallet_keystore_upload');
 
   }

@@ -26,8 +26,9 @@ class WalletSuccess extends Controller
   */
 
   protected function complete(Request $request) {
-    
-    return view ('Wallet/wallet_success');
 
+    $user = Auth::user();
+    $returnData['user_data'] = $user;
+    return view('Wallet/wallet_success',['dataArray' => $returnData]);
   }
 }

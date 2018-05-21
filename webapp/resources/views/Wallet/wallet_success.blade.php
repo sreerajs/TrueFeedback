@@ -36,8 +36,12 @@
 
 
       <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
+        @if ($dataArray['user_data']['account_type'] == 'User')
         <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/home">I Understand, Continue</a>
-          <br /><br />
+        @else
+          <a class="c-btn c-btn--info c-btn--outline c-btn--fullwidth" href="/business/home">I Understand, Continue</a>
+        @endif
+        <br /><br />
      </div>
     </div>
 </div>
