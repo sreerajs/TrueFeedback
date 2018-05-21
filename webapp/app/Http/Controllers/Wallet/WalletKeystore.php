@@ -73,20 +73,22 @@ class WalletKeystore extends Controller
 
   protected function uploadFile(Request $request) {
 
-    $user = Auth::user();
+      $user = Auth::user();
 
-    $file = $request->file('keystore');
-    $file_name = $file->getClientOriginalName();
-    $file_real_path = $file->getRealPath();
-    $destinationPath = 'uploads';
-    $file->move($destinationPath,$file->getClientOriginalName());
+      try {
+        //encode the file contents to base64
+        //$keystoreBase64 = base64_encode(file_get_contents(Input::file('keystore')));
+        //update database with the encoded value
+        $keystoreBase64 = $request->get('keystore');
+        DB::table('users')->where('user_id', $user->user_id)->update(['keystore_file'=> $keystoreBase64]);
+      }
 
-
-    DB::table('users')
-            ->where('id', $user->id)
-            ->update(['keystore_file' => $file_name]);
-
-    return view ('Wallet/wallet_keystore_upload');
+      catch (\Exception $e) {
+        return view ('Wallet/wallet_keystore_upload')->with('error','The file upload has failed');
+      }
+      $returnData['user_data'] = $user;
+      return view('Wallet/wallet_success',['dataArray' => $returnData]);
+    }
 
   }
 

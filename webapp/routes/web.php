@@ -93,10 +93,14 @@ Route::get('/logout', 'UserAuth\Logout@logout');
   //Route::get('/wallet_create_success','Wallet\WalletCreate@success');
 
   Route::post('/wallet_keystore_password','Wallet\WalletKeystore@passwordSubmit');
+  //use this for external api
   Route::post('/wallet_keystore_upload','Wallet\WalletKeystore@uploadFile');
+  //use this for internal testing
+  Route::post('/keystoreUpload','Functions\Upload@keystoreUpload');
+
   Route::post('/wallet_private_key','Wallet\WalletKey@upload');
   Route::post('/wallet_create','Wallet\WalletCreate@create');
-  Route::post('/keystoreUpload','Functions\Upload@keystoreUpload');
+
 
 
 /**
