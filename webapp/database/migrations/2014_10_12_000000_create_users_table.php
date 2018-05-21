@@ -27,15 +27,16 @@ class CreateUsersTable extends Migration
 
             //stats for analytics
             $table->string('country',24)->nullable();
-            $table->string('state', 100)->nullable();    
-            $table->date('dob',100)->nullable();            
+            $table->string('state', 100)->nullable();
+            $table->date('dob',100)->nullable();
             //stats for analytics
 
             //stats for wallet
             $table->boolean('is_wallet_linked')->default(false);
-            $table->text('wallet_address')->nullable(); 
-            $table->double('feedback_token_balance', 8, 4)->default(0.00); 
-            $table->double('eth_token_balance', 8, 4)->default(0.00);     
+            $table->text('wallet_address')->nullable();
+            $table->double('feedback_token_balance', 8, 4)->default(0.00);
+            $table->double('eth_token_balance', 8, 4)->default(0.00);
+            $table->text('keystore_file')->nullable();    
             //stats for wallet
 
             $table->boolean('profile_status')->default(false);

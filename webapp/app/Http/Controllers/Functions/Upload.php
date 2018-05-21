@@ -48,4 +48,30 @@ class Upload extends Controller
     return redirect('profile')->with('success', 'Successfully updated your profile picture.');
   }
 
+  /**
+  * User Keystore Upload
+  * @author Stanly Johnson
+  *
+  * @param  Request | $request
+  * @return array | $dataArray
+  * @return view | dashboard => settings => profile
+  */
+
+  protected function keystoreUpload(Request $request) {
+    $user = Auth::user();
+
+    try {
+      //encode the file contents to base64
+      $keystoreBase64 = base64_encode(file_get_contents(Input::file('keystore')));
+      //update database with the encoded value
+      DB::table('users')->where('user_id', $user->user_id)->update(['keystore_file'=> $keystoreBase64]);
+    }
+
+    catch (\Exception $e) {
+      return view ('Wallet/wallet_keystore_upload')->with('error','The file upload has failed');
+    }
+    $returnData['user_data'] = $user;
+    return view('Wallet/wallet_success',['dataArray' => $returnData]);
+  }
+
 }

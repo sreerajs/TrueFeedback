@@ -20,13 +20,14 @@
       <br /><br />
 
       <br />
-      <form id="formKeystorePassword" action="#" method="post">
+      <form id="formKeystorePassword" action="keystoreUpload" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="c-field">
-          <input class="c-input u-mb-small" name="password" id="keystore_password" type="file" placeholder="Password" required>
+          <input class="c-input u-mb-small" name="keystore" id="keystore" type="file" required>
         </div>
         <input type="submit" value="Submit" class="c-btn c-btn--fullwidth c-btn--info"></input>
       </form>
+
 
     </div>
   </div>

@@ -86,8 +86,7 @@ Route::get('/logout', 'UserAuth\Logout@logout');
   */
   Route::get('/wallet_menu','Wallet\WalletMenu@setup');
   Route::get('/wallet_import','Wallet\WalletImport@setup');
-  Route::get('/wallet_keystore_password','Wallet\WalletKeystore@password');
-  Route::get('/wallet_keystore_upload','Wallet\WalletKeystore@upload');
+  Route::get('/wallet_keystore_password','Wallet\WalletKeystore@showPassword');
   Route::get('/wallet_success','Wallet\WalletSuccess@complete');
   Route::get('/wallet_privatekey','Wallet\WalletKey@input');
   Route::get('/wallet_create','Wallet\WalletCreate@password');
@@ -97,6 +96,7 @@ Route::get('/logout', 'UserAuth\Logout@logout');
   Route::post('/wallet_keystore_upload','Wallet\WalletKeystore@uploadFile');
   Route::post('/wallet_private_key','Wallet\WalletKey@upload');
   Route::post('/wallet_create','Wallet\WalletCreate@create');
+  Route::post('/keystoreUpload','Functions\Upload@keystoreUpload');
 
 
 /**

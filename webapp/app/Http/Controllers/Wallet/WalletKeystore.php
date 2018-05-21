@@ -1,6 +1,6 @@
 <?php
 
-  /**
+/**
  * Wallet/WalletKeystore
  * TrueFeedback - Upload Keystore file
  * PHP Laravel Version 5.5
@@ -21,18 +21,19 @@ use Illuminate\Support\Facades\Auth;
 use Zizaco\Entrust\EntrustFacade as Entrust;
 use Illuminate\Notifications\Notifiable;
 use App\Notifications\WelcomeNotification;
+use Illuminate\Support\Facades\DB;
 
 class WalletKeystore extends Controller
 {
   /**
-  * Return wallet import page to user if authenticated
+  * Return wallet keystore password entry page to user if authenticated
   * @author Stanly Johnson (stanly.johnson@servntire.com)
   *
   * @param  Request | $request
-  * @return redirect | login | wallet_import
+  * @return redirect | login | wallet_keystore_password
   */
 
-  protected function password(Request $request) {
+  protected function showPassword(Request $request) {
 
     if($user = Auth::user())
     {
@@ -44,8 +45,15 @@ class WalletKeystore extends Controller
       return view ('/login');
     }
 
-
   }
+
+  /**
+  * Return wallet keystore upload page to user if authenticated
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  *
+  * @param  Request | $request
+  * @return redirect  wallet_keystore_upload
+  */
 
   protected function passwordSubmit(Request $request) {
 
@@ -55,20 +63,28 @@ class WalletKeystore extends Controller
 
   }
 
-  protected function upload(Request $request) {
-
-    return view ('Wallet/wallet_keystore_upload');
-
-  }
+  /**
+  * Return wallet keystore upload page to user if authenticated
+  * @author Stanly Johnson (stanly.johnson@servntire.com)
+  *
+  * @param  Request | $request
+  * @return redirect  wallet_keystore_upload
+  */
 
   protected function uploadFile(Request $request) {
 
-    
-    return view ('Wallet/wallet_keystore_upload');
+    $user = Auth::user();
 
-  }
+    $file = $request->file('keystore');
+    $file_name = $file->getClientOriginalName();
+    $file_real_path = $file->getRealPath();
+    $destinationPath = 'uploads';
+    $file->move($destinationPath,$file->getClientOriginalName());
 
-  protected function uploadRequest(Request $request) {
+
+    DB::table('users')
+            ->where('id', $user->id)
+            ->update(['keystore_file' => $file_name]);
 
     return view ('Wallet/wallet_keystore_upload');
 
