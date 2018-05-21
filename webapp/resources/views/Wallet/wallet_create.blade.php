@@ -26,22 +26,24 @@
   @yield('alert_info')
   @endif
 
-  <div class="container">
-    <div class="row u-pv-large">
-      <div class="col-lg-5 u-text-center u-ml-auto u-mr-auto">
-        <h1>Create Wallet</h1>
-        <p class="u-mb-large u-h4">Enter a password to create a new wallet</p>
-      </div>
-    </div>
+  <div class="o-page__card">
+    <div class="c-card c-card--center">
+      <h2 class="u-mb-medium">Create Wallet</h2>
+
+      <span style="color:grey">
+      Enter a private key to begin setup of your wallet. This key will be used to unlock your wallet, so choose a difficult phrase.
+      </span>
+
+      <br /><br />
     <form id="formKeystorePassword" action="wallet_create" method="post">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="c-field">
         <input class="c-input" name="wallet_create_password" id="wallet_create_password" type="text" placeholder="Password" required>
       </br></br>
-    </div>     
+    </div>
       <input type="submit" value="Submit" class="c-btn c-btn--fullwidth c-btn--info"></input>
     </form>
-      
+        </div>
     </div>
 </div>
 @endsection
