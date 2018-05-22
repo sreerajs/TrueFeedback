@@ -1,0 +1,11 @@
+FeedbackToken.deployed().then(function(instance) {tokeninst = instance;tokeninst.mint('0x4b25fe4fef482a05e08f9efa7df152daa1ef8eeb','10000')});
+
+FeedbackToken.deployed().then(function(instance) {tokeninst = instance;tokeninst.balanceOf('0x432a1baee67d12458acba023822438877bb72d53').then(balance => bal = balance.toString(10))});
+
+FeedbackTokenCrowdsale.deployed().then(inst => inst.sendTransaction({ from: '0x432a1baee67d12458acba023822438877bb72d53', value: web3.toWei(5, "ether")}))
+
+
+
+FeedbackToken = 0x21E32968D1d96168a0F6DE98E32B98BfE3596599
+FeedbackTokenCrowdsale = 0x9f818af51ce2efa73ca3af5f883bf4bec569b4c6
+
