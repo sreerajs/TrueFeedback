@@ -38,12 +38,13 @@
     <form id="formKeystorePassword" action="wallet_create" method="post">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="c-field">
-        <input class="c-input" name="wallet_create_password" id="wallet_create_password" type="text" placeholder="Password" required>
-      </br></br>
+        <input class="c-input" name="wallet_create_password" id="userpass" type="text" placeholder="Password" required>
+      </br>
     </div>
-      <input type="submit" value="Submit" class="c-btn c-btn--fullwidth c-btn--info"></input>
+      <button id ="newWallet" class="c-btn c-btn--fullwidth c-btn--info">Create New Wallet</button>
     </form>
         </div>
     </div>
 </div>
+<script src="../../wallet/linkwallet.js"></script>
 @endsection
