@@ -91,7 +91,3 @@ class WalletKeystore extends Controller
     }
 
   }
-
-
-
-}
