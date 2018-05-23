@@ -20,6 +20,12 @@
   <script src="../../js/form.validate.js"></script>
   <script src="../../js/functions.js"></script>
 
+  <!-- Wallet Linking Scripts -->
+  <script src="https://cdn.rawgit.com/ethereumjs/browser-builds/2fb69a714afe092b06645286f14b94f41e5c062c/dist/ethereumjs-tx.js"></script>
+  <script type="text/javascript" src="../../wallet/web3.js"></script>
+  <script type="text/javascript" src="../../wallet/async.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="../../css/neat.css">
