@@ -58,8 +58,8 @@ createwallet: function(event) {
   var result = web3.eth.accounts.create(extraEntropy);
 
 
-  //  $('#resultPropStatus').text(result.address);
-  //  $('#resultPropStatus').text(result.privateKey);
+  console.log(result.address);
+  console.log(result.privateKey);
   var keystore = JSON.stringify(web3.eth.accounts.encrypt(result.privateKey, password));
       var param = {
         'keystore' : keystore
@@ -85,7 +85,7 @@ createwallet: function(event) {
     event.preventDefault();
 
     var file = document.getElementById("key").files[0];
-    var password = document.getElementById('userpass').value
+    var password = document.getElementById('impuserpass').value
     if (file) {
       var reader = new FileReader();
       reader.readAsText(file, "UTF-8");
@@ -93,8 +93,8 @@ createwallet: function(event) {
 
         var result = web3.eth.accounts.decrypt(evt.target.result, password)
 
-        //  $('#resultPropStatus').text(result.address);
-        //  $('#resultPropStatus').text(result.privateKey);
+        console.log(result.address);
+        console.log(result.privateKey);
         var keystore = JSON.stringify(web3.eth.accounts.encrypt(result.privateKey, password));
         var param = {
           'keystore' : keystore
@@ -124,12 +124,12 @@ createwallet: function(event) {
     event.preventDefault();
 
     var privatekey = document.getElementById("priv").value;
-    var password = document.getElementById('userpass').value
+    var password = document.getElementById('privuserpass').value
 
 var result =  web3.eth.accounts.privateKeyToAccount(privatekey);
 
-//  $('#resultPropStatus').text(result.address);
-//  $('#resultPropStatus').text(result.privateKey);
+console.log(result.address);
+console.log(result.privateKey);
 var keystore = JSON.stringify(web3.eth.accounts.encrypt(result.privateKey, password));
 var param = {
   'keystore' : keystore
