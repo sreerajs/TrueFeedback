@@ -46,5 +46,4 @@
         </div>
     </div>
 </div>
-<script src="../../wallet/linkwallet.js"></script>
 @endsection
