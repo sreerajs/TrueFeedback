@@ -1,14 +1,13 @@
-App = {
+Hstry = {
   web3Provider: null,
-  accountobject: null,
 
   init: function() {
 
-   App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
-  //App.web3Provider = new Web3.providers.HttpProvider('https://rinkeby.infura.io/yGEHQFbey55ozzDha3hf');
-  //App.web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/dXG7QYJRJPW16SDWx2EM');
+   Hstry.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+  //Hstry.web3Provider = new Web3.providers.HttpProvider('https://rinkeby.infura.io/yGEHQFbey55ozzDha3hf');
+  //Hstry.web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/dXG7QYJRJPW16SDWx2EM');
 
-    web3 = new Web3(App.web3Provider);
+    web3 = new Web3(Hstry.web3Provider);
 
     web3.eth.extend({
     property: 'txpool',
@@ -24,16 +23,16 @@ App = {
     }]
     });
 
-  return App.bindEvents();
+  return Hstry.bindEvents();
   },
 
 
 
 bindEvents: function() {
 
-    $(document).on('click', '#bunlo', App.unlockaccount);
-    $(document).on('click', '#send', App.sendethereum);
-    $(document).on('click', '#pend', App.getTransactions);
+    $(document).on('click', '#bunlo', Hstry.unlockaccount);
+    $(document).on('click', '#send', Hstry.sendethereum);
+    $(document).on('click', '#pend', Hstry.getTransactions);
 
 },
 
@@ -43,7 +42,7 @@ bindEvents: function() {
  getTransactions: function() {
 
 var checkaddress = document.getElementById('useradd').value;;
-//App.accountobject.address;
+//Hstry.accountobject.address;
 
     endBlockNumber = eth.blockNumber;
     startBlockNumber = 5537922;
@@ -84,7 +83,7 @@ var checkadd = document.getElementById('useradd').value;
 web3.eth.txpool.content().then(function(pending){
     if(pending.pending[checkadd]){
 
-        var pendingobject = pending.pending[App.accountobject.address];
+        var pendingobject = pending.pending[Hstry.accountobject.address];
 
         $.each(pendingobject, function(item){
           console.log(pendingobject[item]);
